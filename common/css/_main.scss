@@ -100,18 +100,61 @@
       padding: 45px 0;
 
       > p {
-        margin-left: 75px;
-        &::after {
-          content: '';
-          display: inline-block;
-          width: 1px;
+        flex-shrink: 0;
+        width: 300px;
+        text-align: center;
+        color: #007aff;
+        border-right: 1px solid #007aff;
+
+        span {
+          display: block;
+        }
+      }
+      .slidewrap {
+        width: calc(100% - 300px);
+        padding: 0 50px;
+        display: flex;
+        gap: 0 15px;
+
+        .qmenu-button-prev,
+        .qmenu-button-next {
+          width: 14px;
           height: 100%;
-          background: #007aff;
-          margin-left: 75px;
+          display: block;
+          height: 50px;
+          flex-shrink: 0;
+          background-image: url(../images/qmenu_arrow.png);
+          background-repeat: no-repeat;
+          align-self: center;
+          cursor: pointer;
+        }
+        .qmenu-button-prev {
+          background-position: 0 center;
+        }
+        .qmenu-button-next {
+          background-position: right 0 center;
         }
       }
       .swiperQmenu {
-        padding: 0 50px;
+        width: calc(100% - 48px);
+        display: flex;
+        gap: 0 10px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .swiper-wrapper {
+          top: 0;
+          left: 0;
+
+          .swiper-slide {
+            flex-shrink: 0;
+            text-align: center;
+
+            .imgwrap {}
+          }
+        }
+
       }
     }
   }
@@ -125,7 +168,7 @@
     }
 
     .div_left {
-      ul {
+      .tab_list {
         li {
           border-bottom: 11px solid transparent;
           &.active {
@@ -137,6 +180,38 @@
           }
         }
       }
+
+      .tab_con_list {
+        > div {
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+      }
     }
+
+    .div_right {
+      .noti_con {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .newswrap {
+    background: #eee;
+    .container {
+
+    }
+    .sec_tit {
+      font-size: 60px;
+      color: #222;
+      text-align: center;
+    }
+  }
+  .sub_visualwrap {
+    width: 100%;
+    height: 580px;
   }
 }

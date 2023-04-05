@@ -839,41 +839,13 @@ $(function () {
 });
 
 $(document).ready(function () {
-    $(".notice_view > div").hide();
-    $(".notice_view > div").first().show();
-    $(".notice_list > li").click(function () {
-        $(".notice_view > div").hide();
-        $(".notice_list > li").removeClass("active");
+    $(".tab_con_list > div").first().addClass('active')
+    $(".tab_list > li").on('click' ,function (e) {
+        e.preventDefault();
+        $(".tab_list > li").removeClass("active");
         $(this).addClass("active");
-        $(".notice_view > div").eq($(this).index()).show().slick("setPosition");
-    });
-
-    $(".notice_view > div").slick({
-        slide: "div",
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 100,
-        arrows: false,
-        dots: false,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        draggable: true,
-    });
-
-    $(".btns .prev").click(function () {
-        $(".notice_view > div").slick("slickPrev");
-    });
-
-    $(".btns .next").click(function () {
-        $(".notice_view > div").slick("slickNext");
-    });
-
-    $(".tab_list > li").click(function () {
-        $(".tab_list > li").removeClass("on");
-        $(this).addClass("on");
-        $(".tab_con_list > div").removeClass("on");
-        $(".tab_con_list > div").eq($(this).index()).addClass("on");
+        $(".tab_con_list > div").removeClass("active");
+        $(".tab_con_list > div").eq($(this).index()).addClass("active");
     });
 
     $(".qline").click(function () {

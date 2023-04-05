@@ -83,11 +83,11 @@
                   <span class="mv_eng">The world&nbsp;&nbsp;Live together</span>
                 </h2>
                 <div class="needflex">
-                    <div class="swiper-util">
-                      <div class="swiper-pagination"></div>
-                      <div class="swiper-button-autoplay"></div>
-                    </div>
-                    <a href="" class="link_basic">자세히 보기</a>
+                  <div class="swiper-util">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-autoplay"></div>
+                  </div>
+                  <a href="" class="link_basic">자세히 보기</a>
                 </div>
               </div>
             </div>
@@ -95,24 +95,61 @@
         </section>
         <div class="qmenuwrap">
           <div class="container">
-            <p><span>Quick</span>menu</p>
-            <div class="swiperQmenu">
-              <ul>
-                <li>
-                  <a href="">
-                    <div class="imgwrap"></div>
-                    <p>국제환경산업기술<br />& 그린에너지전</p>
-                  </a>
-                </li>
-                <li></li>
-              </ul>
+            <p></p>
+            <div class="slidewrap">
+              <div class="qmenu-button-prev"></div>
+              <div class="swiperQmenu">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <a href="">
+                      <div class="imgwrap">
+                        <img src="../common/images/qmenu_01.png" alt="" />
+                      </div>
+                      <p>국제환경산업기술<br />& 그린에너지전</p>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="">
+                      <div class="imgwrap">
+                        <img src="../common/images/qmenu_02.png" alt="" />
+                      </div>
+                      <p>환경기술교육</p>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="">
+                      <div class="imgwrap">
+                        <img src="../common/images/qmenu_03.png" alt="" />
+                      </div>
+                      <p>환경기술지원</p>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="">
+                      <div class="imgwrap">
+                        <img src="../common/images/qmenu_04.png" alt="" />
+                      </div>
+                      <p>4대강 수변생태벨트</p>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="">
+                      <div class="imgwrap">
+                        <img src="../common/images/qmenu_05.png" alt="" />
+                      </div>
+                      <p>환경교육기반</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="qmenu-button-next"></div>
             </div>
           </div>
         </div>
         <section class="noticewrap">
           <div class="container needflex">
             <div class="div_left">
-              <ul class="needflex">
+              <ul class="tab_list needflex">
                 <li class="active">
                   <a href="#"> 공지사항 </a>
                 </li>
@@ -123,7 +160,7 @@
                   <a href="#"> 행차소식 </a>
                 </li>
               </ul>
-              <div>
+              <div class="tab_con_list">
                 <div>
                   <ul>
                     <li>
@@ -208,19 +245,21 @@
                 <h4>알림</h4>
                 <div class="swiper-pagination"></div>
               </div>
-              <div class="noti_con swiperNt">
-                <ul class="swiper-wrapper">
-                  <li class="swiper-slide">
-                    <a href=""> 제 44회 </a>
-                  </li>
-                </ul>
+              <div class="noti_con">
+                <div class="swiperNt">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                      <a href=""> 제 44회 </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section class="newswrap">
           <div class="container">
-            <h3>NEWS.</h3>
+            <h3 class="sec_tit">NEWS.</h3>
           </div>
         </section>
         <section class="sub_visualwrap">
@@ -274,6 +313,29 @@
         });
       </script>
       <!-- // 메인비쥬얼 스크립트 -->
+      <!-- 퀵메뉴 스크립트 -->
+      <script>
+        var swiperQmenu = new Swiper(".swiperQmenu", {
+          slidesPerView: 5,
+          // spaceBetween: 30,
+          loop: true, //무한반복여부
+          // loopSlides: 1, //루프 오류시
+
+          centeredSlides: false, //중앙정렬모드
+
+          pagination: {
+            el: ".swiperQmenu .swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            prevEl: ".qmenu-button-prev",
+            nextEl: ".qmenu-button-next",
+          },
+          observer: true,
+          observeParents: true,
+        });
+      </script>
+      <!-- // 퀵메뉴 스크립트 -->
       <!-- 서브비쥬얼 스크립트 -->
       <script>
         var swiperSv = new Swiper(".swiperSv", {
