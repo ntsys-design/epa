@@ -1,0 +1,49 @@
+// NanumSquare Neo
+@font-face {
+    font-family: 'nsn-r';
+    src: url('../fonts/NSN-Regular.eot');
+    src: url('../fonts/NSN-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NSN-Regular.woff2') format('woff2'),
+        url('../fonts/NSN-Regular.woff') format('woff'),
+        url('../fonts/NSN-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nsn-b';
+    src: url('../fonts/NSN-Bold.eot');
+    src: url('../fonts/NSN-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NSN-Bold.woff2') format('woff2'),
+        url('../fonts/NSN-Bold.woff') format('woff'),
+        url('../fonts/NSN-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nsn-l';
+    src: url('../fonts/NSN-Light.eot');
+    src: url('../fonts/NSN-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NSN-Light.woff2') format('woff2'),
+        url('../fonts/NSN-Light.woff') format('woff'),
+        url('../fonts/NSN-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nsn-eb';
+    src: url('../fonts/NSN-ExtraBold.eot');
+    src: url('../fonts/NSN-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NSN-ExtraBold.woff2') format('woff2'),
+        url('../fonts/NSN-ExtraBold.woff') format('woff'),
+        url('../fonts/NSN-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

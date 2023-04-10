@@ -10,7 +10,7 @@
 
       // 메인비쥬얼 bg
       .mv01 {
-        background: lemonchiffon;
+        background: url(../images/main_visual01.png) no-repeat center center;
       }
       .mv02 {
         background: sandybrown;
@@ -31,23 +31,23 @@
           padding: 100px 25px 0;
           width: 550px;
           font-size: 80px;
-          font-weight: 200;
-          letter-spacing: -13px;
+          letter-spacing: -8px;
           margin-bottom: 35px;
+          font-family: 'nsn-l';
 
           span {
             display: block;
             line-height: 80px;
 
             em {
-              font-weight: 500;
+              font-family: 'nsn-b';
               color: #007aff;
             }
 
             &.mv_eng {
               font-size: 46px;
-              font-weight: 100;
-              letter-spacing: 0.5px;
+              font-family: 'nsn-r';
+              letter-spacing: -2.6px;
               line-height: 56px;
             }
           }
@@ -73,10 +73,11 @@
           }
 
           a {
+            font-family: 'nsn-b';
             font-size: 24px;
             color: #222;
             border-bottom: 1px solid #222;
-            padding-bottom: 7px;
+            line-height: 16px;
           }
         }
       }
@@ -90,7 +91,7 @@
     .container {
       width: 100%;
       background: #fff;
-      box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+      box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.2);
       border-radius: 20px;
       position: relative;
       z-index: 55;
@@ -99,15 +100,19 @@
       align-items: center;
       padding: 45px 0;
 
-      > p {
+      .qm_txt {
         flex-shrink: 0;
         width: 300px;
         text-align: center;
         color: #007aff;
-        border-right: 1px solid #007aff;
+        border-right: 2px solid #007aff;
+        font-size: 48px;
+        letter-spacing: -5px;
+        line-height: 36px;
 
-        span {
+        em {
           display: block;
+          font-family: 'nsn-eb';
         }
       }
       .slidewrap {
@@ -150,8 +155,20 @@
           .swiper-slide {
             flex-shrink: 0;
             text-align: center;
+            a {
+            }
 
-            .imgwrap {}
+            .imgwrap {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 60px;
+              margin-bottom: 24px;
+
+              img {
+                object-fit: scale-down;
+              }
+            }
           }
         }
 
@@ -160,23 +177,39 @@
   }
 
   .noticewrap {
+    margin-bottom: 80px;
     .container {
-      gap: 0 2%;
+      gap: 2%;
+      box-sizing: border-box;
       > div {
         flex: 0 0 49%;
       }
     }
 
     .div_left {
+      width: 100%;
       .tab_list {
+        padding: 0 20px;
+        border-bottom: 1px solid #000;
+        gap: 0 10px;
         li {
+          font-size: 22px;
+          font-family: 'nsn-r';
           border-bottom: 11px solid transparent;
+          width: 130px;
+          height: 65px;
+          line-height: 65px;
+          text-align: center;
+
           &.active {
+            font-size: 26px;
             border-color: #007aff;
-            a {
-            }
+            font-family: 'nsn-b';
           }
           a {
+            display: block;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -184,8 +217,58 @@
       .tab_con_list {
         > div {
           display: none;
+
           &.active {
             display: block;
+          }
+
+          ul {
+            border-bottom: 1px solid #bfbfbf;
+            li {
+              padding: 15px;
+              border-bottom: 1px solid #bfbfbf;
+
+              &:last-of-type {
+                border-bottom: unset;
+              }
+              a {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                dl {
+                  width: calc(100%  - 110px);
+                  flex-grow: 0;
+                  padding: 15px 5px 15px 0;
+                  border-right: 1px solid #bcbaba;
+
+                  dt {
+                    font-size: 18px;
+                    font-family: 'nsn-b';
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                  }
+                  dd {
+                    min-height: 45px;
+                    word-break: keep-all;
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;                    
+                  }
+                }
+                time {
+                  flex: 0 0 110px;
+                  text-align: center;
+                  font-size: 14px;
+                  span {
+                    display: block;
+                  }
+                }
+              }
+            }
           }
         }
       }
