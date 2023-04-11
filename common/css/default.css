@@ -606,33 +606,43 @@ header .gnbwrap ul {
   margin-bottom: 80px;
 }
 .contents.main .noticewrap .container {
-  gap: 2%;
+  gap: 0 40px;
   box-sizing: border-box;
 }
 .contents.main .noticewrap .container > div {
-  flex: 0 0 49%;
-}
-.contents.main .noticewrap .div_left {
-  width: 100%;
+  width: calc((100% - 40px) / 2);
+  flex-shrink: 0;
 }
 .contents.main .noticewrap .div_left .tab_list {
   padding: 0 20px;
-  border-bottom: 1px solid #000;
   gap: 0 10px;
+  position: relative;
+}
+.contents.main .noticewrap .div_left .tab_list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  height: 1px;
+  z-index: 5;
 }
 .contents.main .noticewrap .div_left .tab_list li {
   font-size: 22px;
   font-family: "nsn-r";
   border-bottom: 11px solid transparent;
   width: 130px;
-  height: 65px;
-  line-height: 65px;
+  height: 55px;
   text-align: center;
 }
 .contents.main .noticewrap .div_left .tab_list li.active {
   font-size: 26px;
   border-color: #007aff;
   font-family: "nsn-b";
+  position: relative;
+  z-index: 6;
 }
 .contents.main .noticewrap .div_left .tab_list li a {
   display: block;
@@ -647,6 +657,11 @@ header .gnbwrap ul {
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul {
   border-bottom: 1px solid #bfbfbf;
+}
+@media (hover: hover) {
+  .contents.main .noticewrap .div_left .tab_con_list > div ul li:hover {
+    background: #f2f6ff;
+  }
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul li {
   padding: 15px;
@@ -691,9 +706,51 @@ header .gnbwrap ul {
 .contents.main .noticewrap .div_left .tab_con_list > div ul li a time span {
   display: block;
 }
+.contents.main .noticewrap .div_right {
+  min-height: 660px;
+  display: flex;
+  flex-direction: column;
+}
+.contents.main .noticewrap .div_right .noti_top {
+  margin-bottom: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.contents.main .noticewrap .div_right .noti_top h4 {
+  font-size: 26px;
+  font-family: "nsn-b";
+}
+.contents.main .noticewrap .div_right .noti_top .swiper-pagination {
+  margin-left: auto;
+  width: 90px;
+  height: 20px;
+  position: static;
+}
+.contents.main .noticewrap .div_right .noti_top .swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
 .contents.main .noticewrap .div_right .noti_con {
+  flex-grow: 1;
   border: 1px solid #ccc;
   border-radius: 20px;
+  padding: 50px 40px;
+}
+.contents.main .noticewrap .div_right .noti_con .swiperNt {
+  overflow: hidden;
+}
+.contents.main .noticewrap .div_right .noti_con .swiper-slide {
+  width: 100%;
+}
+.contents.main .noticewrap .div_right .noti_con .swiper-slide a {
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  border-radius: 20px;
+  background: #f2f6ff;
 }
 .contents.main .newswrap {
   background: #eee;
@@ -703,7 +760,52 @@ header .gnbwrap ul {
   color: #222;
   text-align: center;
 }
+.contents.main .newswrap .swiperNst {
+  overflow: hidden;
+}
+.contents.main .newswrap .newstab_list li {
+  text-align: center;
+}
+.contents.main .newswrap .swiperNsc {
+  overflow: hidden;
+}
+.contents.main .newswrap .newscon_list {
+  width: 100%;
+  display: flex;
+}
+.contents.main .newswrap .newscon_list li {
+  width: 100%;
+}
+.contents.main .newswrap .newscon_list li .newscon_item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 2%;
+  text-align: center;
+}
+.contents.main .newswrap .newscon_list li .newscon_item article {
+  width: 32%;
+}
 .contents.main .sub_visualwrap {
   width: 100%;
   height: 580px;
+  border-top: 9px solid #fff;
+}
+.contents.main .sub_visualwrap .bgslide {
+  width: 100%;
+  height: 100%;
+}
+.contents.main .sub_visualwrap .sv01 {
+  background: red;
+}
+.contents.main .sub_visualwrap .sv02 {
+  background: blanchedalmond;
+}
+.contents.main .sub_visualwrap .sv03 {
+  background: cadetblue;
+}
+.contents.main .sub_visualwrap .sv04 {
+  background: salmon;
+}
+.contents.main .sub_visualwrap .sv05 {
+  background: darkcyan;
 }/*# sourceMappingURL=default.css.map */
