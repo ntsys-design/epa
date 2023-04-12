@@ -124,7 +124,6 @@
         .qmenu-button-prev,
         .qmenu-button-next {
           width: 14px;
-          height: 100%;
           display: block;
           height: 50px;
           flex-shrink: 0;
@@ -325,6 +324,7 @@
         border-radius: 20px;
         padding: 50px 40px;
         .swiperNt{
+          height: 100%;
           overflow: hidden;
         }
         .swiper-slide {
@@ -344,24 +344,64 @@
   }
 
   .newswrap {
+    padding-top: 90px;
+    padding-bottom: 80px;
     background: #eee;
     .container {
 
     }
     .sec_tit {
       font-size: 60px;
+      font-family: 'nsn-eb';
       color: #222;
       text-align: center;
+      margin-bottom: 30px;
     }
     .swiperNst {
       overflow: hidden;
+      width: 760px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      position: relative;
+
+      .news-button-prev,
+      .news-button-next {
+        position: absolute;
+        top: 0;
+        width: 14px;
+        height: 30px;
+        display: block;
+        flex-shrink: 0;
+        background-image: url(../images/qmenu_arrow.png);
+        background-repeat: no-repeat;
+        align-self: center;
+        cursor: pointer;
+        z-index: 99;
+      }
+      .news-button-prev {
+        left: 200px;
+        background-position: 0 center;
+      }
+      .news-button-next {
+        right: 200px;
+        background-position: right 0 center;
+      }
     }
     .newstab_list {
+      display: flex;
+      align-items: center;
 
       li {
+        width: 130px;
+        font-size: 26px;
         text-align: center;
         a {
         }
+      }
+
+      .swiper-slide-active {
+        font-size: 30px;
+        font-family: 'nsn-b';
       }
     }
     .swiperNsc {
@@ -377,10 +417,51 @@
         .newscon_item {
           display: flex;
           flex-wrap: wrap;
-          gap: 10px 2%;
+          gap: 40px 2%;
           text-align: center;
           article {
             width: 32%;
+            max-width: 400px;
+            a {
+                
+              .imgwrap {
+                margin-bottom: 16px;
+              }
+
+              .atc_textwrap {
+                .atc_tag {
+                  display: block;
+                  width: 90px;
+                  height: 26px;
+                  line-height: 30px;
+                  background: #007aff;
+                  color: #fff;
+                  margin-bottom: 10px;
+                  font-family: 'nsn-r';
+                  font-size: 16px;
+                }
+                .atc_tit {
+                  text-align: left;
+                  font-family: 'nsn-b';
+                  font-size: 18px;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 2;
+                  display: -webkit-box;
+                  margin-bottom: 15px;
+                  word-break: keep-all;
+                  min-height: 51px;
+                }
+                time {
+                  text-align: left;
+                  display: block;
+                  font-size: 14px;
+                  font-family: 'nsn-b';
+                  color: #666;
+                }
+              }
+            }
           }
         }
       }
@@ -389,7 +470,6 @@
   .sub_visualwrap {
     width: 100%;
     height: 580px;
-    border-top: 9px solid #fff;
     .bgslide {
       width: 100%;
       height: 100%;
