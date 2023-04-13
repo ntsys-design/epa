@@ -472,6 +472,24 @@
     .bgslide {
       width: 100%;
       height: 100%;
+      position: relative;
+      .mv_conwrap{
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+    .container{
+      position: relative;
+      height: 100%;
+    }
+    h2{
+      span{
+        display: block;
+      }
+    }
+      }
     }
     .sv01 {
       background: red;
@@ -487,6 +505,23 @@
     }
     .sv05 {
       background: darkcyan;
+    }
+    .swiper-pagination{
+      position: absolute;
+      width: unset;
+      left: 20px;
+      bottom: 56px;
+      .swiper-pagination-bullet{
+        width: 20px;
+        height: 20px;
+        background: #d4d5d9;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active{
+        width: 64px;
+        background: #0044ff;
+        border-radius: 40px;
+      }
     }
   }
 }
