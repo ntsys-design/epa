@@ -451,6 +451,7 @@ header .gnbwrap ul {
   display: flex;
   gap: 0 30px;
   font-family: "nsn-b";
+  font-size: 20px;
 }
 
 footer .footer_top {
@@ -899,7 +900,7 @@ footer .footer_bottom {
   display: block;
 }
 .contents.main .sub_visualwrap .sv01 {
-  background: red;
+  background: url(../images/sub_visual01.png) no-repeat center center;
 }
 .contents.main .sub_visualwrap .sv02 {
   background: blanchedalmond;
