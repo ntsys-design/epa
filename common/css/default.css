@@ -461,9 +461,24 @@ footer .footer_top {
 footer .footer_top .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 footer .footer_top .container .ftt_left {
   gap: 0 32px;
+}
+footer .footer_top .container .ftt_left::after {
+  content: none;
+}
+footer .footer_top .container .ftt_right {
+  gap: 0 10px;
+}
+footer .footer_top .container .ftt_right .nice-select .list {
+  margin-top: unset;
+  margin-bottom: 4px;
+  top: unset;
+  bottom: 100%;
+  display: flex;
+  flex-direction: column-reverse;
 }
 footer .footer_bottom {
   background: #f5f5f5;
