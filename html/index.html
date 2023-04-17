@@ -10,9 +10,11 @@
     <title>환경보전원</title>
     <link rel="stylesheet" href="../common/css/default.css" />
     <link rel="stylesheet" href="../common/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../common/css/nice-select.css" />
     <script src="../common/js/jquery-3.6.0.min.js"></script>
     <script src="../common/js/common.js"></script>
     <script src="../common/js/swiper-bundle.min.js"></script>
+    <script src="../common/js/jquery.nice-select.min.js"></script>
     <script></script>
   </head>
 
@@ -785,10 +787,31 @@
               <li><a href="#">사이트맵</a></li>
             </ul>
             <ul class="ftt_right needflex">
-              <select name="" id=""></select>
-              <select name="" id=""></select>
-              <select name="" id=""></select>
+              <select name="" id="">
+                <option value="" selected disabled>사업별 웹사이트</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+              <select name="" id="">
+                <option value="" selected disabled>환경부 소속 / 산하기관</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+              <select name="" id="">
+                <option value="" selected disabled>유관기관</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
             </ul>
+            <!-- 셀렉박스 스크립트 -->
+            <script>
+              $(document).ready(function (){
+                $('.ftt_right select').niceSelect();
+              });
+            </script>
           </div>
         </div>
         <div class="footer_btm">
