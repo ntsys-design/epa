@@ -150,9 +150,6 @@
           .swiper-slide {
             flex-shrink: 0;
             text-align: center;
-            a {
-            }
-
             .imgwrap {
               display: flex;
               align-items: center;
@@ -340,8 +337,6 @@
     padding-top: 90px;
     padding-bottom: 80px;
     background: #eee;
-    .container {
-    }
     .sec_tit {
       font-size: 60px;
       font-family: "nsn-eb";
@@ -386,8 +381,6 @@
       li {
         font-size: 26px;
         text-align: center;
-        a {
-        }
       }
 
       .swiper-slide-active {
