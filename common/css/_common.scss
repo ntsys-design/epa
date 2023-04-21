@@ -111,7 +111,21 @@ footer {
       }
       .ftt_right {
         gap: 0 10px;
+        width: 50%;
         .nice-select {
+          width: 33% !important;
+          &:after{
+            content: '';
+          background: url(../images/select_down.png);
+          width: 15px !important;
+          height: 8px !important;
+          background-size: cover;
+          transform: unset !important;
+          border:none !important;;
+          }
+          &.open:after{
+             transform: rotate(-180deg) !important;
+          }
             .list {
                 margin-top: unset;
                 margin-bottom: 4px;
@@ -119,6 +133,7 @@ footer {
                 bottom: 100%;
                 display: flex;
                 flex-direction: column-reverse;
+                width: 100%;
             }
         }
       }
