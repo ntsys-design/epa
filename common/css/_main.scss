@@ -74,8 +74,17 @@
             font-family: "nsn-b";
             font-size: 24px;
             color: #222;
-            border-bottom: 1px solid #222;
-            line-height: 16px;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 8px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background: #222;
+            }
           }
         }
       }
@@ -234,7 +243,7 @@
               }
             }
             li {
-              padding: 15px;
+              padding: 15px 0 15px 15px;
               border-bottom: 1px solid #bfbfbf;
 
               &:last-of-type {
@@ -327,6 +336,22 @@
             padding: 50px;
             border-radius: 20px;
             background: #f2f6ff;
+
+            .noti_tit {
+              font-size: 20px;
+              font-family: 'nsn-b';
+              color: #222;
+              letter-spacing: -2px;
+              line-height: 30px;
+              margin-bottom: 13px;
+
+              .noti_num {
+                display: block;
+                font-size: 26px;
+                font-family: 'nsn-eb';
+                color: #1281fe;
+              }
+            }
           }
         }
       }
@@ -401,7 +426,7 @@
         .newscon_item {
           display: flex;
           flex-wrap: wrap;
-          gap: 40px 2%;
+          gap: 40px 40px;
           text-align: center;
           article {
             width: 32%;
