@@ -2,6 +2,7 @@
   min-height: 100vh;
 }
 .wrapper {
+  position: relative;
   &.modaled {
     width: 100%;
     height: 100%;
@@ -59,21 +60,60 @@
 
 // 헤더
 header {
+  width: 100%;
   height: 80px;
+  padding: 0 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
 
-  .container {
+  >div {
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 0 140px;
+    justify-content: space-between;
   }
-
+  .logowrap {
+    flex-shrink: 0;
+  }
   .gnbwrap {
+    display: flex;
+    justify-content: center;
     ul {
       display: flex;
-      gap: 0 30px;
+      align-items: center;
+      gap: 0 80px;
       font-family: "nsn-b";
       font-size: 20px;
+
+      &::after {
+        content: none;
+      }
+
+      li {
+        a {
+          color: #fff;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .utilwrap {
+    display: flex;
+    gap: 0 30px;
+    >div {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      &.search_btn {
+        background: url(../images/hdr_search_btn.png) no-repeat center center;
+      }
+      &.menu_btn {
+        background: url(../images/hdr_menu_btn.png) no-repeat center center;
+      }
     }
   }
 }
@@ -200,4 +240,26 @@ footer {
       }
     }
   }
+}
+
+
+
+// 공통불릿
+.needblt {
+  display: flex;
+  gap: 0 5px;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 20px;
+    height: 30px;
+    display: block;
+  }
+
+  &.blt_leaf {
+    &::before {
+      background: url(../images/blt_leaf.png) no-repeat center center;
+    }
+  }
+
 }
