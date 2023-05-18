@@ -1136,6 +1136,33 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .sub_commonwrap.sub01 {
   background: url(../images/sub_commonbg01.png) no-repeat center center;
 }
+.sub_commonwrap.sub01 > div::after {
+  background: url(../images/sub_commonbg01.png) no-repeat center center;
+}
+.sub_commonwrap.sub02 {
+  background: url(../images/sub_commonbg02.png) no-repeat center center;
+}
+.sub_commonwrap.sub02 > div::after {
+  background: url(../images/sub_commonbg02.png) no-repeat center center;
+}
+.sub_commonwrap.sub03 {
+  background: url(../images/sub_commonbg03.png) no-repeat center center;
+}
+.sub_commonwrap.sub03 > div::after {
+  background: url(../images/sub_commonbg03.png) no-repeat center center;
+}
+.sub_commonwrap.sub04 {
+  background: url(../images/sub_commonbg04.png) no-repeat center center;
+}
+.sub_commonwrap.sub04 > div::after {
+  background: url(../images/sub_commonbg04.png) no-repeat center center;
+}
+.sub_commonwrap.sub05 {
+  background: url(../images/sub_commonbg05.png) no-repeat center center;
+}
+.sub_commonwrap.sub05 > div::after {
+  background: url(../images/sub_commonbg05.png) no-repeat center center;
+}
 .sub_commonwrap .sub_titwrap {
   width: 100%;
   height: 100%;
@@ -1150,7 +1177,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   width: 1280px;
   height: 640px;
   border-radius: 400px;
-  background: url(../images/sub_commonbg01.png) no-repeat center center;
   position: absolute;
   top: 50%;
   left: 50%;
