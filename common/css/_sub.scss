@@ -1,68 +1,105 @@
-
 .sub_commonwrap {
     height: 969px;
     background: #000;
-
+    position: relative;
 
     // 서브페이지 메인비주얼 bg
     &.sub01 {
         background: url(../images/sub_commonbg01.png) no-repeat center center;
-        >div::after {
+        > div::after {
             background: url(../images/sub_commonbg01.png) no-repeat center center;
         }
     }
     &.sub02 {
         background: url(../images/sub_commonbg02.png) no-repeat center center;
-        >div::after {
+        > div::after {
             background: url(../images/sub_commonbg02.png) no-repeat center center;
         }
     }
     &.sub03 {
         background: url(../images/sub_commonbg03.png) no-repeat center center;
-        >div::after {
+        > div::after {
             background: url(../images/sub_commonbg03.png) no-repeat center center;
         }
     }
     &.sub04 {
         background: url(../images/sub_commonbg04.png) no-repeat center center;
-        >div::after {
+        > div::after {
             background: url(../images/sub_commonbg04.png) no-repeat center center;
         }
     }
     &.sub05 {
         background: url(../images/sub_commonbg05.png) no-repeat center center;
-        >div::after {
+        > div::after {
             background: url(../images/sub_commonbg05.png) no-repeat center center;
         }
     }
+    .lnbwrap {
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
 
-    
+        .container {
+            display: flex;
+            border-radius: 60px;
+            background: rgba(0, 40, 87, 0.8);
+            justify-content: space-between;
+            align-items: center;
+            padding: 27px 21px;
 
+            .nice-select {
+                width: 300px;
+                height: 64px;
+                border-radius: 35px;
+                border: 1px solid rgba(255, 255, 255, 0.6);
+                background: transparent;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+
+                .list {
+                    color: #000;
+                }
+            }
+            button {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
     .sub_titwrap {
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.3);
+        background: rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
 
         &::after {
-            content: '';
+            content: "";
             width: 1280px;
             height: 640px;
             border-radius: 400px;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             z-index: 5;
         }
 
         h2 {
+            width: 810px;
+            height: 286px;
             position: relative;
-            background: rgba(0,0,0,0.3);
-            padding: 70px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border-radius: 145px;
             z-index: 6;
             text-align: center;
@@ -70,13 +107,70 @@
             font-weight: 700;
             color: #fff;
 
-            b{
-                font-size: 64px;
+            b {
+                font-size: 60px;
                 display: block;
             }
         }
     }
 }
 
+// margin
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+// 폰트 색상
+.fc_grn {
+    color: #608d00;
+}
+
+// 공용 탭 스타일
+.sub_tab_list {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    border-collapse: collapse;
+
+    > li {
+        flex-grow: 1;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        background: #eee;
+        color: #666;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        a {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &.on {
+            background: #31a9e2;
+            border: 1px solid transparent;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// 서브 컨텐츠 스타일
 .contents.sub {
+    padding-top: 75px;
+    h3.subcon_title {
+        font-weight: 700;
+        font-size: 64px;
+        color: #234292;
+        text-align: center;
+        margin-bottom: 75px;
+    }
 }
