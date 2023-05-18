@@ -725,6 +725,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-right: 2px solid #007aff;
   font-size: 48px;
   letter-spacing: -5px;
+  padding: 20px 0;
   line-height: 36px;
 }
 .contents.main .qmenuwrap .container .qm_txt em {
@@ -843,7 +844,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   }
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul li {
-  padding: 15px 0 15px 15px;
+  padding: 20px 0 20px 15px;
   border-bottom: 1px solid #bfbfbf;
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul li:last-of-type {
@@ -945,6 +946,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 26px;
   font-family: "nsn-eb";
   color: #1281fe;
+}
+.contents.main .noticewrap .div_right .noti_con .swiper-slide a .imgwrap {
+  margin-bottom: 28px;
 }
 .contents.main .newswrap {
   padding-top: 90px;
