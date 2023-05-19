@@ -193,6 +193,7 @@
 // 서브 컨텐츠 스타일
 .contents.sub {
     padding-top: 75px;
+    margin-bottom: 110px;
     h3.subcon_title {
         font-weight: 700;
         font-size: 64px;
@@ -202,9 +203,8 @@
     }
 }
 
-//  sub04 채용정보 게시판
+//  sub04 게시판
 .board {
-    margin-bottom: 110px;
     .brd_top{
     justify-content: space-between;
     align-items: center;
@@ -264,7 +264,7 @@
         font-weight: 700;
         ul{
             border-top: 2px solid #5992FF;
-            
+
             li{
                 border-bottom: 1px solid #999999;
                 div{
@@ -402,7 +402,6 @@
 // sub05 인사말
 
 .greet{
-    margin-bottom: 108px;
     justify-content: space-between;
     .greet_img{
         width: 45%;

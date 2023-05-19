@@ -1358,6 +1358,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .contents.sub {
   padding-top: 75px;
+  margin-bottom: 110px;
 }
 .contents.sub h3.subcon_title {
   font-weight: 700;
@@ -1367,9 +1368,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 75px;
 }
 
-.board {
-  margin-bottom: 110px;
-}
 .board .brd_top {
   justify-content: space-between;
   align-items: center;
@@ -1548,7 +1546,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 
 .greet {
-  margin-bottom: 108px;
   justify-content: space-between;
 }
 .greet .greet_img {
