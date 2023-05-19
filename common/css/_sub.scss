@@ -7,46 +7,51 @@
     &.sub01 {
         background: url(../images/sub_commonbg01.png) no-repeat center center;
         > div::after {
-            background: url(../images/sub_commonbg01.png) no-repeat center center;
+            background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
         }
     }
     &.sub02 {
         background: url(../images/sub_commonbg02.png) no-repeat center center;
         > div::after {
-            background: url(../images/sub_commonbg02.png) no-repeat center center;
+            background: url(../images/sub_commonbg02.png) no-repeat center 35.5%;
         }
     }
     &.sub03 {
         background: url(../images/sub_commonbg03.png) no-repeat center center;
         > div::after {
-            background: url(../images/sub_commonbg03.png) no-repeat center center;
+            background: url(../images/sub_commonbg03.png) no-repeat center 35.5%;
         }
     }
     &.sub04 {
         background: url(../images/sub_commonbg04.png) no-repeat center center;
         > div::after {
-            background: url(../images/sub_commonbg04.png) no-repeat center center;
+            background: url(../images/sub_commonbg04.png) no-repeat center 35.5%;
         }
     }
     &.sub05 {
         background: url(../images/sub_commonbg05.png) no-repeat center center;
         > div::after {
-            background: url(../images/sub_commonbg05.png) no-repeat center center;
+            background: url(../images/sub_commonbg05.png) no-repeat center 35.5%;  
         }
     }
     .lnbwrap {
         position: absolute;
         width: 100%;
-        bottom: 20px;
+        bottom: 50px;
 
         .container {
             display: flex;
+            gap: 0 20px;
             border-radius: 60px;
             background: rgba(0, 40, 87, 0.8);
-            justify-content: space-between;
             align-items: center;
             padding: 27px 21px;
 
+            > div {
+                display: flex;
+                gap: 0 20px;
+                margin-right: auto;
+            }
             .nice-select {
                 width: 300px;
                 height: 64px;
@@ -62,11 +67,30 @@
                     color: #000;
                 }
             }
-            button {
+            > button {
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
                 background: rgba(255, 255, 255, 0.6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::after {
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                }
+
+                &.home::after {
+                    background: url(../images/lnb_home.png) no-repeat center center;
+                }
+                &.share::after {
+                    background: url(../images/lnb_share.png) no-repeat center center;
+                }
+                &.print::after {
+                    background: url(../images/lnb_print.png) no-repeat center center;
+                }
             }
         }
     }
@@ -85,16 +109,19 @@
             height: 640px;
             border-radius: 400px;
             position: absolute;
-            top: 50%;
+            top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 5;
         }
 
         h2 {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 45%;
+            left: 50%;
             width: 810px;
             height: 286px;
-            position: relative;
             background: rgba(0, 0, 0, 0.3);
             padding: 0 70px;
             display: flex;
