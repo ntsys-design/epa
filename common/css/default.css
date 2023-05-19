@@ -128,7 +128,6 @@ body {
   line-height: 1.4;
   color: #222;
   font-family: "nsn-r";
-  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -449,6 +448,7 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
+  background: rgba(0, 0, 0, 0.1);
 }
 header > div {
   height: 100%;
@@ -458,6 +458,7 @@ header > div {
 }
 header .logowrap {
   flex-shrink: 0;
+  width: 250px;
 }
 header .gnbwrap {
   display: flex;
@@ -480,6 +481,8 @@ header .gnbwrap ul li a {
 header .utilwrap {
   display: flex;
   gap: 0 30px;
+  width: 250px;
+  justify-content: flex-end;
 }
 header .utilwrap > div {
   width: 30px;
@@ -608,6 +611,52 @@ footer .footer_btm .container ul.ft_sns li a.fb_ico {
 footer .footer_btm .container ul.ft_sns li a.twt_ico {
   background: url(../images/footer_sns.png) center;
   background-position-x: -87px;
+}
+
+.ulsel {
+  width: 300px;
+  height: 64px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  font-size: 16px;
+}
+.ulsel > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px 0 18px;
+  text-align: left;
+  word-break: keep-all;
+  color: #fff;
+  position: relative;
+}
+.ulsel > button::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 20px;
+  background: url(../images/lnb_select_down.png) no-repeat center center;
+}
+.ulsel > button.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.ulsel > ul {
+  position: relative;
+  bottom: -2px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background: #fff;
+  width: 100%;
+  padding: 5px 24px;
+  font-size: 15px;
+  display: none;
+}
+.ulsel > ul li {
+  padding: 5px 0;
 }
 
 .needblt {
@@ -1142,44 +1191,49 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   background: url(../images/sub_commonbg01.png) no-repeat center center;
 }
 .sub_commonwrap.sub01 > div::after {
-  background: url(../images/sub_commonbg01.png) no-repeat center center;
+  background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
 }
 .sub_commonwrap.sub02 {
   background: url(../images/sub_commonbg02.png) no-repeat center center;
 }
 .sub_commonwrap.sub02 > div::after {
-  background: url(../images/sub_commonbg02.png) no-repeat center center;
+  background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
 }
 .sub_commonwrap.sub03 {
   background: url(../images/sub_commonbg03.png) no-repeat center center;
 }
 .sub_commonwrap.sub03 > div::after {
-  background: url(../images/sub_commonbg03.png) no-repeat center center;
+  background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
 }
 .sub_commonwrap.sub04 {
   background: url(../images/sub_commonbg04.png) no-repeat center center;
 }
 .sub_commonwrap.sub04 > div::after {
-  background: url(../images/sub_commonbg04.png) no-repeat center center;
+  background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
 }
 .sub_commonwrap.sub05 {
   background: url(../images/sub_commonbg05.png) no-repeat center center;
 }
 .sub_commonwrap.sub05 > div::after {
-  background: url(../images/sub_commonbg05.png) no-repeat center center;
+  background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
 }
 .sub_commonwrap .lnbwrap {
   position: absolute;
   width: 100%;
-  bottom: 20px;
+  bottom: 50px;
 }
 .sub_commonwrap .lnbwrap .container {
   display: flex;
+  gap: 0 20px;
   border-radius: 60px;
   background: rgba(0, 40, 87, 0.8);
-  justify-content: space-between;
   align-items: center;
   padding: 27px 21px;
+}
+.sub_commonwrap .lnbwrap .container > div {
+  display: flex;
+  gap: 0 20px;
+  margin-right: auto;
 }
 .sub_commonwrap .lnbwrap .container .nice-select {
   width: 300px;
@@ -1195,11 +1249,28 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .sub_commonwrap .lnbwrap .container .nice-select .list {
   color: #000;
 }
-.sub_commonwrap .lnbwrap .container button {
+.sub_commonwrap .lnbwrap .container > button {
   width: 64px;
   height: 64px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_commonwrap .lnbwrap .container > button::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+}
+.sub_commonwrap .lnbwrap .container > button.home::after {
+  background: url(../images/lnb_home.png) no-repeat center center;
+}
+.sub_commonwrap .lnbwrap .container > button.share::after {
+  background: url(../images/lnb_share.png) no-repeat center center;
+}
+.sub_commonwrap .lnbwrap .container > button.print::after {
+  background: url(../images/lnb_print.png) no-repeat center center;
 }
 .sub_commonwrap .sub_titwrap {
   width: 100%;
@@ -1216,15 +1287,18 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 640px;
   border-radius: 400px;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
 }
 .sub_commonwrap .sub_titwrap h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
   width: 810px;
   height: 286px;
-  position: relative;
   background: rgba(0, 0, 0, 0.3);
   padding: 0 70px;
   display: flex;
