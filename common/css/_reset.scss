@@ -131,13 +131,13 @@ li {
     list-style-type: none;
 }
 
-ul:after,
+/* ul:after,
 ol:after,
 dl:after {
     display: block;
     clear: both;
     content: "";
-}
+} */
 
 a {
     color: inherit;

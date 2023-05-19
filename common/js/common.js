@@ -19,6 +19,13 @@ $(document).ready(function () {
             $(this).siblings().slideDown();
         }
     });
+
+    $('.pagination ul li a').on('click',function(){
+        $('.pagination ul li a').removeClass()
+        $(this).addClass('active')
+    })
+
+
 });
 
     
@@ -33,3 +40,5 @@ $(document).ready(function () {
         $(".popup_modal").removeClass("poped");
         $(".wrapper").removeClass("modaled");
     });
+
+    
