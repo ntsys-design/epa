@@ -631,6 +631,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .ulsel > button::after {
   content: "";
+  transition: 0.3s;
   width: 18px;
   height: 18px;
   position: absolute;
@@ -1430,7 +1431,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .board .brd_list ul {
   border-top: 2px solid #5992FF;
-  margin: 0 10px;
 }
 .board .brd_list ul li {
   border-bottom: 1px solid #999999;

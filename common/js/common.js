@@ -8,19 +8,22 @@ $(document).ready(function () {
         $(".tab_con_list > div").eq($(this).index()).addClass("active");
     });
 
-    $(".qline").click(function () {
-        if ($(this).hasClass("opened")) {
-            $(this).removeClass("opened");
-            $(this).siblings().slideUp();
-        } else {
-            $(".aline").slideUp();
-            $(".qline").removeClass("opened");
-            $(this).addClass("opened");
-            $(this).siblings().slideDown();
-        }
-    });
 
-    $('.pagination ul li a').on('click',function(){
+    //공용 셀렉트
+  $(".ulsel_btn").on("click", function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(this).siblings().fadeOut(100);
+    } else {
+      $(this).addClass("open");
+      $(this).siblings().fadeIn(100);
+    }
+  });
+
+    
+    $('.pagination ul li a').on('click',function(e){
+        e.preventDefault();
         $('.pagination ul li a').removeClass()
         $(this).addClass('active')
     })
