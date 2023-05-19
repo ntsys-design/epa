@@ -21,6 +21,9 @@ $(document).ready(function () {
     }
   });
 
+  
+
+
     
     $('.pagination ul li a').on('click',function(e){
         e.preventDefault();
@@ -30,18 +33,3 @@ $(document).ready(function () {
 
 
 });
-
-    
-    // 회원탈퇴 팝업열기
-    $(document).on("click", ".exp_btn", function (e) {
-        var target = $(".popup_wrap");
-        $(target).parent().addClass("poped");
-        $(".wrapper").addClass("modaled");
-    });
-
-    $(".btn_close").on("click", function () {
-        $(".popup_modal").removeClass("poped");
-        $(".wrapper").removeClass("modaled");
-    });
-
-    

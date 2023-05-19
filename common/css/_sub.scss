@@ -202,7 +202,60 @@
         margin-bottom: 75px;
     }
 }
+// sub01
+.exhb_slide {
+    overflow: hidden;
+    margin-bottom: 80px;
+}
 
+article {
+    .artcl_tit {
+        font-size: 40px;
+        font-family: 'nsn-b';
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .artclinfo_list {
+        > li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0 80px;
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: unset;
+            }
+            > span {
+                display: block;
+                width: 128px;
+                flex-shrink: 0;
+                color: #444;
+                border: 3px solid #6B80FF;
+                border-radius: 20px;
+                text-align: center;
+                padding: 7px 0;
+            }
+            p {
+                align-self: center;
+            }
+            .logo_list {
+                align-self: center;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                gap: 20px 0;
+                > li {
+                    width: 25%;
+                    height: 38px;
+                    flex-shrink: 0;
+                    border: 1px solid red;
+                }
+            }
+        }
+    }
+
+}
 //  sub04 게시판
 .board {
     .brd_top{

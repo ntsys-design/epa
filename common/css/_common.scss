@@ -314,6 +314,10 @@ footer {
     }
 
     &.blt_leaf {
+        font-size: 24px;
+        font-family: 'nsn-b';
+        color: #444;
+        margin-bottom: 30px;
         &::before {
             background: url(../images/blt_leaf.png) no-repeat center center;
         }

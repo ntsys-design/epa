@@ -669,6 +669,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 30px;
   display: block;
 }
+.needblt.blt_leaf {
+  font-size: 24px;
+  font-family: "nsn-b";
+  color: #444;
+  margin-bottom: 30px;
+}
 .needblt.blt_leaf::before {
   background: url(../images/blt_leaf.png) no-repeat center center;
 }
@@ -1366,6 +1372,53 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #234292;
   text-align: center;
   margin-bottom: 75px;
+}
+
+.exhb_slide {
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+article .artcl_tit {
+  font-size: 40px;
+  font-family: "nsn-b";
+  text-align: center;
+  margin-bottom: 40px;
+}
+article .artclinfo_list > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 80px;
+  margin-bottom: 40px;
+}
+article .artclinfo_list > li:last-child {
+  margin-bottom: unset;
+}
+article .artclinfo_list > li > span {
+  display: block;
+  width: 128px;
+  flex-shrink: 0;
+  color: #444;
+  border: 3px solid #6B80FF;
+  border-radius: 20px;
+  text-align: center;
+  padding: 7px 0;
+}
+article .artclinfo_list > li p {
+  align-self: center;
+}
+article .artclinfo_list > li .logo_list {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px 0;
+}
+article .artclinfo_list > li .logo_list > li {
+  width: 25%;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid red;
 }
 
 .board .brd_top {
