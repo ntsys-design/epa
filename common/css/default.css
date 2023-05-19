@@ -611,6 +611,14 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   background-position-x: -87px;
 }
 
+.ta_l {
+  text-align: left;
+}
+
+.ta_c {
+  text-align: center;
+}
+
 .ulsel {
   width: 300px;
   height: 64px;
@@ -1419,6 +1427,33 @@ article .artclinfo_list > li .logo_list > li {
   height: 38px;
   flex-shrink: 0;
   border: 1px solid red;
+}
+article .artclinfo_list > li .tablewrap table {
+  border-collapse: collapse;
+  text-align: center;
+}
+article .artclinfo_list > li .tablewrap thead tr {
+  color: #fff;
+  background: #6B80FF;
+  text-align: center;
+}
+article .artclinfo_list > li .tablewrap thead tr td {
+  padding: 10px 0;
+}
+article .artclinfo_list > li .tablewrap thead tr td:first-of-type {
+  text-align: center;
+}
+article .artclinfo_list > li .tablewrap tbody tr td {
+  border: 1px solid #999;
+  border-right: none;
+  height: 120px;
+  border-top: none;
+}
+article .artclinfo_list > li .tablewrap tbody tr td:first-of-type {
+  border-right: 1px solid #999;
+}
+article .artclinfo_list > li .tablewrap tbody tr td.pl20 {
+  padding-left: 20px;
 }
 
 .board .brd_top {

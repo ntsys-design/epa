@@ -252,6 +252,42 @@ article {
                     border: 1px solid red;
                 }
             }
+            .tablewrap {
+                table {
+                    border-collapse: collapse;
+                    text-align: center;
+                }
+                thead {
+                    tr {
+                        color: #fff;
+                        background: #6B80FF;
+                        text-align: center;
+                        td {
+                            padding: 10px 0;
+                            &:first-of-type {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            border: 1px solid #999;
+                            border-right: none;
+                            height: 120px;
+                            border-top: none;
+                            &:first-of-type {
+                                border-right: 1px solid #999;
+                            }
+
+                            &.pl20 {
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
