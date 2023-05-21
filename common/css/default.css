@@ -1434,6 +1434,7 @@ article .artclinfo_list > li .tablewrap table {
 }
 article .artclinfo_list > li .tablewrap thead tr {
   color: #fff;
+  border: 1px solid #6B80FF;
   background: #6B80FF;
   text-align: center;
 }
@@ -1442,6 +1443,9 @@ article .artclinfo_list > li .tablewrap thead tr td {
 }
 article .artclinfo_list > li .tablewrap thead tr td:first-of-type {
   text-align: center;
+}
+article .artclinfo_list > li .tablewrap tbody tr {
+  border: 1px solid #999;
 }
 article .artclinfo_list > li .tablewrap tbody tr td {
   border: 1px solid #999;
