@@ -31,5 +31,13 @@ $(document).ready(function () {
         $(this).addClass('active')
     })
 
-
+    $('.sub_tab_list li').on('click',function(e){
+        e.preventDefault();
+        let idx=$(this).index()
+        $('.sub_tab_list li').removeClass('on')
+        $(this).addClass('on')
+        $('.sub_con_list div').stop().hide()
+        $('.sub_con_list div').eq(idx).stop().show()
+    })
+    
 });
