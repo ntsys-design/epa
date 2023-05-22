@@ -67,7 +67,8 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-    background: rgba(0,0,0,0.5);
+    // background: rgba(0,0,0,0.5);
+    background: #fff;
 
     &.scrolled {
         background: #fff;
@@ -123,17 +124,17 @@ header {
 
             li {
                 a {
-                    color: #ccc;
+                    color: #999;
                     display: block;
                     &:hover {
-                        color: #fff;
+                        color: #000;
                     }
                 }
 
                 
                 &.active {
                     a {
-                        color: #fff;
+                        color: #000;
                     }
                 }
             }
@@ -151,10 +152,10 @@ header {
             cursor: pointer;
 
             &.search_btn {
-                background: url(../images/hdr_search_btn.png) no-repeat center center;
+                background: url(../images/hdr_search_btn_b.png) no-repeat center center;
             }
             &.menu_btn {
-                background: url(../images/hdr_menu_btn.png) no-repeat center center;
+                background: url(../images/hdr_menu_btn_b.png) no-repeat center center;
             }
         }
     }
