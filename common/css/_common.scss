@@ -194,28 +194,50 @@ footer {
             .ftt_right {
                 gap: 0 10px;
                 width: 50%;
-                .nice-select {
-                    width: 33% !important;
-                    &:after {
-                        content: "";
-                        background: url(../images/select_down.png);
-                        width: 15px !important;
-                        height: 8px !important;
-                        background-size: cover;
-                        transform: unset !important;
-                        border: none !important;
-                    }
-                    &.open:after {
-                        transform: rotate(-180deg) !important;
-                    }
-                    .list {
-                        margin-top: unset;
-                        margin-bottom: 4px;
-                        top: unset;
-                        bottom: 100%;
-                        display: flex;
-                        flex-direction: column-reverse;
-                        width: 100%;
+                .ulsel {
+                    &.rvs {
+                        width: 33% !important;
+                        height: 44px;
+                        position: relative;
+
+                        button {
+                            color: #000;
+                            padding: 0 20px 0 17px;
+                            border: 1px solid #999;
+                            border-radius: unset;
+    
+                            &::after {
+                                content: '';
+                                transition: .3s;
+                                width: 12px;
+                                height: 12px;
+                                position: absolute;
+                                transform: translateY(-50%);
+                                top: 50%;
+                                right: 20px;
+                                background: url(../images/footer_select_up.png) no-repeat center center;
+                            }
+                            &.open {
+                                &::after {
+                                    transform: translateY(-50%) rotate(180deg);
+                                }
+                            }
+                        }
+                        > ul {
+                            position: absolute;
+                            bottom: calc(100% + 2px);
+                            border-radius: unset;
+                            border: 1px solid rgba(0, 0, 0, 0.6);
+                            background: #fff;
+                            width: 100%;
+                            padding: 5px 24px;
+                            font-size: 15px;
+                            display: none;
+                    
+                            li {
+                                padding: 5px 0;
+                            }
+                        }
                     }
                 }
             }
@@ -296,15 +318,14 @@ footer {
 .ulsel {
     width: 300px;
     height: 64px;
-    border-radius: 35px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background: transparent;
     font-size: 16px;
 
     > button {
         display: block;
         width: 100%;
         height: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 35px;
         padding: 0 30px 0 22px;
         text-align: left;
         word-break: keep-all;
@@ -388,6 +409,17 @@ footer {
     &.blt_donut {
         &::before {
             background: url(../images/blt_donut.png) no-repeat center center;
+        }
+    }
+    &.blt_dot {
+        &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: #000;
+            border-radius: 50%;
+            position: relative;
+            top: -3px;
         }
     }
     &.blt_bar {

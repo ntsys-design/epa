@@ -245,12 +245,30 @@ article {
               border-right: none;
               height: 120px;
               border-top: none;
+              padding: 20px;
               &:first-of-type {
                 border-right: 1px solid #999;
               }
-
+              b {
+                font-size: 20px;
+                color: #3754FF;
+                font-family: 'nsn-b';
+              }
+              &.pl10 {
+                padding-left: 10px;
+              }
               &.pl20 {
                 padding-left: 20px;
+              }
+              ul {
+                margin-top: 5px;
+                li {
+                    line-height: 28px;
+
+                    &.blt_star, &.blt_bar {
+                        padding-left: 20px;
+                    }
+                }
               }
             }
           }

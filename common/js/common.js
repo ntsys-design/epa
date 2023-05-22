@@ -35,6 +35,8 @@ $(document).ready(function () {
 
     //공용 셀렉트
   $(".ulsel_btn").on("click", function (e) {
+    $(this).parent().siblings().find('.ulsel_btn').removeClass("open");
+    $(this).parent().siblings().find('.ulsel_btn').siblings().fadeOut(100);
     e.preventDefault();
     if ($(this).hasClass("open")) {
       $(this).removeClass("open");
@@ -42,6 +44,15 @@ $(document).ready(function () {
     } else {
       $(this).addClass("open");
       $(this).siblings().fadeIn(100);
+    }
+  });
+    // 외부영역 클릭 시 셀렉트 닫기
+  $(document).mouseup(function (e){
+    e.stopPropagation();
+    var selBox = $(".ulsel");
+    if(selBox.has(e.target).length === 0){
+      $(".ulsel_btn").removeClass("open");
+      $(".ulsel_list").fadeOut(100);
     }
   });
 
