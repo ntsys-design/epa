@@ -567,8 +567,8 @@ footer .footer_top .container .ftt_right .ulsel.rvs button {
 footer .footer_top .container .ftt_right .ulsel.rvs button::after {
   content: "";
   transition: 0.3s;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -580,6 +580,7 @@ footer .footer_top .container .ftt_right .ulsel.rvs button.open::after {
 }
 footer .footer_top .container .ftt_right .ulsel.rvs > ul {
   position: absolute;
+  z-index: 4;
   bottom: calc(100% + 2px);
   border-radius: unset;
   border: 1px solid rgba(0, 0, 0, 0.6);
