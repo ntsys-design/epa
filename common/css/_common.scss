@@ -63,7 +63,7 @@ header {
     width: 100%;
     height: 80px;
     padding: 0 30px;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 999;
@@ -267,7 +267,7 @@ footer {
         display: block;
         width: 100%;
         height: 100%;
-        padding: 0 30px 0 18px;
+        padding: 0 30px 0 22px;
         text-align: left;
         word-break: keep-all;
         color: #fff;
@@ -308,7 +308,22 @@ footer {
 }
 
 // 공통버튼
-
+.btnwrap {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    
+    button {
+        flex-shrink: 0;
+    }
+}
+.pbl_btn {
+    width: 390px;
+    height: 96px;
+    border: 4px solid #3A7DFF;
+    font-size: 36px;
+    font-family: 'nsn-b';
+}
 // 공통불릿
 .needblt {
     display: flex;
@@ -320,7 +335,9 @@ footer {
         height: 30px;
         display: block;
     }
-
+    &.gap1 {
+        gap: 0 1px;
+    }
     &.blt_leaf {
         font-size: 24px;
         font-family: 'nsn-b';
@@ -328,6 +345,25 @@ footer {
         margin-bottom: 30px;
         &::before {
             background: url(../images/blt_leaf.png) no-repeat center center;
+        }
+    }
+    &.blt_donut {
+        &::before {
+            background: url(../images/blt_donut.png) no-repeat center center;
+        }
+    }
+    &.blt_bar {
+        &::before {
+            content: '-';
+            width: 10px;
+            height: 24px;
+        }
+    }
+    &.blt_star {
+        &::before {
+            content: '*';
+            width: 10px;
+            height: 20px;
         }
     }
 }
@@ -370,7 +406,7 @@ footer {
     }
 }
 .sub_con_list{
-    div{
+    .sub_tab_con{
         display: none;
         &:first-child{
             display: block;

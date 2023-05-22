@@ -36,8 +36,8 @@ $(document).ready(function () {
         let idx=$(this).index()
         $('.sub_tab_list li').removeClass('on')
         $(this).addClass('on')
-        $('.sub_con_list div').stop().hide()
-        $('.sub_con_list div').eq(idx).stop().show()
+        $('.sub_con_list .sub_tab_con').stop().hide()
+        $('.sub_con_list .sub_tab_con').eq(idx).stop().show()
     })
     
 });
