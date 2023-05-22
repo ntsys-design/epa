@@ -261,6 +261,14 @@ article {
 }
 // sub02
 .sub_tab_con {
+    .needflex {
+        &.twins {
+            > article {
+                width: 49%;
+                flex-shrink: 0;
+            }
+        }
+    }
     h6 {
         font-size: 18px;
         font-family: 'nsn-b';

@@ -443,10 +443,30 @@ header {
   width: 100%;
   height: 80px;
   padding: 0 30px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+}
+header.scrolled {
+  background: #fff;
+  box-shadow: 0 0 1px #000;
+}
+header.scrolled .gnbwrap li a {
+  color: #888;
+}
+header.scrolled .gnbwrap li a:hover {
+  color: #000;
+}
+header.scrolled .gnbwrap li.active a {
+  color: #000;
+}
+header.scrolled .utilwrap .search_btn {
+  background: url(../images/hdr_search_btn_b.png) no-repeat center center;
+}
+header.scrolled .utilwrap .menu_btn {
+  background: url(../images/hdr_menu_btn_b.png) no-repeat center center;
 }
 header > div {
   height: 100%;
@@ -473,8 +493,14 @@ header .gnbwrap ul::after {
   content: none;
 }
 header .gnbwrap ul li a {
-  color: #fff;
+  color: #ccc;
   display: block;
+}
+header .gnbwrap ul li a:hover {
+  color: #fff;
+}
+header .gnbwrap ul li.active a {
+  color: #fff;
 }
 header .utilwrap {
   display: flex;
@@ -1498,6 +1524,10 @@ article .artclinfo_list > li .tablewrap tbody tr td.pl20 {
   padding-left: 20px;
 }
 
+.sub_tab_con .needflex.twins > article {
+  width: 49%;
+  flex-shrink: 0;
+}
 .sub_tab_con h6 {
   font-size: 18px;
   font-family: "nsn-b";

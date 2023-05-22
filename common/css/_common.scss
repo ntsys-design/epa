@@ -63,11 +63,39 @@ header {
     width: 100%;
     height: 80px;
     padding: 0 30px;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    // background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.5);
+
+    &.scrolled {
+        background: #fff;
+        box-shadow: 0 0 1px #000 ;
+        .gnbwrap {
+            li {
+                a {
+                    color: #888;
+                    &:hover {
+                        color: #000;
+                    }
+                }
+                &.active {
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .utilwrap {
+            .search_btn {
+                background: url(../images/hdr_search_btn_b.png) no-repeat center center;
+            }
+            .menu_btn {
+                background: url(../images/hdr_menu_btn_b.png) no-repeat center center;
+            }
+        }
+    }
 
     > div {
         height: 100%;
@@ -95,8 +123,18 @@ header {
 
             li {
                 a {
-                    color: #fff;
+                    color: #ccc;
                     display: block;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+
+                
+                &.active {
+                    a {
+                        color: #fff;
+                    }
                 }
             }
         }

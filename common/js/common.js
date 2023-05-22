@@ -1,4 +1,28 @@
 $(document).ready(function () {
+  // 헤더 scrolled
+  // var headerTop = $('header').scrollTop();
+  
+  // $(window).scroll(function() {
+  //   var window = $(this).scrollTop();
+
+  //   if(headerTop <= window) {
+  //     $('header').addClass("scrolled");
+  //   } else {
+  //     $('header').removeClass("scrolled");
+  //   }
+  // })
+
+  $(window).scroll(function () {
+    let scrTop = $(this).scrollTop()
+    if (scrTop > 80) {
+      $('header').addClass("scrolled");
+      $('header .logowrap h1 img').attr('src','../common/images/header_logo_c.png');
+    } else {
+      $('header').removeClass("scrolled");
+      $('header .logowrap h1 img').attr('src','../common/images/header_logo.png');
+    }
+  })
+
     $(".tab_con_list > div").first().addClass('active')
     $(".tab_list > li").on('click' ,function (e) {
         e.preventDefault();
