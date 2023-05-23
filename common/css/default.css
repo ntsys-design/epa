@@ -718,6 +718,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .btnwrap button {
   flex-shrink: 0;
+  colro: #000;
 }
 
 .pbl_btn {
