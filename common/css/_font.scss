@@ -1,36 +1,41 @@
-/* NanumSquareNeo */
+  // SUIT
+
+  @font-face {
+    font-family: 'suit-sb';
+    src: url('../fonts/suit-semiBold.eot');
+    src: url('../fonts/suit-semiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/suit-semiBold.woff2') format('woff2'),
+        url('../fonts/suit-semiBold.woff') format('woff'),
+        url('../fonts/suit-semiBold.ttf') format('truetype'),
+        url('../fonts/suit-semiBold.svg#suit-semiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
-    font-family: 'NSN-R';
-    src: url('../fonts/NanumSquareNeoTTF-bRg.eot');
-    src: url('../fonts/NanumSquareNeoTTF-bRg.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NanumSquareNeoTTF-bRg.woff2') format('woff2'),
-        url('../fonts/NanumSquareNeoTTF-bRg.woff') format('woff'),
-        url('../fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+    font-family: 'suit-b';
+    src: url('../fonts/suit-bold.eot');
+    src: url('../fonts/suit-bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/suit-bold.woff2') format('woff2'),
+        url('../fonts/suit-bold.woff') format('woff'),
+        url('../fonts/suit-bold.ttf') format('truetype'),
+        url('../fonts/suit-bold.svg#suit-bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'suit-r';
+    src: url('../fonts/suit-regular.eot');
+    src: url('../fonts/suit-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/suit-regular.woff2') format('woff2'),
+        url('../fonts/suit-regular.woff') format('woff'),
+        url('../fonts/suit-regular.ttf') format('truetype'),
+        url('../fonts/suit-regular.svg#suit-regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'NSN-B';
-    src: url('../fonts/NanumSquareNeoTTF-cBd.eot');
-    src: url('../fonts/NanumSquareNeoTTF-cBd.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NanumSquareNeoTTF-cBd.woff2') format('woff2'),
-        url('../fonts/NanumSquareNeoTTF-cBd.woff') format('woff'),
-        url('../fonts/NanumSquareNeo-cBd.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'NSN-EB';
-    src: url('../fonts/NanumSquareNeoTTF-dEb.eot');
-    src: url('../fonts/NanumSquareNeoTTF-dEb.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NanumSquareNeoTTF-dEb.woff2') format('woff2'),
-        url('../fonts/NanumSquareNeoTTF-dEb.woff') format('woff'),
-        url('../fonts/NanumSquareNeo-dEb.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
+}
+

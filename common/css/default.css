@@ -1,26 +1,25 @@
 @charset "UTF-8";
-/* NanumSquareNeo */
 @font-face {
-  font-family: "NSN-R";
-  src: url("../fonts/NanumSquareNeoTTF-bRg.eot");
-  src: url("../fonts/NanumSquareNeoTTF-bRg.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumSquareNeoTTF-bRg.woff2") format("woff2"), url("../fonts/NanumSquareNeoTTF-bRg.woff") format("woff"), url("../fonts/NanumSquareNeo-bRg.ttf") format("truetype");
+  font-family: "suit-sb";
+  src: url("../fonts/suit-semiBold.eot");
+  src: url("../fonts/suit-semiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-semiBold.woff2") format("woff2"), url("../fonts/suit-semiBold.woff") format("woff"), url("../fonts/suit-semiBold.ttf") format("truetype"), url("../fonts/suit-semiBold.svg#suit-semiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "suit-b";
+  src: url("../fonts/suit-bold.eot");
+  src: url("../fonts/suit-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-bold.woff2") format("woff2"), url("../fonts/suit-bold.woff") format("woff"), url("../fonts/suit-bold.ttf") format("truetype"), url("../fonts/suit-bold.svg#suit-bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "suit-r";
+  src: url("../fonts/suit-regular.eot");
+  src: url("../fonts/suit-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-regular.woff2") format("woff2"), url("../fonts/suit-regular.woff") format("woff"), url("../fonts/suit-regular.ttf") format("truetype"), url("../fonts/suit-regular.svg#suit-regular") format("svg");
   font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "NSN-B";
-  src: url("../fonts/NanumSquareNeoTTF-cBd.eot");
-  src: url("../fonts/NanumSquareNeoTTF-cBd.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumSquareNeoTTF-cBd.woff2") format("woff2"), url("../fonts/NanumSquareNeoTTF-cBd.woff") format("woff"), url("../fonts/NanumSquareNeo-cBd.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "NSN-EB";
-  src: url("../fonts/NanumSquareNeoTTF-dEb.eot");
-  src: url("../fonts/NanumSquareNeoTTF-dEb.eot?#iefix") format("embedded-opentype"), url("../fonts/NanumSquareNeoTTF-dEb.woff2") format("woff2"), url("../fonts/NanumSquareNeoTTF-dEb.woff") format("woff"), url("../fonts/NanumSquareNeo-dEb.ttf") format("truetype");
-  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -120,7 +119,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #222;
-  font-family: "NSN-R";
+  font-family: "suit-r";
   letter-spacing: -0.05em;
 }
 
@@ -426,7 +425,6 @@ textarea {
   background-color: #333;
   color: #fff;
   font-size: 20px;
-  font-weight: 700;
 }
 .skip_navi a:hover, .skip_navi a:focus {
   top: 0;
@@ -488,7 +486,7 @@ header .gnbwrap ul {
   display: flex;
   align-items: center;
   gap: 0 80px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   font-size: 20px;
 }
 header .gnbwrap ul::after {
@@ -538,7 +536,7 @@ footer .footer_top .container .ftt_left {
 }
 footer .footer_top .container .ftt_left li {
   position: relative;
-  font-family: "nsn-r";
+  font-family: "suit-r";
 }
 footer .footer_top .container .ftt_left li::after {
   content: "/";
@@ -718,7 +716,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .btnwrap button {
   flex-shrink: 0;
-  colro: #000;
+  color: #000;
 }
 
 .pbl_btn {
@@ -726,7 +724,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 96px;
   border: 4px solid #3A7DFF;
   font-size: 36px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
 }
 
 .needblt {
@@ -745,7 +743,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .needblt.blt_leaf {
   font-size: 24px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   color: #444;
   margin-bottom: 30px;
 }
@@ -845,19 +843,19 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 80px;
   letter-spacing: -8px;
   margin-bottom: 35px;
-  font-family: "nsn-l";
+  font-family: "suit-r";
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span {
   display: block;
   line-height: 80px;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span em {
-  font-family: "nsn-b";
+  font-family: "suit-b";
   color: #007aff;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span.mv_eng {
   font-size: 46px;
-  font-family: "nsn-r";
+  font-family: "suit-r";
   letter-spacing: -2.6px;
   line-height: 56px;
 }
@@ -881,7 +879,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-radius: 40px;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap .needflex a {
-  font-family: "nsn-b";
+  font-family: "suit-b";
   font-size: 24px;
   color: #222;
   position: relative;
@@ -933,7 +931,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .qmenuwrap .container .qm_txt em {
   display: block;
-  font-family: "nsn-eb";
+  font-family: "suit-sb";
 }
 .contents.main .qmenuwrap .container .slidewrap {
   width: calc(100% - 300px);
@@ -1035,7 +1033,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_left .tab_list li {
   font-size: 22px;
-  font-family: "nsn-r";
+  font-family: "suit-r";
   border-bottom: 11px solid transparent;
   width: 130px;
   height: 55px;
@@ -1044,7 +1042,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .contents.main .noticewrap .div_left .tab_list li.active {
   font-size: 26px;
   border-color: #007aff;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   position: relative;
   z-index: 6;
 }
@@ -1087,7 +1085,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul li a dl dt {
   font-size: 18px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1123,7 +1121,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_right .noti_top h4 {
   font-size: 26px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
 }
 .contents.main .noticewrap .div_right .noti_top .swiper-pagination {
   margin-left: auto;
@@ -1159,7 +1157,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .noti_tit {
   font-size: 20px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   color: #222;
   letter-spacing: -2px;
   line-height: 30px;
@@ -1168,7 +1166,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .noti_tit .noti_num {
   display: block;
   font-size: 26px;
-  font-family: "nsn-eb";
+  font-family: "suit-sb";
   color: #1281fe;
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .imgwrap {
@@ -1181,7 +1179,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .newswrap .sec_tit {
   font-size: 60px;
-  font-family: "nsn-eb";
+  font-family: "suit-sb";
   color: #222;
   text-align: center;
   margin-bottom: 30px;
@@ -1225,7 +1223,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .newswrap .newstab_list .swiper-slide-active {
   font-size: 30px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
 }
 .contents.main .newswrap .news_tab_con {
   overflow: hidden;
@@ -1236,8 +1234,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .newswrap .newscon_list li {
   width: 100%;
-  flex-shrink: 0;
   display: none;
+}
+.contents.main .newswrap .newscon_list li.active {
+  display: block;
 }
 .contents.main .newswrap .newscon_list li .newscon_item {
   display: flex;
@@ -1256,16 +1256,16 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: block;
   width: 90px;
   height: 26px;
-  line-height: 30px;
+  line-height: 26px;
   background: #007aff;
   color: #fff;
   margin-bottom: 10px;
-  font-family: "nsn-r";
+  font-family: "suit-r";
   font-size: 16px;
 }
 .contents.main .newswrap .newscon_list li .newscon_item article a .atc_textwrap .atc_tit {
   text-align: left;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1280,11 +1280,8 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   text-align: left;
   display: block;
   font-size: 14px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   color: #666;
-}
-.contents.main .newswrap .newscon_list li.active {
-  display: block;
 }
 .contents.main .sub_visualwrap {
   width: 100%;
@@ -1306,10 +1303,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #ffffff;
   display: block;
   font-size: 40px;
-  font-family: "nsn-l";
 }
 .contents.main .sub_visualwrap .bgslide h2 span em {
-  font-family: "nsn-r";
+  font-family: "suit-r";
   font-size: 60px;
   padding-bottom: 40px;
 }
@@ -1328,6 +1324,24 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-radius: 21px;
   line-height: 150%;
 }
+.contents.main .sub_visualwrap .bgslide .swiper-pagination {
+  position: absolute;
+  width: unset;
+  left: 17%;
+  bottom: 56px;
+  z-index: 5;
+}
+.contents.main .sub_visualwrap .bgslide .swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background: #d4d5d9;
+  opacity: 1;
+}
+.contents.main .sub_visualwrap .bgslide .swiper-pagination .swiper-pagination-bullet-active {
+  width: 64px;
+  background: #0044ff;
+  border-radius: 40px;
+}
 .contents.main .sub_visualwrap .sv01 {
   background: url(../images/sub_visual01.png) no-repeat center center;
 }
@@ -1336,24 +1350,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .sub_visualwrap .sv03 {
   background: url(../images/sub_visual03.png) no-repeat center center;
-}
-.contents.main .sub_visualwrap .swiper-pagination {
-  position: absolute;
-  width: unset;
-  left: 17%;
-  bottom: 56px;
-  z-index: 5;
-}
-.contents.main .sub_visualwrap .swiper-pagination .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  background: #d4d5d9;
-  opacity: 1;
-}
-.contents.main .sub_visualwrap .swiper-pagination .swiper-pagination-bullet-active {
-  width: 64px;
-  background: #0044ff;
-  border-radius: 40px;
 }
 
 .sub_commonwrap {
@@ -1482,7 +1478,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   z-index: 6;
   text-align: center;
   font-size: 40px;
-  font-weight: 700;
+  font-family: "suit-b";
   color: #fff;
 }
 .sub_commonwrap .sub_titwrap h2 b {
@@ -1507,7 +1503,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 110px;
 }
 .contents.sub h3.subcon_title {
-  font-weight: 700;
+  font-family: "suit-b";
   font-size: 64px;
   color: #234292;
   text-align: center;
@@ -1521,7 +1517,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 article .artcl_tit {
   font-size: 40px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1592,7 +1588,7 @@ article .artclinfo_list > li .tablewrap tbody tr td:first-of-type {
 article .artclinfo_list > li .tablewrap tbody tr td b {
   font-size: 20px;
   color: #3754FF;
-  font-family: "nsn-b";
+  font-family: "suit-b";
 }
 article .artclinfo_list > li .tablewrap tbody tr td.pl10 {
   padding-left: 10px;
@@ -1616,7 +1612,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
 }
 .sub_tab_con h6 {
   font-size: 18px;
-  font-family: "nsn-b";
+  font-family: "suit-b";
   margin-bottom: 16px;
   padding-left: 30px;
 }
@@ -1647,7 +1643,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   gap: 40px;
 }
 .board .brd_top .brd_tl span {
-  font-weight: 700;
+  font-family: "suit-sb";
   position: relative;
 }
 .board .brd_top .brd_tl span:first-child:after {
@@ -1692,7 +1688,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   width: 120px;
   background: #5992ff;
   color: #ffffff;
-  font-weight: 700;
+  font-family: "suit-sb";
 }
 .board .brd_list {
   font-weight: 700;
@@ -1798,7 +1794,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   justify-content: center;
   align-items: center;
   position: relative;
-  font-weight: 700;
+  font-family: "suit-sb";
 }
 .pagination_wrap .pagination ul > li a.active:after {
   position: absolute;

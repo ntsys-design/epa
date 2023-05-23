@@ -31,20 +31,20 @@
           font-size: 80px;
           letter-spacing: -8px;
           margin-bottom: 35px;
-          font-family: "nsn-l";
+          font-family: "suit-r";
 
           span {
             display: block;
             line-height: 80px;
 
             em {
-              font-family: "nsn-b";
+              font-family: "suit-b";
               color: #007aff;
             }
 
             &.mv_eng {
               font-size: 46px;
-              font-family: "nsn-r";
+              font-family: "suit-r";
               letter-spacing: -2.6px;
               line-height: 56px;
             }
@@ -71,7 +71,7 @@
           }
 
           a {
-            font-family: "nsn-b";
+            font-family: "suit-b";
             font-size: 24px;
             color: #222;
             position: relative;
@@ -128,7 +128,7 @@
 
         em {
           display: block;
-          font-family: "nsn-eb";
+          font-family: "suit-sb";
         }
       }
       .slidewrap {
@@ -235,7 +235,7 @@
         }
         li {
           font-size: 22px;
-          font-family: "nsn-r";
+          font-family: "suit-r";
           border-bottom: 11px solid transparent;
           width: 130px;
           height: 55px;
@@ -244,7 +244,7 @@
           &.active {
             font-size: 26px;
             border-color: #007aff;
-            font-family: "nsn-b";
+            font-family: "suit-b";
             position: relative;
             z-index: 6;
           }
@@ -290,7 +290,7 @@
 
                   dt {
                     font-size: 18px;
-                    font-family: "nsn-b";
+                    font-family: "suit-b";
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
@@ -332,7 +332,7 @@
         align-items: center;
         h4 {
           font-size: 26px;
-          font-family: "nsn-b";
+          font-family: "suit-b";
         }
         .swiper-pagination {
           margin-left: auto;
@@ -368,7 +368,7 @@
 
             .noti_tit {
               font-size: 20px;
-              font-family: 'nsn-b';
+              font-family: 'suit-b';
               color: #222;
               letter-spacing: -2px;
               line-height: 30px;
@@ -377,7 +377,7 @@
               .noti_num {
                 display: block;
                 font-size: 26px;
-                font-family: 'nsn-eb';
+                font-family: 'suit-sb';
                 color: #1281fe;
               }
             }
@@ -397,7 +397,7 @@
     background: #eee;
     .sec_tit {
       font-size: 60px;
-      font-family: "nsn-eb";
+      font-family: "suit-sb";
       color: #222;
       text-align: center;
       margin-bottom: 30px;
@@ -443,7 +443,7 @@
 
       .swiper-slide-active {
         font-size: 30px;
-        font-family: "nsn-b";
+        font-family: "suit-b";
       }
     }
     .news_tab_con {
@@ -455,8 +455,11 @@
 
       li {
         width: 100%;
-        flex-shrink: 0;
         display: none;
+
+        &.active {
+          display: block;
+        }
 
         .newscon_item {
           display: flex;
@@ -476,16 +479,16 @@
                   display: block;
                   width: 90px;
                   height: 26px;
-                  line-height: 30px;
+                  line-height: 26px;
                   background: #007aff;
                   color: #fff;
                   margin-bottom: 10px;
-                  font-family: "nsn-r";
+                  font-family: "suit-r";
                   font-size: 16px;
                 }
                 .atc_tit {
                   text-align: left;
-                  font-family: "nsn-b";
+                  font-family: "suit-b";
                   font-size: 18px;
                   text-overflow: ellipsis;
                   overflow: hidden;
@@ -500,16 +503,12 @@
                   text-align: left;
                   display: block;
                   font-size: 14px;
-                  font-family: "nsn-b";
+                  font-family: "suit-b";
                   color: #666;
                 }
               }
             }
           }
-        }
-
-        &.active {
-          display: block;
         }
       }
     }
@@ -534,9 +533,9 @@
             color: #ffffff;
             display: block;
             font-size: 40px;
-            font-family: 'nsn-l';
+            
             em{
-              font-family: 'nsn-r';
+              font-family: 'suit-r';
               font-size: 60px;
               padding-bottom: 40px;
             }
@@ -557,6 +556,25 @@
           border-radius: 21px;
           line-height: 150%;
         }
+        .swiper-pagination {
+          position: absolute;
+          width: unset;
+          left: 17%;
+          bottom: 56px;
+          z-index: 5;
+          
+          .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            background: #d4d5d9;
+            opacity: 1;
+          }
+          .swiper-pagination-bullet-active {
+            width: 64px;
+            background: #0044ff;
+            border-radius: 40px;
+          }
+        }
     }
     .sv01 {
       background: url(../images/sub_visual01.png) no-repeat center center;
@@ -566,24 +584,6 @@
     }
     .sv03 {
       background: url(../images/sub_visual03.png) no-repeat center center;
-    }
-    .swiper-pagination {
-      position: absolute;
-      width: unset;
-      left: 17%;
-      bottom: 56px;
-      z-index: 5;
-      .swiper-pagination-bullet {
-        width: 20px;
-        height: 20px;
-        background: #d4d5d9;
-        opacity: 1;
-      }
-      .swiper-pagination-bullet-active {
-        width: 64px;
-        background: #0044ff;
-        border-radius: 40px;
-      }
     }
   }
 }
