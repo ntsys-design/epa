@@ -343,7 +343,7 @@ article {
     border: 1px solid #999999;
     padding: 0px 20px;
     height: 35px;
-    font-weight: 700;
+    font-family: 'suit-b';
     background: url(../images/board_slt.png) no-repeat 90% center;
     width: 140px;
   }
@@ -369,7 +369,7 @@ article {
     }
   }
   .brd_list {
-    font-weight: 700;
+    font-family: 'suit-b';
     ul {
       border-top: 2px solid #5992ff;
 
@@ -517,10 +517,10 @@ article {
   .greet_txt {
     width: 53.5%;
     p {
-      font-weight: 400;
+      font-family: 'suit-r';
       color: #000000;
       &.greet_p1 {
-        font-weight: 700;
+        font-family: 'suit-b';
         font-size: 40px;
         color: #666666;
         span {
