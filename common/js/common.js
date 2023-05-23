@@ -24,7 +24,17 @@ $(document).ready(function () {
   //   }
   // })
 
+//메인 News탭
+  $(".newscon_list > li").first().addClass('active')
+  $(".swiperNst ul li").on('click' ,function (e) {
+      e.preventDefault();
+      $(".swiperNst ul li").removeClass("active");
+      $(this).addClass("active");
+      $(".newscon_list > li").removeClass("active");
+      $(".newscon_list > li").eq($(this).index()).addClass("active");
+  });
 
+//공용 탭
     $(".tab_con_list > div").first().addClass('active')
     $(".tab_list > li").on('click' ,function (e) {
         e.preventDefault();

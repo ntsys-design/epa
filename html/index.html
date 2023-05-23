@@ -360,9 +360,9 @@
                             </ul>
                             <span class="news-button-next"></span>
                         </div>
-                        <div class="swiperNsc">
-                            <ul class="newscon_list swiper-wrapper">
-                                <li class="swiper-slide">
+                        <div class="news_tab_con">
+                            <ul class="newscon_list">
+                                <li>
                                     <div class="newscon_item">
                                         <article>
                                             <a href="">
@@ -447,7 +447,7 @@
                                         </article>
                                     </div>
                                 </li>
-                                <li class="swiper-slide">
+                                <li>
                                     <div class="newscon_item">
                                         <article>
                                             <a href="">
@@ -532,7 +532,7 @@
                                         </article>
                                     </div>
                                 </li>
-                                <li class="swiper-slide">
+                                <li>
                                     <div class="newscon_item">
                                         <article>
                                             <a href="">
@@ -717,7 +717,7 @@
             <!-- 퀵메뉴 스크립트 -->
             <script>
                 var swiperQmenu = new Swiper(".swiperQmenu", {
-                    slidesPerView: 5,
+                    slidesPerView: 3,
                     // spaceBetween: 30,
                     loop: true, //무한반복여부
                     // loopSlides: 1, //루프 오류시
@@ -734,6 +734,14 @@
                     },
                     observer: true,
                     observeParents: true,
+                    breakpoints: {
+                        850 : {
+                            slidesPerView: 4,
+                        },
+                        1080 : {
+                            slidesPerView: 5,
+                        }
+                    }
                 });
             </script>
             <!-- // 퀵메뉴 스크립트 -->
@@ -779,26 +787,35 @@
                     },
                     observer: true,
                     observeParents: true,
+    on:{
+      slideChangeTransitionEnd:()=>{
+        // let active_label, active_panel_id;
+        // active_label = $('.swiper-slide-active').next(); //이동이 된 직후, .swiper-slide-active로 활성화되어 있는 요소는 화면에서 보이는 요소 중 첫 번째 요소이다. 
+        // active_panel_id = active_label.children('a').attr('id');
+        // //console.log(active_panel_id);
+        // active_label.addClass('active').siblings().removeClass('active');
+        
+  
+        // for(let i = 0; i< $('.tabPanels').children().length; i++){
+        //   let labeledby, activePanel; 
+        //   activePanel = $('.tabPanels').children().eq(i); //li요소들 : tabPanel들 컨텐츠들
+        //   labeledby = activePanel.attr('aria-labeledby');
+        //   //console.log(labeledby, active_panel_id);
+        //   if(active_panel_id == labeledby){
+        //     activePanel.attr('arria-hidden','false').addClass('on').siblings().removeClass('on').attr('arria-hidden','true');
+        //   }
+        // } // fon문 End
+        let active_label, active_panel_id, tab_paneles;
+        active_label = $('.swiperNst .swiper-slide-active').next(); //이동이 된 직후, .swiper-slide-active로 활성화되어 있는 요소는 화면에서 보이는 요소 중 첫 번째 요소이다. 
+        active_panel_id = active_label.children('li').attr('id');
+        tab_paneles = $('.news_box_outer').next('.list_box').children('.newscon_list').children(); //일반 요소 자식들을 감싸는 ul
+        call_slideChangeTransitionEnd(active_label, active_panel_id, tab_paneles);
+      },//slideChangeTransitionEnd End 
+     
+  
+    
+    }, //on End 
                 });
-
-                var swiperNsc = new Swiper(".swiperNsc", {
-                    slidesPerView: "auto",
-                    // autoplay: {
-                    //   delay: 5000, //오토플레이 시간
-                    //   disableOnInteraction: false, //수동 스와이프 후 다시 자동재생
-                    // },
-                    loop: true, //무한반복여부
-                    loopSlides: 1, //루프 오류시
-
-                    centeredSlides: true, //중앙정렬모드
-
-                    navigation: false,
-                    observer: true,
-                    observeParents: true,
-                });
-
-                swiperNst.controller.control = swiperNsc;
-                swiperNsc.controller.control = swiperNst;
             </script>
             <!-- // 뉴스 스크립트 -->
             <!-- 서브비쥬얼 스크립트 -->

@@ -70,6 +70,13 @@ header {
     // background: rgba(0,0,0,0.5);
     background: #fff;
 
+    @media screen and (max-width: 1260px) {
+        .gnbwrap {
+            display: none !important;
+        }
+        
+    }
+
     &.scrolled {
         background: #fff;
         box-shadow: 0 0 1px #000 ;
@@ -77,8 +84,13 @@ header {
             li {
                 a {
                     color: #888;
+                }
+
+                @media (hover: hover) {
                     &:hover {
-                        color: #000;
+                        a {
+                            color: #000;
+                        }
                     }
                 }
                 &.active {
@@ -103,12 +115,14 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 0 80px;
     }
     .logowrap {
         flex-shrink: 0;
         width: 250px;
     }
     .gnbwrap {
+        flex-shrink: 0;
         display: flex;
         justify-content: center;
         ul {
@@ -126,8 +140,10 @@ header {
                 a {
                     color: #999;
                     display: block;
+                }
+                @media (hover: hover) {
                     &:hover {
-                        color: #000;
+                        a {color: #000;}
                     }
                 }
 

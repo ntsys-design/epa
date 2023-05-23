@@ -94,7 +94,6 @@
   // Quickmenu
   .qmenuwrap {
     .container {
-      width: 100%;
       background: #fff;
       box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.2);
       border-radius: 20px;
@@ -104,10 +103,14 @@
       display: flex;
       align-items: center;
       padding: 45px 0;
+      @media screen and (max-width : 1260px) {
+        flex-direction: column;
+        padding: 25px 0;
+      }
 
       .qm_txt {
-        flex-shrink: 0;
-        width: 300px;
+        flex-grow: 1;
+        box-sizing: border-box;
         text-align: center;
         color: #007aff;
         border-right: 2px solid #007aff;
@@ -115,6 +118,13 @@
         letter-spacing: -5px;
         padding: 20px 0;
         line-height: 36px;
+        @media screen and (max-width : 1260px) {
+          border-right: none;
+
+          em {
+            display: inline !important;
+          }
+        }
 
         em {
           display: block;
@@ -126,9 +136,19 @@
         padding: 0 50px;
         display: flex;
         gap: 0 15px;
+        @media screen and (max-width : 1260px) {
+          width: 100%;
+          padding: 0 50px;
+          gap: 0 10px;
+        }
+        @media screen and (max-width : 720px) {
+          padding: 0 30px;
+          gap: unset;
+        }
 
         .qmenu-button-prev,
         .qmenu-button-next {
+          flex-shrink: 0;
           width: 14px;
           display: block;
           height: 50px;
@@ -148,7 +168,6 @@
       .swiperQmenu {
         width: calc(100% - 48px);
         display: flex;
-        gap: 0 10px;
         justify-content: center;
         align-items: center;
         overflow: hidden;
@@ -180,11 +199,20 @@
   .noticewrap {
     margin-bottom: 80px;
     .container {
-      gap: 0 40px;
+      gap: 120px 40px;
       box-sizing: border-box;
+      @media screen and (max-width : 960px) {
+        flex-wrap: wrap;
+
+        > div {
+          width: 100% !important;
+        }
+      }
       > div {
         width: calc((100% - 40px) / 2);
         flex-shrink: 0;
+
+        
       }
     }
 
@@ -376,7 +404,7 @@
     }
     .swiperNst {
       overflow: hidden;
-      width: 760px;
+      max-width: 760px;
       margin: 0 auto;
       margin-bottom: 10px;
       position: relative;
@@ -418,7 +446,7 @@
         font-family: "nsn-b";
       }
     }
-    .swiperNsc {
+    .news_tab_con {
       overflow: hidden;
     }
     .newscon_list {
@@ -427,6 +455,8 @@
 
       li {
         width: 100%;
+        flex-shrink: 0;
+        display: none;
 
         .newscon_item {
           display: flex;
@@ -476,6 +506,10 @@
               }
             }
           }
+        }
+
+        &.active {
+          display: block;
         }
       }
     }
