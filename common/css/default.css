@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "suit-sb";
-  src: url("../fonts/suit-semiBold.eot");
-  src: url("../fonts/suit-semiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-semiBold.woff2") format("woff2"), url("../fonts/suit-semiBold.woff") format("woff"), url("../fonts/suit-semiBold.ttf") format("truetype"), url("../fonts/suit-semiBold.svg#suit-semiBold") format("svg");
+  src: url("../fonts/suit-semibold.eot");
+  src: url("../fonts/suit-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-semibold.woff2") format("woff2"), url("../fonts/suit-semibold.woff") format("woff"), url("../fonts/suit-semibold.ttf") format("truetype"), url("../fonts/suit-semibold.svg#suit-semibold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
