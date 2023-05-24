@@ -120,7 +120,6 @@ body {
   line-height: 1.4;
   color: #222;
   font-family: "SUIT-R";
-  letter-spacing: -0.05em;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -891,9 +890,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 {
   padding: 100px 25px 0;
-  width: 550px;
   font-size: 80px;
-  letter-spacing: -8px;
   margin-bottom: 35px;
   font-family: "SUIT-R";
 }
@@ -914,7 +911,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span.mv_eng {
   font-size: 46px;
   font-family: "SUIT-R";
-  letter-spacing: -2.6px;
   line-height: 56px;
 }
 @media screen and (max-width: 720px) {
@@ -985,7 +981,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #007aff;
   border-right: 2px solid #007aff;
   font-size: 48px;
-  letter-spacing: -5px;
   padding: 20px 0;
   line-height: 36px;
 }
@@ -1248,7 +1243,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 20px;
   font-family: "SUIT-B";
   color: #222;
-  letter-spacing: -2px;
   line-height: 30px;
   margin-bottom: 13px;
 }
