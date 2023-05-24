@@ -131,7 +131,7 @@
       z-index: 6;
       text-align: center;
       font-size: 40px;
-      font-family: 'suit-b';
+      font-family: 'SUIT-B';
       color: #fff;
 
       b {
@@ -161,7 +161,7 @@
   padding-top: 75px;
   margin-bottom: 110px;
   h3.subcon_title {
-    font-family: 'suit-b';
+    font-family: 'SUIT-B';
     font-size: 64px;
     color: #234292;
     text-align: center;
@@ -177,7 +177,7 @@
 article {
   .artcl_tit {
     font-size: 40px;
-    font-family: "suit-b";
+    font-family: "SUIT-B";
     text-align: center;
     margin-bottom: 40px;
   }
@@ -252,7 +252,7 @@ article {
               b {
                 font-size: 20px;
                 color: #3754FF;
-                font-family: 'suit-b';
+                font-family: 'SUIT-B';
               }
               &.pl10 {
                 padding-left: 10px;
@@ -289,7 +289,7 @@ article {
     }
     h6 {
         font-size: 18px;
-        font-family: 'suit-b';
+        font-family: 'SUIT-B';
         margin-bottom: 16px;
         padding-left: 30px;
     }
@@ -320,7 +320,7 @@ article {
     .brd_tl {
       gap: 40px;
       span {
-        font-family: 'suit-sb';
+        font-family: 'SUIT-SB';
         position: relative;
         &:first-child {
           &:after {
@@ -343,7 +343,7 @@ article {
     border: 1px solid #999999;
     padding: 0px 20px;
     height: 35px;
-    font-family: 'suit-b';
+    font-family: 'SUIT-B';
     background: url(../images/board_slt.png) no-repeat 90% center;
     width: 140px;
   }
@@ -365,11 +365,11 @@ article {
       width: 120px;
       background: #5992ff;
       color: #ffffff;
-      font-family: 'suit-sb';
+      font-family: 'SUIT-SB';
     }
   }
   .brd_list {
-    font-family: 'suit-b';
+    font-family: 'SUIT-B';
     ul {
       border-top: 2px solid #5992ff;
 
@@ -483,7 +483,7 @@ article {
           justify-content: center;
           align-items: center;
           position: relative;
-          font-family: 'suit-sb';
+          font-family: 'SUIT-SB';
 
           &.active {
             &:after {
@@ -517,10 +517,10 @@ article {
   .greet_txt {
     width: 53.5%;
     p {
-      font-family: 'suit-r';
+      font-family: 'SUIT-R';
       color: #000000;
       &.greet_p1 {
-        font-family: 'suit-b';
+        font-family: 'SUIT-B';
         font-size: 40px;
         color: #666666;
         span {

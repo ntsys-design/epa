@@ -1,24 +1,24 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "suit-sb";
-  src: url("../fonts/suit-semibold.eot");
-  src: url("../fonts/suit-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-semibold.woff2") format("woff2"), url("../fonts/suit-semibold.woff") format("woff"), url("../fonts/suit-semibold.ttf") format("truetype"), url("../fonts/suit-semibold.svg#suit-semibold") format("svg");
+  font-family: "SUIT-SB";
+  src: url("../fonts/SUIT-SemiBold.eot");
+  src: url("../fonts/SUIT-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-SemiBold.woff2") format("woff2"), url("../fonts/SUIT-SemiBold.woff") format("woff"), url("../fonts/SUIT-SemiBold.ttf") format("truetype"), url("../fonts/SUIT-SemiBold.svg#SUIT-SemiBold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "suit-b";
-  src: url("../fonts/suit-bold.eot");
-  src: url("../fonts/suit-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-bold.woff2") format("woff2"), url("../fonts/suit-bold.woff") format("woff"), url("../fonts/suit-bold.ttf") format("truetype"), url("../fonts/suit-bold.svg#suit-bold") format("svg");
+  font-family: "SUIT-B";
+  src: url("../fonts/SUIT-Bold.eot");
+  src: url("../fonts/SUIT-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-Bold.woff2") format("woff2"), url("../fonts/SUIT-Bold.woff") format("woff"), url("../fonts/SUIT-Bold.ttf") format("truetype"), url("../fonts/SUIT-Bold.svg#SUIT-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "suit-r";
-  src: url("../fonts/suit-regular.eot");
-  src: url("../fonts/suit-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-regular.woff2") format("woff2"), url("../fonts/suit-regular.woff") format("woff"), url("../fonts/suit-regular.ttf") format("truetype"), url("../fonts/suit-regular.svg#suit-regular") format("svg");
+  font-family: "SUIT-R";
+  src: url("../fonts/SUIT-Regular.eot");
+  src: url("../fonts/SUIT-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-Regular.woff2") format("woff2"), url("../fonts/SUIT-Regular.woff") format("woff"), url("../fonts/SUIT-Regular.ttf") format("truetype"), url("../fonts/SUIT-Regular.svg#SUIT-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -119,7 +119,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #222;
-  font-family: "suit-r";
+  font-family: "SUIT-R";
   letter-spacing: -0.05em;
 }
 
@@ -486,7 +486,7 @@ header .gnbwrap ul {
   display: flex;
   align-items: center;
   gap: 0 80px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   font-size: 20px;
 }
 header .gnbwrap ul::after {
@@ -536,7 +536,7 @@ footer .footer_top .container .ftt_left {
 }
 footer .footer_top .container .ftt_left li {
   position: relative;
-  font-family: "suit-r";
+  font-family: "SUIT-R";
 }
 footer .footer_top .container .ftt_left li::after {
   content: "/";
@@ -724,7 +724,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 96px;
   border: 4px solid #3A7DFF;
   font-size: 36px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
 }
 
 .needblt {
@@ -743,7 +743,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .needblt.blt_leaf {
   font-size: 24px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   color: #444;
   margin-bottom: 30px;
 }
@@ -843,19 +843,19 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 80px;
   letter-spacing: -8px;
   margin-bottom: 35px;
-  font-family: "suit-r";
+  font-family: "SUIT-R";
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span {
   display: block;
   line-height: 80px;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span em {
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   color: #007aff;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap h2 span.mv_eng {
   font-size: 46px;
-  font-family: "suit-r";
+  font-family: "SUIT-R";
   letter-spacing: -2.6px;
   line-height: 56px;
 }
@@ -879,7 +879,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-radius: 40px;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap .needflex a {
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   font-size: 24px;
   color: #222;
   position: relative;
@@ -931,7 +931,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .qmenuwrap .container .qm_txt em {
   display: block;
-  font-family: "suit-sb";
+  font-family: "SUIT-SB";
 }
 .contents.main .qmenuwrap .container .slidewrap {
   width: calc(100% - 300px);
@@ -1033,7 +1033,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_left .tab_list li {
   font-size: 22px;
-  font-family: "suit-r";
+  font-family: "SUIT-R";
   border-bottom: 11px solid transparent;
   width: 130px;
   height: 55px;
@@ -1042,7 +1042,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .contents.main .noticewrap .div_left .tab_list li.active {
   font-size: 26px;
   border-color: #007aff;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   position: relative;
   z-index: 6;
 }
@@ -1085,7 +1085,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul li a dl dt {
   font-size: 18px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1121,7 +1121,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_right .noti_top h4 {
   font-size: 26px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
 }
 .contents.main .noticewrap .div_right .noti_top .swiper-pagination {
   margin-left: auto;
@@ -1157,7 +1157,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .noti_tit {
   font-size: 20px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   color: #222;
   letter-spacing: -2px;
   line-height: 30px;
@@ -1166,7 +1166,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .noti_tit .noti_num {
   display: block;
   font-size: 26px;
-  font-family: "suit-sb";
+  font-family: "SUIT-SB";
   color: #1281fe;
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .imgwrap {
@@ -1179,7 +1179,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .newswrap .sec_tit {
   font-size: 60px;
-  font-family: "suit-sb";
+  font-family: "SUIT-SB";
   color: #222;
   text-align: center;
   margin-bottom: 30px;
@@ -1223,7 +1223,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .newswrap .newstab_list .swiper-slide-active {
   font-size: 30px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
 }
 .contents.main .newswrap .news_tab_con {
   overflow: hidden;
@@ -1260,12 +1260,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   background: #007aff;
   color: #fff;
   margin-bottom: 10px;
-  font-family: "suit-r";
+  font-family: "SUIT-R";
   font-size: 16px;
 }
 .contents.main .newswrap .newscon_list li .newscon_item article a .atc_textwrap .atc_tit {
   text-align: left;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1280,7 +1280,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   text-align: left;
   display: block;
   font-size: 14px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   color: #666;
 }
 .contents.main .sub_visualwrap {
@@ -1305,7 +1305,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 40px;
 }
 .contents.main .sub_visualwrap .bgslide h2 span em {
-  font-family: "suit-r";
+  font-family: "SUIT-R";
   font-size: 60px;
   padding-bottom: 40px;
 }
@@ -1478,7 +1478,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   z-index: 6;
   text-align: center;
   font-size: 40px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   color: #fff;
 }
 .sub_commonwrap .sub_titwrap h2 b {
@@ -1503,7 +1503,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 110px;
 }
 .contents.sub h3.subcon_title {
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   font-size: 64px;
   color: #234292;
   text-align: center;
@@ -1517,7 +1517,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 article .artcl_tit {
   font-size: 40px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1588,7 +1588,7 @@ article .artclinfo_list > li .tablewrap tbody tr td:first-of-type {
 article .artclinfo_list > li .tablewrap tbody tr td b {
   font-size: 20px;
   color: #3754FF;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
 }
 article .artclinfo_list > li .tablewrap tbody tr td.pl10 {
   padding-left: 10px;
@@ -1612,7 +1612,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
 }
 .sub_tab_con h6 {
   font-size: 18px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   margin-bottom: 16px;
   padding-left: 30px;
 }
@@ -1643,7 +1643,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   gap: 40px;
 }
 .board .brd_top .brd_tl span {
-  font-family: "suit-sb";
+  font-family: "SUIT-SB";
   position: relative;
 }
 .board .brd_top .brd_tl span:first-child:after {
@@ -1662,7 +1662,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   border: 1px solid #999999;
   padding: 0px 20px;
   height: 35px;
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   background: url(../images/board_slt.png) no-repeat 90% center;
   width: 140px;
 }
@@ -1688,10 +1688,10 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   width: 120px;
   background: #5992ff;
   color: #ffffff;
-  font-family: "suit-sb";
+  font-family: "SUIT-SB";
 }
 .board .brd_list {
-  font-family: "suit-b";
+  font-family: "SUIT-B";
 }
 .board .brd_list ul {
   border-top: 2px solid #5992ff;
@@ -1794,7 +1794,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: "suit-sb";
+  font-family: "SUIT-SB";
 }
 .pagination_wrap .pagination ul > li a.active:after {
   position: absolute;
@@ -1821,11 +1821,11 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   width: 53.5%;
 }
 .greet .greet_txt p {
-  font-family: "suit-r";
+  font-family: "SUIT-R";
   color: #000000;
 }
 .greet .greet_txt p.greet_p1 {
-  font-family: "suit-b";
+  font-family: "SUIT-B";
   font-size: 40px;
   color: #666666;
   margin-bottom: 34px;
