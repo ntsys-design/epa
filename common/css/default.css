@@ -803,6 +803,46 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: block;
 }
 
+.sub_tab_list2 {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  border-collapse: collapse;
+}
+.sub_tab_list2 > li {
+  flex-grow: 1;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #eee;
+  color: #666;
+}
+.sub_tab_list2 > li:not(:last-child) {
+  border-right: none;
+}
+.sub_tab_list2 > li a {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub_tab_list2 > li.on {
+  background: #31a9e2;
+  border: 1px solid transparent;
+}
+.sub_tab_list2 > li.on a {
+  color: #fff;
+}
+
+.sub_con_list2 .sub_tab_con2 {
+  display: none;
+}
+.sub_con_list2 .sub_tab_con2:nth-child(1) {
+  display: block;
+}
+
 @media screen and (max-width: 1260px) {
   header {
     padding: 0 20px;
@@ -2013,6 +2053,13 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li {
 }
 article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_bar {
   padding-left: 20px;
+}
+
+.sub_tab_con article > div figure {
+  width: 40%;
+}
+.sub_tab_con article > div .con_txt {
+  width: 60%;
 }
 
 .sub_tab_con .needflex.twins > article {

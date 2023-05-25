@@ -44,6 +44,7 @@ $(document).ready(function () {
     $(".tab_con_list > div").eq($(this).index()).addClass("active");
   });
 
+
   //공용 셀렉트
   $(".ulsel_btn").on("click", function (e) {
     $(this).parent().siblings().find(".ulsel_btn").removeClass("open");
@@ -72,7 +73,7 @@ $(document).ready(function () {
     $(".pagination ul li a").removeClass();
     $(this).addClass("active");
   });
-
+// 서브 탭
   $(".sub_tab_list li").on("click", function (e) {
     e.preventDefault();
     let idx = $(this).index();
@@ -80,6 +81,15 @@ $(document).ready(function () {
     $(this).addClass("on");
     $(".sub_con_list .sub_tab_con").stop().hide();
     $(".sub_con_list .sub_tab_con").eq(idx).stop().show();
+  });
+// 서브 탭인탭
+  $(".sub_tab_list2 li").on("click", function (e) {
+    e.preventDefault();
+    let idx = $(this).index();
+    $(".sub_tab_list2 li").removeClass("on");
+    $(this).addClass("on");
+    $(".sub_con_list2 .sub_tab_con2").stop().hide();
+    $(".sub_con_list2 .sub_tab_con2").eq(idx).stop().show();
   });
 
   function call_slideChangeTransitionEnd(
