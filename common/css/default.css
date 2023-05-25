@@ -710,15 +710,16 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .btnwrap button {
   flex-shrink: 0;
-  color: #000;
 }
 
 .pbl_btn {
-  width: 390px;
-  height: 96px;
-  border: 4px solid #3a7dff;
-  font-size: 36px;
-  font-family: "SUIT-B";
+  width: 225px;
+  padding: 13px 0;
+  border: 2px solid #587533;
+  color: #587533;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: "SUIT-SB";
 }
 
 .needblt {
@@ -1839,23 +1840,31 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 
 .mb8 {
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 }
 
 .mb12 {
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
 }
 
 .mb16 {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .mb24 {
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 
 .mb56 {
-  margin-bottom: 56px;
+  margin-bottom: 56px !important;
+}
+
+.mb80 {
+  margin-bottom: 80px !important;
+}
+
+.pl20 {
+  padding-left: 20px;
 }
 
 .fc_grn {
@@ -1864,7 +1873,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .contents.sub {
   padding-top: 80px;
-  margin-bottom: 110px;
+  margin-bottom: 120px;
 }
 .contents.sub h3 {
   font-family: "SUIT-SB";

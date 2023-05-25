@@ -153,19 +153,25 @@
 
 // margin
 .mb8 {
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
 }
 .mb12 {
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
 }
 .mb16 {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 .mb24 {
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 .mb56 {
-  margin-bottom: 56px;
+  margin-bottom: 56px !important;
+}
+.mb80 {
+  margin-bottom: 80px !important;
+}
+.pl20 {
+  padding-left: 20px;
 }
 
 // 폰트 색상
@@ -176,7 +182,7 @@
 // 서브 컨텐츠 스타일
 .contents.sub {
   padding-top: 80px;
-  margin-bottom: 110px;
+  margin-bottom: 120px;
   h3 {
     font-family: 'SUIT-SB';
     font-size: 48px;
@@ -206,6 +212,7 @@
     &:last-of-type {
       margin-bottom: unset;
     }
+
   }
   .body02 {
     font-size: 16px;

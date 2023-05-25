@@ -386,15 +386,16 @@ footer {
 
   button {
     flex-shrink: 0;
-    color: #000;
   }
 }
 .pbl_btn {
-  width: 390px;
-  height: 96px;
-  border: 4px solid #3a7dff;
-  font-size: 36px;
-  font-family: "SUIT-B";
+  width: 225px;
+  padding: 13px 0;
+  border: 2px solid #587533;
+  color: #587533;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: "SUIT-SB";
 }
 // 공통불릿
 .needblt {
