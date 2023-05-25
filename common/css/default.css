@@ -799,7 +799,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .sub_con_list .sub_tab_con {
   display: none;
 }
-.sub_con_list .sub_tab_con:first-child {
+.sub_con_list .sub_tab_con:nth-child(1) {
   display: block;
 }
 

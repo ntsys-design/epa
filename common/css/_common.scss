@@ -478,7 +478,7 @@ footer {
 .sub_con_list {
   .sub_tab_con {
     display: none;
-    &:first-child {
+    &:nth-child(1) {
       display: block;
     }
   }
