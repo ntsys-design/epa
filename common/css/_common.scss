@@ -399,54 +399,41 @@ footer {
 // 공통불릿
 .needblt {
   display: flex;
-  gap: 0 5px;
-  align-items: center;
+  align-items: flex-start;
   &::before {
     content: "";
-    width: 20px;
-    height: 30px;
     display: block;
-  }
-  &.gap1 {
-    gap: 0 1px;
+    flex-shrink: 0;
   }
   &.blt_leaf {
-    font-size: 24px;
-    font-family: "SUIT-B";
-    color: #444;
-    margin-bottom: 30px;
+    gap: 0 12px;
     &::before {
+      width: 24px;
+      height: 24px;
       background: url(../images/blt_leaf.png) no-repeat center center;
     }
   }
-  &.blt_donut {
-    &::before {
-      background: url(../images/blt_donut.png) no-repeat center center;
-    }
-  }
   &.blt_dot {
+    gap: 0 4px; 
     &::before {
-      content: "";
-      width: 5px;
-      height: 5px;
-      background: #000;
-      border-radius: 50%;
-      position: relative;
-      top: -3px;
+      width: 16px;
+      height: 22px;
+      background: url(../images/blt_dot.png) no-repeat center center;
     }
-  }
+  } 
   &.blt_bar {
+    gap: 0 4px;
     &::before {
-      content: "-";
-      width: 10px;
-      height: 24px;
+      width: 16px;
+      height: 22px;
+      background: url(../images/blt_bar.png) no-repeat center center;
     }
-  }
-  &.blt_star {
+  } 
+  &.blnk {
+    gap: 0 4px;
     &::before {
-      content: "*";
-      width: 10px;
-      height: 20px;
+      width: 16px;
+      height: 22px;
     }
   }
 }
