@@ -337,6 +337,20 @@ article {
     }
   }
 }
+// sub01
+.sub_tab_con {
+  article{
+    >div{
+      figure{
+      width: 40%;
+    }
+    .con_txt{
+      width: 60%;
+    }
+    }
+  }
+}
+
 // sub02
 .sub_tab_con {
     .needflex {
