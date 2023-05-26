@@ -217,4 +217,58 @@ function goToTab(abs_idx, selecElm){
       goToTab(abs_idx, ".news");
     });
   });
+
+
+
+// sub_01_04_02 slide
+  var subConSlide = new Swiper(".sub_con_slide", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+          nextEl: ".swiperwrap1 .swiper-button-next",
+          prevEl: ".swiperwrap1 .swiper-button-prev",
+        },
+  });
+
+  var subConSlide2 = new Swiper(".sub_con_slide2", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+          nextEl: ".swiperwrap2 .swiper-button-next",
+          prevEl: ".swiperwrap2 .swiper-button-prev",
+        },
+  });
+
+  var subConSlide3 = new Swiper(".sub_con_slide3", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+          nextEl: ".swiperwrap3 .swiper-button-next",
+          prevEl: ".swiperwrap3 .swiper-button-prev",
+        },
+  });
+// sub_01_04_02 공간별보기
+  $('.spc_idx li').on('click',function(e){
+    e.preventDefault()
+    $('.spc_idx li').removeClass('on')
+    $(this).addClass('on')
+  })
+
+  // sub_01_04_02 아코디언
+  $('.program_info>li a').on('click',function(e){
+    e.preventDefault()
+    let active=$(this).parent('li').hasClass('active');
+    if(active){
+      $(this).parent('li').removeClass('active')
+      $(this).siblings('div').slideUp()
+    }else{
+      $('.program_info>li a').parent('li').removeClass('active')
+      $('.program_info>li a').siblings('div').slideUp()
+      $(this).parent('li').addClass('active')
+      $(this).siblings('div').slideDown()
+  
+    }
+  })
+
 });
+
