@@ -379,7 +379,9 @@ $fs-32: 2rem; // 32px
 .needflex {
     display: flex;
 }
-
+.needgrid{
+    display: grid;
+}
 
 //style
 $header-height: 85px;

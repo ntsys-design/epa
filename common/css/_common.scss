@@ -485,7 +485,7 @@ footer {
 }
 
 // 탭인탭
-.sub_tab_list2 {
+.sub_tab_list2, .sub_tab_list2_1 {
   width: 100%;
   display: flex;
   gap: 0 48px;
@@ -528,8 +528,8 @@ footer {
     }
   }
 }
-.sub_con_list2 {
-  .sub_tab_con2 {
+.sub_con_list2,.sub_con_list2_1 {
+  .sub_tab_con2,.sub_tab_con2_1 {
     display: none;
     &:nth-child(1) {
       display: block;
