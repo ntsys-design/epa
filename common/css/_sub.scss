@@ -414,13 +414,16 @@ article {
       flex-direction: column;
       gap: 20px 0;
       flex-wrap: wrap;
-      height: 280px;
+      height: 290px;
       width: 73%;
       li{
         width: 50%;
         a{
           display: flex;
           gap: 0 8px;
+          b{
+            border-bottom: 1px solid transparent;
+          }
           span{
             font-family: "SUIT-SB";
             display:flex;
