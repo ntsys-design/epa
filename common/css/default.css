@@ -2134,19 +2134,19 @@ article .artclinfo_list > li .logo_list > li {
   display: block;
 }
 
-.sub_tab_con2 .img_wrap.needgrid, .sub_tab_con2_1 .img_wrap.needgrid {
+.sub_tab_con .img_wrap.needgrid, .sub_tab_con2 .img_wrap.needgrid, .sub_tab_con2_1 .img_wrap.needgrid {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   justify-content: space-between;
 }
-.sub_tab_con2 .img_wrap.needgrid figure, .sub_tab_con2_1 .img_wrap.needgrid figure {
+.sub_tab_con .img_wrap.needgrid figure, .sub_tab_con2 .img_wrap.needgrid figure, .sub_tab_con2_1 .img_wrap.needgrid figure {
   width: 100%;
 }
-.sub_tab_con2 .img_wrap.needgrid figure figcaption, .sub_tab_con2_1 .img_wrap.needgrid figure figcaption {
+.sub_tab_con .img_wrap.needgrid figure figcaption, .sub_tab_con2 .img_wrap.needgrid figure figcaption, .sub_tab_con2_1 .img_wrap.needgrid figure figcaption {
   text-align: center;
   margin-top: 24px;
 }
-.sub_tab_con2 .img_wrap figure, .sub_tab_con2_1 .img_wrap figure {
+.sub_tab_con .img_wrap figure, .sub_tab_con2 .img_wrap figure, .sub_tab_con2_1 .img_wrap figure {
   width: 100%;
 }
 
