@@ -369,10 +369,26 @@ article {
     }
   }
 }
-.sub_tab_con2{
+.sub_con_list2, .sub_con_list2_1 {
+
+    .con_wrap{
+      .flex_wrap{
+        justify-content: space-between;
+        .txt_wrap{
+          width: 65%;
+        }
+        .con_wrap_img{
+          width: 30%;
+          display: block;
+         
+        }
+      }
+    }
+}
+.sub_tab_con2, .sub_tab_con2_1{
   .img_wrap{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    &.needgrid{
+       grid-template-columns: repeat(3, 1fr);
     grid-gap:32px;
    justify-content: space-between;
    figure{
@@ -381,6 +397,11 @@ article {
       text-align: center;
       margin-top: 24px;
     }
+   }
+    }
+   figure{
+    width: 100%;
+   
    }
   }
 }

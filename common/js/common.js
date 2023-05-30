@@ -92,6 +92,14 @@ $(document).ready(function () {
     $(".sub_con_list2 .sub_tab_con2").eq(idx).stop().show();
   });
 
+  $(".sub_tab_list2_1 li").on("click", function (e) {
+    e.preventDefault();
+    let idx = $(this).index();
+    $(".sub_tab_list2_1 li").removeClass("on");
+    $(this).addClass("on");
+    $(".sub_con_list2_1 .sub_tab_con2_1").stop().hide();
+    $(".sub_con_list2_1 .sub_tab_con2_1").eq(idx).stop().show();
+  });
   function call_slideChangeTransitionEnd(
     active_label,
     active_panel_id,
