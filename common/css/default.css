@@ -732,12 +732,11 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .tablewrap table thead tr td:last-of-type {
   border-right: unset;
 }
-.tablewrap table tbody tr:last-of-type th, .tablewrap table tbody tr:last-of-type td {
-  border-bottom: unset;
+.tablewrap table tbody tr th:last-of-type, .tablewrap table tbody tr td:last-of-type {
+  border-right: unset;
 }
 .tablewrap table tbody tr th, .tablewrap table tbody tr td {
-  color: #333;
-  font-family: "SUIT-R";
+  font-size: 16px;
   padding: 20px 0;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -750,6 +749,16 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .tablewrap table tbody tr th:last-of-type, .tablewrap table tbody tr td:last-of-type {
   border-right: unset;
+}
+.tablewrap table tbody tr th {
+  text-align: center;
+  font-family: "SUIT-SB";
+  color: #000;
+  background: #f1f5f3;
+}
+.tablewrap table tbody tr td {
+  color: #333;
+  font-family: "SUIT-R";
 }
 
 .btnwrap {

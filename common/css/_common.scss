@@ -404,14 +404,13 @@ footer {
     }
     tbody {
       tr {
-        &:last-of-type {
-            th, td {
-              border-bottom: unset;
+        th, td {
+          &:last-of-type {
+              border-right: unset;
             }
         }
         th, td {
-          color: #333;
-          font-family: "SUIT-R";
+          font-size: 16px;
           padding: 20px 0;
           border-right: 1px solid #eee;
           border-bottom: 1px solid #eee;
@@ -424,6 +423,16 @@ footer {
           &:last-of-type {
             border-right: unset;
           }
+        }
+        th {
+          text-align: center;
+          font-family: "SUIT-SB";
+          color: #000;
+          background: #f1f5f3;
+        }
+        td {
+          color: #333;
+          font-family: "SUIT-R";
         }
       }
     }
