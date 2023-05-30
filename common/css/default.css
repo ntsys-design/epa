@@ -837,7 +837,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   padding: 0 4px;
 }
 .sub_tab_list2 > li.on, .sub_tab_list2_1 > li.on {
-  border: 1px solid transparent;
   position: relative;
 }
 .sub_tab_list2 > li.on a, .sub_tab_list2_1 > li.on a {
@@ -2153,7 +2152,7 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
   flex-direction: column;
   gap: 20px 0;
   flex-wrap: wrap;
-  height: 280px;
+  height: 290px;
   width: 73%;
 }
 .space_wrap .spc_idx_wrap .spc_idx li {
@@ -2162,6 +2161,9 @@ article .artclinfo_list > li .tablewrap tbody tr td ul li.blt_star, article .art
 .space_wrap .spc_idx_wrap .spc_idx li a {
   display: flex;
   gap: 0 8px;
+}
+.space_wrap .spc_idx_wrap .spc_idx li a b {
+  border-bottom: 1px solid transparent;
 }
 .space_wrap .spc_idx_wrap .spc_idx li a span {
   font-family: "SUIT-SB";
