@@ -278,62 +278,6 @@ article {
           border: 1px solid red;
         }
       }
-      .tablewrap {
-        table {
-          border-collapse: collapse;
-          text-align: center;
-        }
-        thead {
-          tr {
-            color: #fff;
-            border: 1px solid #6b80ff;
-            background: #6b80ff;
-            text-align: center;
-            td {
-              padding: 10px 0;
-              &:first-of-type {
-                text-align: center;
-              }
-            }
-          }
-        }
-        tbody {
-          tr {
-            border: 1px solid #999;
-            td {
-              border: 1px solid #999;
-              border-right: none;
-              height: 120px;
-              border-top: none;
-              padding: 20px;
-              &:first-of-type {
-                border-right: 1px solid #999;
-              }
-              b {
-                font-size: 20px;
-                color: #3754FF;
-                font-family: 'SUIT-B';
-              }
-              &.pl10 {
-                padding-left: 10px;
-              }
-              &.pl20 {
-                padding-left: 20px;
-              }
-              ul {
-                margin-top: 5px;
-                li {
-                    line-height: 28px;
-
-                    &.blt_star, &.blt_bar {
-                        padding-left: 20px;
-                    }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 }
