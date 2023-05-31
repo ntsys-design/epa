@@ -2441,4 +2441,8 @@ article .artclinfo_list > li .logo_list > li {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+}
+
+.mapwrap > div {
+  width: 100%;
 }/*# sourceMappingURL=default.css.map */
