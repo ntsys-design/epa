@@ -817,6 +817,14 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 22px;
   background: url(../images/blt_bar.png) no-repeat center center;
 }
+.needblt.blt_trngl {
+  gap: 0 4px;
+}
+.needblt.blt_trngl::before {
+  content: "▶";
+  width: 16px;
+  height: 22px;
+}
 .needblt.blnk {
   gap: 0 4px;
 }
