@@ -660,6 +660,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   text-align: center;
 }
 
+.ta_r {
+  text-align: right;
+}
+
 .ulsel {
   width: 300px;
   height: 50px;
@@ -2009,7 +2013,11 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 
 .pl20 {
-  padding-left: 20px;
+  padding-left: 20px !important;
+}
+
+.pr20 {
+  padding-right: 20px !important;
 }
 
 .fc_grn {
