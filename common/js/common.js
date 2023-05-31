@@ -278,5 +278,20 @@ function goToTab(abs_idx, selecElm){
     }
   })
 
+    // sub_03_02 자주하는 질문 아코디언
+    $('.faq_list .brd_title a').on('click',function(e){
+      e.preventDefault()
+      let active=$(this).closest('div').hasClass('active');
+      if(active){
+        $(this).closest('div').removeClass('active')
+        $(this).closest('div').siblings('p').slideUp()
+      }else{
+        $('.faq_list .brd_title a').closest('div').removeClass('active')
+        $('.faq_list .brd_title a').closest('div').siblings('p').slideUp()
+        $(this).closest('div').addClass('active')
+        $(this).closest('div').siblings('p').slideDown()
+    
+      }
+    })
 });
 
