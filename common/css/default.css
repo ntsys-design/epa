@@ -2253,6 +2253,20 @@ article .artclinfo_list > li .logo_list > li {
   margin: 0 auto;
 }
 
+.board .faq_list .brd_ctgr {
+  flex: 0 0 20%;
+}
+.board .faq_list .brd_aswr {
+  display: none;
+  padding: 50px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+.board .faq_list.active a {
+  color: #13523B;
+  font-weight: 600;
+}
+
 .board .brd_top {
   justify-content: space-between;
   align-items: center;
@@ -2331,7 +2345,7 @@ article .artclinfo_list > li .logo_list > li {
   flex: 1;
 }
 .board .brd_list ul li div p.brd_title {
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   text-align: left;
 }
 .board .brd_list ul li div p.brd_title a {

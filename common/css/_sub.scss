@@ -297,6 +297,7 @@ article {
     }
   }
 }
+// 아코디언
 .program_info{
   li{
     a{
@@ -438,6 +439,24 @@ article {
     text-align: center;
     margin: 0 auto;
 }
+// 아코디언
+.board .faq_list{
+  .brd_ctgr{
+    flex: 0 0 20%;
+  }
+.brd_aswr{
+      display: none;
+      padding: 50px;
+      border: 1px solid #eee;
+      border-radius: 20px;
+    }
+    &.active{
+      a{
+        color: #13523B;
+        font-weight: 600;
+      }
+    }
+}
 // sub04 게시판
 .board {
   .brd_top {
@@ -515,7 +534,7 @@ article {
           p {
             flex: 1;
             &.brd_title {
-              flex: 0 0 45%;
+              flex: 0 0 40%;
               text-align: left;
               a {
                 text-overflow: ellipsis;
