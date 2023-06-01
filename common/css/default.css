@@ -2277,9 +2277,12 @@ article .artclinfo_list > li .logo_list > li {
 .board .faq_list .brd_ctgr {
   flex: 0 0 20%;
 }
+.board .faq_list .brd_title {
+  flex: 0 0 80% !important;
+}
 .board .faq_list .brd_aswr {
   display: none;
-  padding: 50px;
+  padding: 50px 50px 50px 20%;
   border: 1px solid #eee;
   border-radius: 20px;
 }
@@ -2359,6 +2362,9 @@ article .artclinfo_list > li .logo_list > li {
   display: flex;
   text-align: center;
   align-items: center;
+}
+.board .brd_list ul li div.brd_hd p {
+  font-family: "SUIT-b";
 }
 .board .brd_list ul li div.brd_hd .brd_title {
   text-align: center;

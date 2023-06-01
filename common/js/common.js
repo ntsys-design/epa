@@ -268,12 +268,12 @@ function goToTab(abs_idx, selecElm){
     let active=$(this).parent('li').hasClass('active');
     if(active){
       $(this).parent('li').removeClass('active')
-      $(this).siblings('div').slideUp()
+      $(this).siblings('div').stop().slideUp()
     }else{
       $('.program_info>li a').parent('li').removeClass('active')
-      $('.program_info>li a').siblings('div').slideUp()
+      $('.program_info>li a').siblings('div').stop().slideUp()
       $(this).parent('li').addClass('active')
-      $(this).siblings('div').slideDown()
+      $(this).siblings('div').stop().slideDown()
   
     }
   })
@@ -284,12 +284,12 @@ function goToTab(abs_idx, selecElm){
       let active=$(this).closest('div').hasClass('active');
       if(active){
         $(this).closest('div').removeClass('active')
-        $(this).closest('div').siblings('p').slideUp()
+        $(this).closest('div').siblings('p').stop().slideUp()
       }else{
         $('.faq_list .brd_title a').closest('div').removeClass('active')
-        $('.faq_list .brd_title a').closest('div').siblings('p').slideUp()
+        $('.faq_list .brd_title a').closest('div').siblings('p').stop().slideUp()
         $(this).closest('div').addClass('active')
-        $(this).closest('div').siblings('p').slideDown()
+        $(this).closest('div').siblings('p').stop().slideDown()
     
       }
     })
