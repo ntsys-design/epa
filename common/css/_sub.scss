@@ -451,9 +451,12 @@ article {
   .brd_ctgr{
     flex: 0 0 20%;
   }
+  .brd_title{
+    flex: 0 0 80% !important;
+  }
 .brd_aswr{
       display: none;
-      padding: 50px;
+      padding: 50px 50px 50px 20%;
       border: 1px solid #eee;
       border-radius: 20px;
     }
@@ -535,6 +538,9 @@ article {
           text-align: center;
           align-items: center;
           &.brd_hd {
+            p{
+              font-family: 'SUIT-b';
+            }
             .brd_title {
               text-align: center;
             }
