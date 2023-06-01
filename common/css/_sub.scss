@@ -771,3 +771,106 @@ article {
     width: 100%;
   }
 }
+
+
+
+// 통합검색
+.search_desc {
+  font-weight: 300;
+  margin-bottom: 40px;
+
+}
+
+.result_tab {
+  margin-bottom: 35px;
+
+  ul {
+    display: flex;
+    border: 1px solid #ccc;
+    border-right: none;
+
+    li {
+      flex: 1 0 20%;
+      text-align: center;
+      cursor: pointer;
+      padding: 10px 0;
+      background: #f7f7f7;
+      color: #333;
+      border-right: 1px solid #ccc;
+
+      &.active {
+        background: #a9c2ff;
+      }
+    }
+  }
+}
+
+.resultview_list {
+  .resultview {
+    margin-bottom: 60px;
+
+    &:last-of-type {
+      margin-bottom: unset;
+    }
+    .resultview_tit {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+
+      em {
+        &:first-of-type {
+          display: flex;
+          align-items: center;
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 17px;
+            background: url(../images/main_search_spacer.png) no-repeat center
+              center;
+            margin: 0 20px;
+          }
+        }
+      }
+
+    }
+
+    .boardwrap {
+      .board_list {
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+
+  .redcross {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    border: 1px solid #999;
+    border-radius: 20px;
+
+    span {
+      width: 12px;
+      height: 12px;
+      background: url(../images/btn_redcross.png) no-repeat center center;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+.red {
+  color: #ff6363;
+}
+
+.src_hltd {
+  color: #425da2 !important;
+  font-weight: 600 !important;
+}

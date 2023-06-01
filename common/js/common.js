@@ -293,5 +293,52 @@ function goToTab(abs_idx, selecElm){
     
       }
     })
+
+    // 통합검색
+    resultView();
+
+    function resultView() {
+        // 검색결과 리스트
+        $(".resultview > div").each(function () {
+            $(this).children().find(".resultview_item").slice(0, 3).show();
+        }); // 처음 3개 노출
+        $(".rp .redcross").click(function (e) {
+            e.preventDefault();
+            $(this).parent().siblings().find(".resultview_item:hidden").slice(0, 3).show(); // 다음 3개 노출
+            if ($(this).parent().siblings().find(".resultview_item:hidden").length == 0) {
+                // 남은 아이템 수 확인
+            }
+        });
+    }
+
+    // 검색결과 탭 작동
+    const cloneSlide = $(".resultview_list").html();
+    const arraySlide = [];
+
+    $(".resultview_list .resultview").each(function (i, e) {
+        arraySlide.push(e);
+    });
+    $(".result_tab ul li:first-child").first().addClass("active");
+    $(".result_tab ul li").on("click", function () {
+        const type = $(this).children(".data-name").text();
+
+        $(".result_tab ul li").removeClass("active");
+        $(this).addClass("active");
+        $(".resultview_list").empty();
+
+        if (type === "전체") {
+            $(".resultview_list").append(cloneSlide);
+        } else {
+            $(arraySlide).each(function (i, e) {
+                const exist = $(e).attr("data-type").indexOf(type);
+
+                if (exist >= 0) {
+                    $(".resultview_list").append(e);
+                }
+            });
+        }
+        resultView();
+    });
+
 });
 
