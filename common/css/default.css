@@ -1,5 +1,13 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "SUIT-B";
+  src: url("../fonts/SUIT-Bold.eot");
+  src: url("../fonts/SUIT-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-Bold.woff2") format("woff2"), url("../fonts/SUIT-Bold.woff") format("woff"), url("../fonts/SUIT-Bold.ttf") format("truetype"), url("../fonts/SUIT-Bold.svg#SUIT-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "SUIT-SB";
   src: url("../fonts/SUIT-SemiBold.eot");
   src: url("../fonts/SUIT-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-SemiBold.woff2") format("woff2"), url("../fonts/SUIT-SemiBold.woff") format("woff"), url("../fonts/SUIT-SemiBold.ttf") format("truetype"), url("../fonts/SUIT-SemiBold.svg#SUIT-SemiBold") format("svg");
@@ -8,10 +16,10 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "SUIT-B";
-  src: url("../fonts/SUIT-Bold.eot");
-  src: url("../fonts/SUIT-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-Bold.woff2") format("woff2"), url("../fonts/SUIT-Bold.woff") format("woff"), url("../fonts/SUIT-Bold.ttf") format("truetype"), url("../fonts/SUIT-Bold.svg#SUIT-Bold") format("svg");
-  font-weight: bold;
+  font-family: "SUIT-M";
+  src: url("../fonts/suit-medium.eot");
+  src: url("../fonts/suit-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/suit-medium.woff2") format("woff2"), url("../fonts/suit-medium.woff") format("woff"), url("../fonts/suit-medium.ttf") format("truetype"), url("../fonts/suit-medium.svg#suit-medium") format("svg");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -780,7 +788,40 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .btnwrap button {
   flex-shrink: 0;
 }
+.btnwrap button.ml_auto {
+  margin-left: auto;
+}
 
+.brd_file {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.brd_file button {
+  width: 24px;
+  height: 32px;
+}
+.brd_file button.doc {
+  background: url(../images/doc.png) no-repeat center center;
+}
+.brd_file button.xls {
+  background: url(../images/xls.png) no-repeat center center;
+}
+.brd_file button.pdf {
+  background: url(../images/pdf.png) no-repeat center center;
+}
+.brd_file button.zip {
+  background: url(../images/zip.png) no-repeat center center;
+}
+
+.board_btn {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #fff;
+  font-family: "SUIT-M";
+  width: 88px;
+  height: 40px;
+}
 .pbl_btn {
   width: 225px;
   padding: 13px 0;
@@ -2078,6 +2119,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: flex;
   align-items: center;
   font-size: 20px;
+  font-family: "SUIT-M";
   margin-bottom: 16px;
   color: #000;
 }
@@ -2388,52 +2430,33 @@ article .artclinfo_list > li .logo_list > li {
   margin-right: 10px;
   border: 1px solid #000;
 }
-.board .brd_list ul li div p.brd_file {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.board .brd_list ul li div p.brd_file button {
-  width: 24px;
-  height: 32px;
-}
-.board .brd_list ul li div p.brd_file button.doc {
-  background: url(../images/doc.png) no-repeat center center;
-}
-.board .brd_list ul li div p.brd_file button.xls {
-  background: url(../images/xls.png) no-repeat center center;
-}
-.board .brd_list ul li div p.brd_file button.pdf {
-  background: url(../images/pdf.png) no-repeat center center;
-}
-.board .brd_list ul li div p.brd_file button.zip {
-  background: url(../images/zip.png) no-repeat center center;
-}
 .board .brd_list.thmb ul {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px 32px;
   border-top: unset;
 }
 @media screen and (max-width: 960px) {
   .board .brd_list.thmb ul {
-    gap: 15px;
+    gap: 32px 20px;
   }
 }
 .board .brd_list.thmb ul li {
-  flex: 0 1 calc((100% - 40px) / 3);
+  flex: 0 1 calc((100% - 64px) / 3);
   border-bottom: unset;
 }
 @media screen and (max-width: 960px) {
   .board .brd_list.thmb ul li {
-    flex: 0 1 calc((100% - 15px) / 2);
+    flex: 0 1 calc((100% - 20px) / 2);
   }
 }
 .board .brd_list.thmb ul li a .imgwrap {
-  border: 1px solid #000;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
   width: 100%;
-  padding-bottom: 50%;
+  padding-bottom: 56.16%;
   position: relative;
   display: inherit;
 }
@@ -2447,7 +2470,7 @@ article .artclinfo_list > li .logo_list > li {
      object-fit: cover;
 }
 .board .brd_list.thmb ul li a dl {
-  padding: 10px;
+  margin-top: 32px;
 }
 .board .brd_list.thmb ul li a dl dt {
   font-family: "SUIT-SB";
@@ -2457,7 +2480,7 @@ article .artclinfo_list > li .logo_list > li {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .board .brd_list.thmb ul li a dl dd {
   display: -webkit-box;
@@ -2605,7 +2628,7 @@ article .artclinfo_list > li .logo_list > li {
 .resultview_list .resultview .resultview_tit {
   font-size: 18px;
   color: #444;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -2624,6 +2647,51 @@ article .artclinfo_list > li .logo_list > li {
 }
 .resultview_list .resultview .boardwrap .board_list {
   margin-bottom: 40px;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item {
+  display: none;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a {
+  align-items: center;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_left {
+  padding: 10px;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div {
+  padding: 10px;
+  align-items: center;
+  gap: 0 1%;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div > p {
+  min-width: 0;
+  flex: 0 0 10%;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div > p.brd_title {
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-family: "SUIT-SB";
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div > p.brd_dpt {
+  word-break: keep-all;
+  flex: 0 0 13%;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div > p.brd_wrtr {
+  flex: 0 0 8%;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div > p.brd_text {
+  flex-grow: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div > p.brd_file {
+  flex: 0 0 7%;
 }
 .resultview_list .redcross {
   display: flex;
@@ -2649,4 +2717,73 @@ article .artclinfo_list > li .logo_list > li {
 .src_hltd {
   color: #425da2 !important;
   font-weight: 600 !important;
+}
+
+.board_view .viewwrap .cont_head {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #000;
+}
+.board_view .viewwrap .cont_head .brd_title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.board_view .viewwrap .board_util {
+  align-items: center;
+  gap: 0 16px;
+}
+.board_view .viewwrap .board_util .brd_wrtr {
+  font-family: "SUIT-M";
+}
+.board_view .viewwrap .board_util .brd_date {
+  color: #666;
+}
+.board_view .viewwrap .board_util .brd_cnt {
+  color: #666;
+}
+.board_view .viewwrap .board_util .spcr {
+  display: block;
+  width: 1px;
+  height: 14px;
+  background: #eee;
+}
+.board_view .viewwrap .cont_body {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+}
+.board_view .viewwrap .cont_foot {
+  border-bottom: 1px solid #ccc;
+}
+.board_view .viewwrap .cont_foot .board_nav li {
+  height: 72px;
+  border-bottom: 1px solid #eee;
+}
+.board_view .viewwrap .cont_foot .board_nav li:last-child {
+  border-bottom: unset;
+}
+.board_view .viewwrap .cont_foot .board_nav li a {
+  padding: 24px;
+  gap: 0 24px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+}
+.board_view .viewwrap .cont_foot .board_nav li a .nav_tag {
+  flex-shrink: 0;
+  font-family: "SUIT-M";
+}
+.board_view .viewwrap .cont_foot .board_nav li a .brd_title {
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_next, .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_prev {
+  color: #777;
 }/*# sourceMappingURL=default.css.map */

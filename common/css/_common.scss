@@ -450,13 +450,52 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 0 10px;
+
   &.jcfs {
     justify-content: flex-start;
   }
+  
   button {
     flex-shrink: 0;
+
+    &.ml_auto {
+      margin-left: auto;
+    }
   }
 }
+
+.brd_file {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  button {
+    width: 24px;
+    height: 32px;
+    &.doc {
+      background: url(../images/doc.png) no-repeat center center;
+    }
+    &.xls {
+      background: url(../images/xls.png) no-repeat center center;
+    }
+    &.pdf {
+      background: url(../images/pdf.png) no-repeat center center;
+    }
+    &.zip {
+      background: url(../images/zip.png) no-repeat center center;
+    }
+  }
+}
+.board_btn {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #fff;
+  font-family: 'SUIT-M';
+  width: 88px;
+  height: 40px;
+
+  &.list {}
+}
+
 .pbl_btn {
   width: 225px;
   padding: 13px 0;
@@ -466,6 +505,7 @@ footer {
   font-size: 20px;
   font-family: "SUIT-SB";
 }
+
 .dl_btn {
   display: flex;
   align-items: center;
@@ -482,6 +522,10 @@ footer {
     }
   }
 }
+
+
+
+
 // 공통불릿
 .needblt {
   display: flex;

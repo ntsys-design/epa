@@ -302,7 +302,7 @@ function goToTab(abs_idx, selecElm){
         $(".resultview > div").each(function () {
             $(this).children().find(".resultview_item").slice(0, 3).show();
         }); // 처음 3개 노출
-        $(".rp .redcross").click(function (e) {
+        $(".redcross").click(function (e) {
             e.preventDefault();
             $(this).parent().siblings().find(".resultview_item:hidden").slice(0, 3).show(); // 다음 3개 노출
             if ($(this).parent().siblings().find(".resultview_item:hidden").length == 0) {
