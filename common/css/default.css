@@ -2230,8 +2230,10 @@ article .artclinfo_list > li .logo_list > li {
   padding: 48px 20px 40px;
   height: 211px;
 }
-.img_wrap.links > a:hover {
-  box-shadow: 0 0 1px #000;
+@media (hover: hover) {
+  .img_wrap.links > a:hover {
+    box-shadow: 0 0 1px #000;
+  }
 }
 .img_wrap.links > a img {
   width: 64px;
@@ -2809,8 +2811,17 @@ article .artclinfo_list > li .logo_list > li {
   height: 16px;
   background: url(../images/count_ico.png) no-repeat center center;
 }
-.board_view .viewwrap .board_util .spcr {
+.board_view .viewwrap .board_util > p {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+.board_view .viewwrap .board_util > p:last-of-type::after {
+  content: none;
+}
+.board_view .viewwrap .board_util > p::after {
   display: block;
+  content: "";
   width: 1px;
   height: 14px;
   background: #eee;
@@ -2833,6 +2844,7 @@ article .artclinfo_list > li .logo_list > li {
 }
 .board_view .viewwrap .filewrap .file_list li {
   margin-bottom: 8px;
+  color: #666;
 }
 .board_view .viewwrap .filewrap .file_list li a {
   display: inline-block;

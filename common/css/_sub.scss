@@ -347,8 +347,11 @@ article {
       padding: 48px 20px 40px;
       height: 211px;
 
-      &:hover {
-        box-shadow: 0 0 1px #000;
+      @media (hover:hover) {
+        
+        &:hover {
+          box-shadow: 0 0 1px #000;
+        }
       }
 
       
@@ -1034,11 +1037,23 @@ height: 48px;
           background: url(../images/count_ico.png) no-repeat center center;
         }
       }
-      .spcr {
-        display: block;
-        width: 1px;
-        height: 14px;
-        background: #eee;
+      > p {
+        display: flex;
+        align-items: center;
+        gap: 0 16px;
+
+        &:last-of-type {
+          &::after {
+            content: none;
+          }
+        }
+        &::after {
+          display: block;
+          content: '';
+          width: 1px;
+          height: 14px;
+          background: #eee;
+        }
       }
     }
     .cont_body {
@@ -1062,6 +1077,7 @@ height: 48px;
       .file_list {
         li {
           margin-bottom: 8px;
+          color: #666;
 
           a {
             display: inline-block;
