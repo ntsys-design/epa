@@ -39,7 +39,6 @@
   }
   // sub_tit
   .sub_titwrap {
-    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -70,6 +69,8 @@
     display: flex;
     gap: 0 16px;
     align-items: center;
+    position: relative;
+
 
     > div {
       display: flex;
@@ -113,6 +114,7 @@
       }
     }
     > button {
+      flex-shrink: 0;
       width: 48px;
       height: 48px;
       border-radius: 50%;
@@ -139,6 +141,37 @@
         background: url(../images/lnb_print.png) no-repeat center center;
       }
     }
+
+    @include maxWidth (880px) {
+      > button {
+        position: absolute;
+
+        &.share {
+          right: 16px;
+          transform: translateX(-100%);
+        }
+        &.print {
+          right: 0;
+        }
+      }
+    }
+    @include maxWidth (720px) {
+      margin-right: 0;
+      margin-left: 0;
+
+      .lnb_btn {
+        display: none;
+      }
+      > div {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin-right: unset;
+        .ulsel {
+          width: calc((100% - 1px)/2);
+        }
+      }
+
+    }
   }
 }
 // margin
@@ -155,7 +188,10 @@
   margin-bottom: 24px !important;
 }
 .mb56 {
-  margin-bottom: 56px !important;
+  margin-bottom: 56px !important; 
+}
+.mb64 {
+  margin-bottom: 64px !important;
 }
 .mb80 {
   margin-bottom: 80px !important;
@@ -273,6 +309,73 @@ article {
       }
     }
   }
+
+  .diagwrap {
+    width: 100%;
+    position: relative;
+
+    .diag_midline {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .diag_mthr {
+      padding: 0 20px;
+
+      .circlebox {
+        display: flex;
+        max-width: 480px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        
+        .circlewrap {
+          max-width: 240px;
+          width: 100%;
+          padding-bottom: 50%;
+          position: relative;
+
+          .circle {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 2;
+
+            &::after {
+              content: '';
+              width: calc(100% - 2px);
+              height:  calc(100% - 2px);
+              border: 1px solid #eee;
+              border-bottom: 1px solid #8EAA5E;
+              border-left: 1px solid #8EAA5E;
+              transform: rotate(-45deg);
+              border-radius: 50%;
+              position: absolute;
+              top: 0;
+              z-index: 44;
+            }
+
+            &.rvs {
+              margin-left: -1px;
+              &::after {
+                transform: rotate(135deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // sub01
 .sub_tab_con {
@@ -347,6 +450,7 @@ article {
       padding: 48px 20px 40px;
       height: 211px;
 
+
       @media (hover:hover) {
         
         &:hover {
@@ -367,6 +471,13 @@ article {
       }
       &:only-of-type {
         margin: 0 auto;
+      }
+    }
+    @include maxWidth(720px) {
+      gap : 20px;
+
+      > a {
+        flex: 0 1 calc((100% - 20px)/2);
       }
     }
   }
@@ -630,14 +741,6 @@ height: 48px;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
               }
-              .notice{
-                border: 1px solid #CCCCCC;
-                padding:0 15px;
-                margin-right: 12px;
-                color: #1154FF;
-                border-radius: 2px;
-                display: inline-block;
-              }
             }
           }
         }
@@ -719,6 +822,14 @@ height: 48px;
     }
   }
  
+}
+.notice_tag{
+  border: 1px solid #CCCCCC;
+  padding:0 15px;
+  margin-right: 12px;
+  color: #1154FF;
+  border-radius: 2px;
+  display: inline-block;
 }
 
 .pagination_wrap {
@@ -1018,10 +1129,17 @@ height: 48px;
 
 .board_view {
   .viewwrap {
+    margin-top: 80px;
+
+    &.hasTag {
+      margin-top: 64px;
+    }
     .cont_head {
       padding-bottom: 24px;
       border-bottom: 2px solid #000;
-
+      .notice_tag {
+        margin-bottom: 16px;
+      }
       .brd_title {
         text-overflow: ellipsis;
         overflow: hidden;
