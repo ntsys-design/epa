@@ -469,20 +469,21 @@ footer {
   justify-content: center;
   gap: 10px;
   button {
-    width: 24px;
-    height: 32px;
-    &.doc {
-      background: url(../images/doc.png) no-repeat center center;
-    }
-    &.xls {
-      background: url(../images/xls.png) no-repeat center center;
-    }
-    &.pdf {
-      background: url(../images/pdf.png) no-repeat center center;
-    }
-    &.zip {
-      background: url(../images/zip.png) no-repeat center center;
-    }
+    width: 20px;
+    height: 20px;
+    background: url(../images/brd_file_ico.png) no-repeat center center;
+    // &.doc {
+    //   background: url(../images/doc.png) no-repeat center center;
+    // }
+    // &.xls {
+    //   background: url(../images/xls.png) no-repeat center center;
+    // }
+    // &.pdf {
+    //   background: url(../images/pdf.png) no-repeat center center;
+    // }
+    // &.zip {
+    //   background: url(../images/zip.png) no-repeat center center;
+    // }
   }
 }
 .board_btn {
