@@ -2230,8 +2230,10 @@ article .artclinfo_list > li .logo_list > li {
   padding: 48px 20px 40px;
   height: 211px;
 }
-.img_wrap.links > a:hover {
-  box-shadow: 0 0 1px #000;
+@media (hover: hover) {
+  .img_wrap.links > a:hover {
+    box-shadow: 0 0 1px #000;
+  }
 }
 .img_wrap.links > a img {
   width: 64px;
@@ -2629,6 +2631,11 @@ article .artclinfo_list > li .logo_list > li {
   font-family: "SUIT-R";
   color: #000000;
 }
+@media screen and (min-width: 1179px) {
+  .greet .greet_txt p .spanblock {
+    display: block;
+  }
+}
 .greet .greet_txt p.greet_p1 {
   font-family: "SUIT-B";
   font-size: 28px;
@@ -2801,18 +2808,35 @@ article .artclinfo_list > li .logo_list > li {
 .board_view .viewwrap .board_util {
   align-items: center;
   gap: 0 16px;
+  color: #666;
 }
 .board_view .viewwrap .board_util .brd_wrtr {
   font-family: "SUIT-M";
-}
-.board_view .viewwrap .board_util .brd_date {
-  color: #666;
+  color: #000;
 }
 .board_view .viewwrap .board_util .brd_cnt {
-  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
 }
-.board_view .viewwrap .board_util .spcr {
+.board_view .viewwrap .board_util .brd_cnt .ico_eye {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/count_ico.png) no-repeat center center;
+}
+.board_view .viewwrap .board_util > p {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+.board_view .viewwrap .board_util > p:last-of-type::after {
+  content: none;
+}
+.board_view .viewwrap .board_util > p::after {
   display: block;
+  content: "";
   width: 1px;
   height: 14px;
   background: #eee;
@@ -2820,6 +2844,41 @@ article .artclinfo_list > li .logo_list > li {
 .board_view .viewwrap .cont_body {
   padding: 40px 0;
   border-bottom: 1px solid #ccc;
+}
+.board_view .viewwrap .pb_textarea {
+  min-height: 230px;
+}
+.board_view .viewwrap .filewrap {
+  background: #f7f7f8;
+  margin-top: 40px;
+  padding: 20px;
+}
+.board_view .viewwrap .filewrap .filewrap_tit {
+  font-family: "SUIT-M";
+  margin-bottom: 8px;
+}
+.board_view .viewwrap .filewrap .file_list li {
+  margin-bottom: 8px;
+  color: #666;
+}
+.board_view .viewwrap .filewrap .file_list li a {
+  display: inline-block;
+  position: relative;
+  color: #666;
+}
+@media (hover: hover) {
+  .board_view .viewwrap .filewrap .file_list li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #666;
+    left: 0;
+    bottom: 2px;
+  }
+}
+.board_view .viewwrap .filewrap .file_list li:last-of-type {
+  margin-bottom: unset;
 }
 .board_view .viewwrap .cont_foot {
   border-bottom: 1px solid #ccc;
