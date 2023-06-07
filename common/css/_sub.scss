@@ -11,37 +11,31 @@
   // 서브페이지 메인비주얼 bg
   &.sub01 {
     background: url(../images/sub_commonbg01.png) no-repeat center center;
-    > div::after {
-      background: url(../images/sub_commonbg01.png) no-repeat center 35.5%;
-    }
   }
   &.sub02 {
     background: url(../images/sub_commonbg02.png) no-repeat center center;
-    > div::after {
-      background: url(../images/sub_commonbg02.png) no-repeat center 35.5%;
-    }
   }
   &.sub03 {
     background: url(../images/sub_commonbg03.png) no-repeat center center;
-    > div::after {
-      background: url(../images/sub_commonbg03.png) no-repeat center 35.5%;
-    }
   }
   &.sub04 {
     background: url(../images/sub_commonbg04.png) no-repeat center center;
-    > div::after {
-      background: url(../images/sub_commonbg04.png) no-repeat center 35.5%;
-    }
   }
   &.sub05 {
     background: url(../images/sub_commonbg05.png) no-repeat center center;
-    > div::after {
-      background: url(../images/sub_commonbg05.png) no-repeat center 35.5%;
-    }
+  }
+  &.sub06 {
+    background: url(../images/sub_commonbg06.png) no-repeat center center;
   }
   .bg_blend {
-    background: rgba(0, 0, 0, 0.3);
+    // background: rgba(0, 0, 0, 0.3);
     height: 100%;
+  }
+
+  .blockspan {
+    @include maxWidth(720px) {
+      display: block;
+    }
   }
   // sub_tit
   .sub_titwrap {
@@ -343,6 +337,35 @@ article {
     }
   }
   &.ver2 {
+  }
+  &.links {
+    > a {
+      flex: 0 1 calc((100% - 64px)/3);
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 48px 20px 40px;
+      height: 211px;
+
+      &:hover {
+        box-shadow: 0 0 1px #000;
+      }
+
+      
+
+      img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 32px;
+      }
+      p {
+        font-size: 18px;
+        color: #333;
+      }
+      &:only-of-type {
+        margin: 0 auto;
+      }
+    }
   }
   // &.needgrid {
   //   grid-template-columns: repeat(3, 1fr);
@@ -711,7 +734,7 @@ article {
             }
           }
 
-          &:last-child {
+          &:last-child { 
             margin-right: 0;
           }
         }
@@ -722,34 +745,44 @@ article {
 // sub05 인사말
 
 .greet {
-  justify-content: space-between;
-  .greet_img {
-    width: 45%;
-  }
+  gap: 25px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+
   .greet_txt {
-    width: 53.5%;
+    width: 64.29%;
     p {
       font-family: "SUIT-R";
       color: #000000;
+
       &.greet_p1 {
         font-family: "SUIT-B";
-        font-size: 40px;
-        color: #666666;
-        span {
-          color: #004199;
-        }
-        margin-bottom: 34px;
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 24px;
       }
       &.greet_p2 {
-        margin-bottom: 20px;
-      }
-      &.greet_p3 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 20px;
+        line-height: 27px;
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 40px;
       }
     }
+  }
+  .greet_img {
+    align-self: flex-end;
+    img {
+      position: relative;
+      bottom: -50px;
+    }
+  }
+}
+.greet_ext {
+  margin-top: 40px;
+  line-height: 27px;
+  
+  p {
+    font-size: 18px;
   }
 }
 
