@@ -798,20 +798,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   gap: 10px;
 }
 .brd_file button {
-  width: 24px;
-  height: 32px;
-}
-.brd_file button.doc {
-  background: url(../images/doc.png) no-repeat center center;
-}
-.brd_file button.xls {
-  background: url(../images/xls.png) no-repeat center center;
-}
-.brd_file button.pdf {
-  background: url(../images/pdf.png) no-repeat center center;
-}
-.brd_file button.zip {
-  background: url(../images/zip.png) no-repeat center center;
+  width: 20px;
+  height: 20px;
+  background: url(../images/brd_file_ico.png) no-repeat center center;
 }
 
 .board_btn {
@@ -2337,67 +2326,107 @@ article .artclinfo_list > li .logo_list > li {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 .board .brd_top .brd_tl {
-  gap: 40px;
+  gap: 32px;
 }
 .board .brd_top .brd_tl span {
-  font-family: "SUIT-SB";
   position: relative;
+  color: #333333;
+}
+.board .brd_top .brd_tl span b {
+  font-family: "SUIT-M";
+  color: #13523B;
+}
+.board .brd_top .brd_tl span em {
+  color: #000000;
+  font-family: "SUIT-M";
 }
 .board .brd_top .brd_tl span:first-child:after {
   position: absolute;
   content: "";
-  right: -23px;
-  width: 2px;
-  height: 18px;
-  background: #000000;
+  top: 50%;
+  right: -17px;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 14px;
+  background: #eeeeee;
 }
 .board .brd_top .brd_tr {
   align-items: center;
   gap: 10px;
 }
-.board select {
-  border: 1px solid #999999;
-  padding: 0px 20px;
-  height: 35px;
-  font-family: "SUIT-B";
-  background: url(../images/board_slt.png) no-repeat 90% center;
-  width: 140px;
+.board .brd_sch {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 24px 32px;
+  margin-bottom: 64px;
+  gap: 16px;
+}
+.board .ulsel {
+  border-radius: 2px;
+  height: 48px;
+}
+.board .ulsel button {
+  border: 1px solid #CCCCCC;
+  color: #333;
+}
+.board .ulsel button::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../images/slt_down.png);
+  right: 14px;
+}
+.board .ulsel.brd_slt {
+  flex-shrink: 0;
+  width: 144px;
+}
+.board .ulsel.brd_slt button {
+  border-radius: 2px;
+  padding: 0 16px;
+}
+.board .ulsel.brd_count {
+  width: 96px;
+}
+.board .ulsel.brd_count button {
+  border-radius: 2px;
+  padding: 0 12px;
 }
 .board .brd_search_bar {
-  gap: 10px;
-  margin-right: 10px;
+  flex-grow: 1;
+  height: 48px;
 }
 .board .brd_search_bar input {
-  border: 1px solid #999999;
+  border: 1px solid #CCCCCC;
   padding: 0 10px;
-  height: 35px;
-  width: 260px;
-  background: url(../images/board_sch_ico.png) no-repeat 95% center;
+  border-radius: 2px;
   font-size: 16px;
+  height: 100%;
 }
 .board .brd_search_bar input::-moz-placeholder {
-  color: #aaaaaa;
+  color: #777777;
 }
 .board .brd_search_bar input::placeholder {
-  color: #aaaaaa;
+  color: #777777;
 }
-.board .brd_search_bar .brd_search_btn {
-  width: 120px;
-  background: #5992ff;
+.board .brd_search_btn {
+  flex-shrink: 0;
+  width: 112px;
+  background: #13523B;
+  height: 48px;
   color: #ffffff;
-  font-family: "SUIT-SB";
+  font-family: "SUIT-M";
 }
 .board .brd_list {
   font-family: "SUIT-R";
 }
 .board .brd_list ul {
-  border-top: 2px solid #5992ff;
+  border-top: 2px solid #000000;
 }
 .board .brd_list ul li {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #CCCCCC;
 }
 .board .brd_list ul li div {
   min-height: 55px;
@@ -2406,7 +2435,7 @@ article .artclinfo_list > li .logo_list > li {
   align-items: center;
 }
 .board .brd_list ul li div.brd_hd p {
-  font-family: "SUIT-b";
+  font-family: "SUIT-M";
 }
 .board .brd_list ul li div.brd_hd .brd_title {
   text-align: center;
@@ -2500,58 +2529,58 @@ article .artclinfo_list > li .logo_list > li {
   align-items: center;
   width: 100%;
   height: 32px;
-  gap: 0 30px;
 }
 .pagination_wrap .pagination > button {
   display: inline-block;
   min-width: 20px;
   flex-shrink: 0;
-  height: 30px;
+  height: 40px;
+  width: 40px;
 }
 .pagination_wrap .pagination > button.first_page {
-  width: 32px;
   background: url(../images/btn_first_page.png) no-repeat center center/contain;
 }
 .pagination_wrap .pagination > button.prev_page {
   background: url(../images/btn_prev_page.png) no-repeat center center/contain;
-  width: 21px;
+  margin-left: -1px;
+  margin-right: 32px;
+}
+.pagination_wrap .pagination > button.prev_page_on {
+  background: url(../images/btn_prev_page_on.png) no-repeat center center/contain;
+  margin-right: 32px;
 }
 .pagination_wrap .pagination > button.next_page {
   background: url(../images/btn_next_page.png) no-repeat center center/contain;
-  width: 21px;
+  margin-left: 32px;
+}
+.pagination_wrap .pagination > button.next_page_on {
+  background: url(../images/btn_next_page_on.png) no-repeat center center/contain;
+  margin-left: 32px;
 }
 .pagination_wrap .pagination > button.last_page {
   background: url(../images/btn_last_page.png) no-repeat center center/contain;
-  width: 32px;
+  margin-left: -1px;
 }
 .pagination_wrap .pagination ul {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0 26px;
+  gap: 0 36px;
 }
 .pagination_wrap .pagination ul > li:last-child {
   margin-right: 0;
 }
 .pagination_wrap .pagination ul > li a {
   display: flex;
-  color: #444444;
+  color: #777777;
   height: 100%;
   justify-content: center;
   align-items: center;
   position: relative;
   font-family: "SUIT-SB";
 }
-.pagination_wrap .pagination ul > li a.active:after {
-  position: absolute;
-  content: "";
-  width: 28px;
-  height: 34px;
-  border: 2px solid #5992ff;
-  border-radius: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.pagination_wrap .pagination ul > li a.active {
+  color: #000000;
 }
 .pagination_wrap .pagination ul > li a:last-child {
   margin-right: 0;
