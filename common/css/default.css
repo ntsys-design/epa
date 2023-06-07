@@ -2442,13 +2442,18 @@ article .artclinfo_list > li .logo_list > li {
   border-top: 2px solid #000000;
 }
 .board .brd_list ul li {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #eeeeee;
+}
+.board .brd_list ul li:first-child, .board .brd_list ul li:last-child {
+  border-bottom: 1px solid #cccccc;
 }
 .board .brd_list ul li div {
   min-height: 55px;
+  max-height: 64px;
   display: flex;
   text-align: center;
   align-items: center;
+  padding: 20px 0;
 }
 .board .brd_list ul li div.brd_hd p {
   font-family: "SUIT-M";
@@ -2471,9 +2476,12 @@ article .artclinfo_list > li .logo_list > li {
   -webkit-box-orient: vertical;
 }
 .board .brd_list ul li div p.brd_title .notice {
-  padding: 0 2px;
-  margin-right: 10px;
-  border: 1px solid #000;
+  border: 1px solid #CCCCCC;
+  padding: 0 15px;
+  margin-right: 12px;
+  color: #1154FF;
+  border-radius: 2px;
+  display: inline-block;
 }
 .board .brd_list.thmb ul {
   display: flex;
@@ -2534,9 +2542,16 @@ article .artclinfo_list > li .logo_list > li {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+.board .brd_list.thmb {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #cccccc;
+  padding-top: 40px;
+  margin-top: 8px;
+  padding-bottom: 40px;
+}
 
 .pagination_wrap {
-  margin-top: 52px;
+  margin-top: 40px;
 }
 .pagination_wrap .pagination {
   display: flex;
