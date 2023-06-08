@@ -2413,18 +2413,46 @@ article .graphwrap .dvsn_list > li {
   width: 60%;
 }
 
-.program_info li a {
-  padding: 10px;
+.program_info {
+  border-top: 2px solid #000;
 }
-.program_info li .program_detail {
+.program_info > li {
+  border-bottom: 2px solid #eee;
+}
+.program_info > li > a {
+  padding: 27px 8px;
+  position: relative;
+  font-family: "SUIT-M";
+  font-size: 20px;
+}
+.program_info > li > a:after {
+  background: url(../images/ic_down.png) center center;
+  position: absolute;
+  cursor: pointer;
+  content: "";
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.program_info > li .program_detail {
   display: none;
-  padding: 50px;
-  border: 1px solid #eee;
-  border-radius: 20px;
+  border-top: 2px solid #eee;
+  padding-bottom: 40px;
 }
-.program_info li.active a {
-  color: #13523b;
-  font-weight: 600;
+.program_info > li .program_detail > p {
+  padding: 24px;
+  background: #F7F7F8;
+  margin: 24px 0 40px;
+}
+.program_info > li .program_detail .flxwrap {
+  justify-content: space-between;
+  margin: 40px;
+}
+.program_info > li.active a:after {
+  transform: translateY(-50%) rotate(-180deg);
 }
 
 .sub_con_list2 .con_wrap .flex_wrap,
