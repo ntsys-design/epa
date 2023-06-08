@@ -2249,34 +2249,55 @@ article .diagwrap .diag_mthr .circlebox .circlewrap {
   padding-bottom: 50%;
   position: relative;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  z-index: 2;
+article .diagwrap .diag_mthr .circlebox .circlewrap:first-of-type {
+  margin-right: -0.5px;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle::after {
+article .diagwrap .diag_mthr .circlebox .circlewrap:last-of-type {
+  margin-left: -0.5px;
+}
+article .diagwrap .diag_mthr .circlebox .circlewrap::after {
   content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
-  border: 1px solid #eee;
-  border-bottom: 1px solid #8EAA5E;
-  border-left: 1px solid #8EAA5E;
-  transform: rotate(-45deg);
   border-radius: 50%;
+  z-index: 4;
+}
+article .diagwrap .diag_mthr .circlebox .circlewrap .circle {
   position: absolute;
+  left: 0;
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+article .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
+  background: #eee;
   top: 0;
-  z-index: 44;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 2;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle.rvs {
-  margin-left: -1px;
+article .diagwrap .diag_mthr .circlebox .circlewrap .circle.top.rvs {
+  background: #8EAA5E;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle.rvs::after {
-  transform: rotate(135deg);
+article .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
+  background: #8EAA5E;
+  bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+}
+article .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom.rvs {
+  background: #eee;
+  z-index: 2;
 }
 
 .sub_tab_con article > div figure {
