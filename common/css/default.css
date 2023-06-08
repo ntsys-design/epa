@@ -2219,12 +2219,13 @@ article .artclinfo_list > li .logo_list > li {
   flex-shrink: 0;
   border: 1px solid red;
 }
-article .diagwrap {
+article .graphwrap .diagwrap {
   width: 100%;
   height: 100%;
+  margin-bottom: 140px;
   position: relative;
 }
-article .diagwrap .diag_midline {
+article .graphwrap .diagwrap .diag_midline {
   display: block;
   box-sizing: border-box;
   position: absolute;
@@ -2234,12 +2235,13 @@ article .diagwrap .diag_midline {
   height: 1px;
   background: transparent;
   border-bottom: 1px solid #ccc;
-  z-index: 5;
+  z-index: 1;
 }
-article .diagwrap .diag_mthr {
+article .graphwrap .diagwrap .diag_mthr {
+  padding: 0 25px;
   position: relative;
 }
-article .diagwrap .diag_mthr::before {
+article .graphwrap .diagwrap .diag_mthr::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2250,7 +2252,7 @@ article .diagwrap .diag_mthr::before {
   background: #13523B;
   z-index: 6;
 }
-article .diagwrap .diag_mthr::after {
+article .graphwrap .diagwrap .diag_mthr::after {
   content: "";
   position: absolute;
   right: 0;
@@ -2261,36 +2263,35 @@ article .diagwrap .diag_mthr::after {
   background: #13523B;
   z-index: 6;
 }
-article .diagwrap .diag_mthr .circlebox {
+article .graphwrap .diagwrap .diag_mthr .circlebox {
   display: flex;
   max-width: 482px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap {
   max-width: 241px;
   width: 100%;
   padding-bottom: 50%;
   position: relative;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap:first-of-type {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap:first-of-type {
   right: -0.5px;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap:last-of-type {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap:last-of-type {
   left: -0.5px;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap::after {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap::after {
   content: "";
   position: absolute;
   z-index: 4;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
   border-radius: 50%;
@@ -2298,7 +2299,7 @@ article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle {
   display: flex;
   flex-direction: column;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::before {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::before {
   content: "";
   width: 3px;
   height: 3px;
@@ -2309,7 +2310,7 @@ article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::before {
   transform: translate(-50%, -50%);
   z-index: 6;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after {
   content: "";
   width: 5px;
   height: 5px;
@@ -2320,23 +2321,22 @@ article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after {
   transform: translate(-50%, -50%);
   z-index: 6;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div {
   height: 50%;
   display: flex;
   justify-content: center;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap {
   align-items: flex-end;
   padding-bottom: 23px;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap img {
-  width: 48px;
-  height: 48px;
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap img {
+  max-width: 48px;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.textwrap {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.textwrap {
   padding-top: 27px;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle {
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle {
   position: absolute;
   left: 0;
   z-index: 3;
@@ -2344,29 +2344,66 @@ article .diagwrap .diag_mthr .circlebox .circlewrap .circle {
   width: 100%;
   height: 50%;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
-  background: #eee;
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
   top: 0;
+  border: 1px solid #eee;
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   z-index: 2;
+  border-bottom: none;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle.top.rvs {
-  background: #8EAA5E;
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top.rvs {
+  border: 1px solid #8EAA5E;
+  border-bottom: none;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
-  background: #8EAA5E;
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
   bottom: 0;
+  border: 1px solid #8EAA5E;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 50% 100%;
   border-bottom-right-radius: 50% 100%;
+  border-top: none;
 }
-article .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom.rvs {
-  background: #eee;
+article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom.rvs {
   z-index: 2;
+  border: 1px solid #eee;
+  border-top: none;
+}
+article .graphwrap .midgreen {
+  font-size: 24px;
+  font-family: "SUIT-M";
+  color: #13523B;
+  border: 1px solid #13523B;
+  border-radius: 48px;
+  padding: 33px 50px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 48px;
+}
+article .graphwrap .midgreen::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  max-width: 152px;
+  width: 100%;
+  height: 60px;
+  background: url(../images/sub01_arrws.png) no-repeat center center;
+}
+article .graphwrap .dvsn_list {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 59px;
+}
+article .graphwrap .dvsn_list > li {
+  flex: 0 1 30%;
+  height: 50px;
+  border: 1px solid #eee;
 }
 
 .sub_tab_con article > div figure {
