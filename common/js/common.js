@@ -58,6 +58,7 @@ $(document).ready(function () {
       $(this).siblings().fadeIn(100);
     }
   });
+
   // 외부영역 클릭 시 셀렉트 닫기
   $(document).mouseup(function (e) {
     e.stopPropagation();
@@ -67,6 +68,12 @@ $(document).ready(function () {
       $(".ulsel_list").fadeOut(100);
     }
   });
+
+  $(window).resize(function () {
+    toFunc();
+    $('.ulsel_btn').removeClass('open');
+    $(".ulsel_list").fadeOut(100);
+});
 
   $(".pagination ul li a").on("click", function (e) {
     e.preventDefault();
@@ -277,6 +284,33 @@ function goToTab(abs_idx, selecElm){
   
     }
   })
+    // sub_02_02 검색탭
+  $(".sch_tab > ul > li").first().addClass("active");
+  $(".sch_tab > ul > li").on("click", function (e) {
+    e.preventDefault();
+    $(".sch_tab > ul > li").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  toFunc();
+
+  function toFunc() {
+    if ($(window).width() < 720) {
+    $('.sch_tab').addClass("ulsel").removeClass('pcef');
+    $('.sch_tab .ulsel_btn').removeClass("hide");
+    $('.sch_tab').children('ul').removeClass('needflex').addClass('ulsel_list')
+  } else {
+    $('.sch_tab').removeClass("ulsel").addClass('pcef');
+    $('.sch_tab .ulsel_btn').addClass("hide");
+    $('.sch_tab').children('ul').removeAttr('style').addClass('needflex').removeClass('ulsel_list')
+  }
+  }
+
+  $(window).resize(function () {
+      toFunc();
+  });
+
+
 
     // sub_03_02 자주하는 질문 아코디언
     $('.faq_list .brd_title a').on('click',function(e){

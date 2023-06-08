@@ -2249,7 +2249,7 @@ article .graphwrap .diagwrap .diag_mthr::before {
   width: 7px;
   height: 7px;
   transform: translateY(-50%);
-  background: #13523B;
+  background: #13523b;
   z-index: 6;
 }
 article .graphwrap .diagwrap .diag_mthr::after {
@@ -2260,7 +2260,7 @@ article .graphwrap .diagwrap .diag_mthr::after {
   width: 7px;
   height: 7px;
   transform: translateY(-50%);
-  background: #13523B;
+  background: #13523b;
   z-index: 6;
 }
 article .graphwrap .diagwrap .diag_mthr .circlebox {
@@ -2303,7 +2303,7 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::befor
   content: "";
   width: 3px;
   height: 3px;
-  background: #13523B;
+  background: #13523b;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2314,7 +2314,7 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after
   content: "";
   width: 5px;
   height: 5px;
-  border: 1px solid #13523B;
+  border: 1px solid #13523b;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2355,12 +2355,12 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
   border-bottom: none;
 }
 article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top.rvs {
-  border: 1px solid #8EAA5E;
+  border: 1px solid #8eaa5e;
   border-bottom: none;
 }
 article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
   bottom: 0;
-  border: 1px solid #8EAA5E;
+  border: 1px solid #8eaa5e;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 50% 100%;
@@ -2375,8 +2375,8 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom.rv
 article .graphwrap .midgreen {
   font-size: 24px;
   font-family: "SUIT-M";
-  color: #13523B;
-  border: 1px solid #13523B;
+  color: #13523b;
+  border: 1px solid #13523b;
   border-radius: 48px;
   padding: 33px 50px;
   text-align: center;
@@ -2398,10 +2398,9 @@ article .graphwrap .midgreen::before {
 article .graphwrap .dvsn_list {
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px 59px;
+  gap: 20px 50px;
 }
 article .graphwrap .dvsn_list > li {
-  flex: 0 1 30%;
   height: 50px;
   border: 1px solid #eee;
 }
@@ -2604,7 +2603,7 @@ article .graphwrap .dvsn_list > li {
   border-radius: 20px;
 }
 .board .faq_list.active a {
-  color: #13523B;
+  color: #13523b;
   font-weight: 600;
 }
 
@@ -2623,7 +2622,7 @@ article .graphwrap .dvsn_list > li {
 }
 .board .brd_top .brd_tl span b {
   font-family: "SUIT-M";
-  color: #13523B;
+  color: #13523b;
 }
 .board .brd_top .brd_tl span em {
   color: #000000;
@@ -2643,19 +2642,66 @@ article .graphwrap .dvsn_list > li {
   align-items: center;
   gap: 10px;
 }
+.board .brd_schwrap {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 64px;
+}
+.board .brd_schwrap .tabwrap {
+  padding: 32px;
+  border-bottom: 1px solid #eee;
+}
+.board .brd_schwrap .sch_tab.ulsel {
+  width: 100%;
+}
+.board .brd_schwrap .sch_tab.ulsel .ulsel_btn {
+  border-radius: unset;
+}
+.board .brd_schwrap .sch_tab.ulsel ul {
+  max-height: 400px;
+  overflow-y: hidden;
+}
+.board .brd_schwrap .sch_tab.pcef ul {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-left: 1px solid #ccc;
+}
+.board .brd_schwrap .sch_tab.pcef ul > li {
+  flex: 0 0 25%;
+  border: 1px solid #ccc;
+  border-left: unset;
+  margin-top: -1px;
+}
+.board .brd_schwrap .sch_tab.pcef ul > li.active {
+  background: #78B510;
+}
+.board .brd_schwrap .sch_tab.pcef ul > li.active a {
+  color: #fff;
+}
+.board .brd_schwrap .sch_tab.pcef ul > li a {
+  padding: 16px 10px;
+  text-align: center;
+  color: #666;
+}
+.board .brd_schwrap .brd_sch {
+  padding: 32px;
+  border: none;
+  margin-bottom: unset;
+}
 .board .brd_sch {
   border: 1px solid #000;
   border-radius: 8px;
   padding: 24px 32px;
   margin-bottom: 64px;
   gap: 16px;
+  flex-wrap: wrap;
 }
 .board .ulsel {
   border-radius: 2px;
   height: 48px;
 }
 .board .ulsel button {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   color: #333;
 }
 .board .ulsel button::after {
@@ -2685,7 +2731,7 @@ article .graphwrap .dvsn_list > li {
   height: 48px;
 }
 .board .brd_search_bar input {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   padding: 0 10px;
   border-radius: 2px;
   font-size: 16px;
@@ -2700,7 +2746,7 @@ article .graphwrap .dvsn_list > li {
 .board .brd_search_btn {
   flex-shrink: 0;
   width: 112px;
-  background: #13523B;
+  background: #13523b;
   height: 48px;
   color: #ffffff;
   font-family: "SUIT-M";
@@ -2813,10 +2859,10 @@ article .graphwrap .dvsn_list > li {
 }
 
 .notice_tag {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   padding: 0 15px;
   margin-right: 12px;
-  color: #1154FF;
+  color: #1154ff;
   border-radius: 2px;
   display: inline-block;
 }
