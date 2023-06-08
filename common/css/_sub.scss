@@ -414,20 +414,46 @@ article {
 }
 // 아코디언
 .program_info{
-  li{
-    a{
-      padding: 10px;
+  border-top: 2px solid #000;
+  >li{
+    border-bottom: 2px solid #eee;
+    >a{
+      padding: 27px 8px;
+      position: relative;
+      font-family: "SUIT-M";
+      font-size: 20px;
+      &:after{
+        background: url(../images/ic_down.png)center center;
+        position: absolute;
+        cursor: pointer;
+        content: '';
+        width: 32px;
+        height: 32px;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        transition: .3s;
+      }
     }
     .program_detail {
       display: none;
-      padding: 50px;
-      border: 1px solid #eee;
-      border-radius: 20px;
+      border-top: 2px solid #eee;
+      padding-bottom: 40px;
+      >p{
+        padding: 24px;
+        background: #F7F7F8;
+        margin:24px 0 40px;
+      }
+      .flxwrap{
+        justify-content: space-between;
+        margin: 40px;
+      }
     }
     &.active {
       a {
-        color: #13523b;
-        font-weight: 600;
+        &:after{
+          transform:translateY(-50%) rotate(-180deg);
+        }
       }
     }
   }
