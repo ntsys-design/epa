@@ -18,7 +18,7 @@
 @font-face {
   font-family: "SUIT-M";
   src: url("../fonts/SUIT-Medium.eot");
-  src: url("../fonts/SUIT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-Medium.woff2") format("woff2"), url("../fonts/SUIT-Medium.woff") format("woff"), url("../fonts/SUIT-Medium.ttf") format("truetype"), url("../fonts/SUIT-Medium.svg#suit-medium") format("svg");
+  src: url("../fonts/SUIT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SUIT-Medium.woff2") format("woff2"), url("../fonts/SUIT-Medium.woff") format("woff"), url("../fonts/SUIT-Medium.ttf") format("truetype"), url("../fonts/SUIT-Medium.svg#SUIT-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
