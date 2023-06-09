@@ -2381,7 +2381,7 @@ article .graphwrap .midgreen {
   padding: 33px 50px;
   text-align: center;
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 88px;
 }
 article .graphwrap .midgreen::before {
   content: "";
@@ -2398,18 +2398,43 @@ article .graphwrap .midgreen::before {
 article .graphwrap .dvsn_list {
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px 50px;
+  gap: 20px 60px;
 }
 article .graphwrap .dvsn_list > li {
-  height: 50px;
-  border: 1px solid #eee;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 0 56px 48px 56px;
+  flex: 0 1 calc((100% - 120px) / 3);
+}
+article .graphwrap .dvsn_list > li img {
+  position: relative;
+  top: -40px;
+  left: -16px;
+  margin-bottom: -15px;
+}
+article .graphwrap .dvsn_list > li > span {
+  display: block;
+  font-family: "SUIT-SB";
+  font-size: 28px;
+  margin-bottom: 24px;
 }
 
-.sub_tab_con article > div figure {
-  width: 40%;
+.sub_tab_con article > div {
+  gap: 40px;
 }
-.sub_tab_con article > div .con_txt {
-  width: 60%;
+.sub_tab_con article > div figure {
+  width: 25%;
+  text-align: center;
+}
+.sub_tab_con article > div .con_txt p {
+  color: #333;
+}
+.sub_tab_con article > div .con_txt p span {
+  font-family: "SUIT-SB";
+  color: #13523B;
+}
+.sub_tab_con article > div.bd_t {
+  border-top: 2px solid #000;
+  padding-top: 40px;
 }
 
 .program_info {
