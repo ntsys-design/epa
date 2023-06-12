@@ -1540,8 +1540,14 @@ article {
 
 .stmwrap {
   .stm_con {
+    margin-bottom: 64px;
+
+    &:last-of-type {
+      margin-bottom: unset;
+    }
     > h5 {
       padding-bottom: 24px;
+      margin-bottom: 40px;
       border-bottom: 2px solid #000;
       a {
         font-size: 24px;
@@ -1551,10 +1557,18 @@ article {
     > ul {
       display: flex;
       flex-wrap: wrap;
-      gap: 40px 0;
+      gap: 40px 20px;
+      @include maxWidth(960px) {
+        gap: 40px 25px;
+      }
 
       >li {
-        flex: 0 1 25%;
+        flex: 0 0 calc((100% - 60px)/4);
+
+        @include maxWidth(960px) {
+          flex: 0 0 calc((100% - 50px)/3);
+        }
+
 
         dl {
 
