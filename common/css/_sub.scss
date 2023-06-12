@@ -511,6 +511,7 @@ article {
         box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
         padding:0 56px 48px 56px;
         flex: 0 1 calc((100% - 120px) / 3);
+        max-height: 233px;
         img{
           position: relative;
           top: -40px;
@@ -638,7 +639,7 @@ article {
       text-align: center;
       border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 48px 20px 40px;
+      padding: 40px 20px 40px;
       height: 211px;
 
       @media (hover: hover) {
@@ -650,7 +651,7 @@ article {
       img {
         width: 64px;
         height: 64px;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
       }
       p {
         font-size: 18px;
@@ -1514,5 +1515,22 @@ article {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width:1080px){
+  article .graphwrap .dvsn_list{
+    gap: 60px;
+  }
+  article .graphwrap .dvsn_list > li{
+    flex: 0 1 calc((100% - 60px) / 2);
+  }
+}
+@media screen and (max-width:720px){
+  .img_wrap > figure{
+    flex: 0 1 calc((100% - 32px) / 2)
+  }
+  article .graphwrap .dvsn_list > li{
+    flex: 0 1 100%;
   }
 }

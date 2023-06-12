@@ -2404,6 +2404,7 @@ article .graphwrap .dvsn_list > li {
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
   padding: 0 56px 48px 56px;
   flex: 0 1 calc((100% - 120px) / 3);
+  max-height: 233px;
 }
 article .graphwrap .dvsn_list > li img {
   position: relative;
@@ -2511,7 +2512,7 @@ article .graphwrap .dvsn_list > li > span {
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 48px 20px 40px;
+  padding: 40px 20px 40px;
   height: 211px;
 }
 @media (hover: hover) {
@@ -2522,7 +2523,7 @@ article .graphwrap .dvsn_list > li > span {
 .img_wrap.links > a img {
   width: 64px;
   height: 64px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .img_wrap.links > a p {
   font-size: 18px;
@@ -3262,4 +3263,21 @@ article .graphwrap .dvsn_list > li > span {
 }
 .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_next, .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_prev {
   color: #777;
+}
+
+@media screen and (max-width: 1080px) {
+  article .graphwrap .dvsn_list {
+    gap: 60px;
+  }
+  article .graphwrap .dvsn_list > li {
+    flex: 0 1 calc((100% - 60px) / 2);
+  }
+}
+@media screen and (max-width: 720px) {
+  .img_wrap > figure {
+    flex: 0 1 calc((100% - 32px) / 2);
+  }
+  article .graphwrap .dvsn_list > li {
+    flex: 0 1 100%;
+  }
 }/*# sourceMappingURL=default.css.map */
