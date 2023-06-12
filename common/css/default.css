@@ -2994,7 +2994,7 @@ article .graphwrap .dvsn_list > li > span {
   }
 }
 .greet .greet_txt p.greet_p1 {
-  font-family: "SUIT-B";
+  font-family: "SUIT-SB";
   font-size: 28px;
   color: #333;
   margin-bottom: 24px;
@@ -3279,4 +3279,39 @@ article .graphwrap .dvsn_list > li > span {
 }
 .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_next, .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_prev {
   color: #777;
+}
+
+.stmwrap .stm_con > h5 {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #000;
+}
+.stmwrap .stm_con > h5 a {
+  font-size: 24px;
+  font-family: "SUIT-B";
+}
+.stmwrap .stm_con > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+}
+.stmwrap .stm_con > ul > li {
+  flex: 0 1 25%;
+}
+.stmwrap .stm_con > ul > li dl dt {
+  font-family: "SUIT-M";
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.stmwrap .stm_con > ul > li dl dt a {
+  display: inline-block;
+}
+.stmwrap .stm_con > ul > li dl dd {
+  margin-bottom: 12px;
+}
+.stmwrap .stm_con > ul > li dl dd:last-of-type {
+  margin-bottom: unset;
+}
+.stmwrap .stm_con > ul > li dl dd a {
+  display: inline-block;
+  color: #333;
 }/*# sourceMappingURL=default.css.map */

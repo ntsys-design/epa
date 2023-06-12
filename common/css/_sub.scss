@@ -1194,7 +1194,7 @@ article {
       }
 
       &.greet_p1 {
-        font-family: "SUIT-B";
+        font-family: "SUIT-SB";
         font-size: 28px;
         color: #333;
         margin-bottom: 24px;
@@ -1532,5 +1532,56 @@ article {
         }
       }
     }
+  }
+}
+
+
+//사이트맵
+
+.stmwrap {
+  .stm_con {
+    > h5 {
+      padding-bottom: 24px;
+      border-bottom: 2px solid #000;
+      a {
+        font-size: 24px;
+        font-family: 'SUIT-B';
+      }
+    }
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 0;
+
+      >li {
+        flex: 0 1 25%;
+
+        dl {
+
+          dt {
+            font-family: 'SUIT-M';
+            font-size: 20px;
+            margin-bottom: 16px;
+
+            a {
+              display: inline-block;
+            }
+          }
+
+          dd {
+            margin-bottom: 12px;
+
+            &:last-of-type {
+              margin-bottom: unset;
+            }
+            a {
+              display: inline-block;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+    
   }
 }
