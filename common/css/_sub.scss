@@ -1536,23 +1536,6 @@ article {
   }
 }
 
-@media screen and (max-width:1080px){
-  article .graphwrap .dvsn_list{
-    gap: 60px;
-  }
-  article .graphwrap .dvsn_list > li{
-    flex: 0 1 calc((100% - 60px) / 2);
-  }
-}
-@media screen and (max-width:720px){
-  .img_wrap > figure{
-    flex: 0 1 calc((100% - 32px) / 2)
-  }
-  article .graphwrap .dvsn_list > li{
-    flex: 0 1 100%;
-  }
-}
-
 //사이트맵
 
 .stmwrap {
@@ -1600,5 +1583,25 @@ article {
       }
     }
     
+  }
+}
+
+
+
+
+@media screen and (max-width:1080px){
+  article .graphwrap .dvsn_list{
+    gap: 60px;
+  }
+  article .graphwrap .dvsn_list > li{
+    flex: 0 1 calc((100% - 60px) / 2);
+  }
+}
+@media screen and (max-width:720px){
+  .img_wrap > figure{
+    flex: 0 1 calc((100% - 32px) / 2)
+  }
+  article .graphwrap .dvsn_list > li{
+    flex: 0 1 100%;
   }
 }
