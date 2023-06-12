@@ -2418,12 +2418,12 @@ article .graphwrap .dvsn_list > li > span {
   margin-bottom: 24px;
 }
 
-.sub_tab_con article > div {
-  gap: 40px;
-}
 .sub_tab_con article > div figure {
   width: 25%;
   text-align: center;
+}
+.sub_tab_con article > div figure.ffix {
+  flex: 0 0 20%;
 }
 .sub_tab_con article > div .con_txt p {
   color: #333;
@@ -2479,18 +2479,33 @@ article .graphwrap .dvsn_list > li > span {
   transform: translateY(-50%) rotate(-180deg);
 }
 
-.sub_con_list2 .con_wrap .flex_wrap,
-.sub_con_list2_1 .con_wrap .flex_wrap {
+.con_wrap .flex_wrap {
   justify-content: space-between;
 }
-.sub_con_list2 .con_wrap .flex_wrap .txt_wrap,
-.sub_con_list2_1 .con_wrap .flex_wrap .txt_wrap {
+@media screen and (max-width: 720px) {
+  .con_wrap .flex_wrap {
+    flex-direction: column;
+    gap: 12px 0;
+  }
+}
+.con_wrap .flex_wrap .txt_wrap {
   width: 65%;
 }
-.sub_con_list2 .con_wrap .flex_wrap .con_wrap_img,
-.sub_con_list2_1 .con_wrap .flex_wrap .con_wrap_img {
+@media screen and (max-width: 720px) {
+  .con_wrap .flex_wrap .txt_wrap {
+    width: 100%;
+  }
+}
+.con_wrap .flex_wrap .con_wrap_img {
   width: 30%;
   display: block;
+  align-self: center;
+}
+@media screen and (max-width: 720px) {
+  .con_wrap .flex_wrap .con_wrap_img {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .img_wrap {
@@ -2505,6 +2520,8 @@ article .graphwrap .dvsn_list > li > span {
 }
 .img_wrap > figure:only-of-type {
   margin: 0 auto;
+  width: 100%;
+  flex: unset;
 }
 .img_wrap.links > a {
   flex: 0 1 calc((100% - 64px) / 3);

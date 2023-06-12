@@ -531,10 +531,15 @@ article {
 // sub01
 .sub_tab_con {
   article {
-    > div {gap: 40px;
+    > div {
+      // gap: 40px;
       figure {
         width: 25%;
         text-align: center;
+
+        &.ffix {
+          flex: 0 0 20%;
+        }
       }
       .con_txt {
         p{
@@ -601,22 +606,32 @@ article {
     }
   }
 }
-.sub_con_list2,
-.sub_con_list2_1 {
+
   .con_wrap {
     .flex_wrap {
       justify-content: space-between;
+
+      @include maxWidth(720px) {
+        flex-direction: column;
+        gap: 12px 0;
+      }
       .txt_wrap {
         width: 65%;
+        @include maxWidth(720px) {
+          width: 100%;
+        }
       }
       .con_wrap_img {
         width: 30%;
         display: block;
+        align-self: center;
+        @include maxWidth(720px) {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }
-}
-
 .img_wrap {
   display: flex;
   justify-content: flex-start;
@@ -628,6 +643,9 @@ article {
 
     &:only-of-type {
       margin: 0 auto;
+
+      width: 100%;
+      flex: unset;
     }
   }
   &.ver2 {
