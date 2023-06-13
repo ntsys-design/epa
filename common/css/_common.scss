@@ -603,14 +603,14 @@ footer {
       background: url(../images/blt_bar.png) no-repeat center center;
     }
   }
-  &.blt_trngl {
-    gap: 0 4px;
-    &::before {
-      content: '▶';
-      width: 16px;
-      height: 22px;
-    }
-  }
+  // &.blt_trngl {
+  //   gap: 0 4px;
+  //   &::before {
+  //     content: '▶';
+  //     width: 16px;
+  //     height: 22px;
+  //   }
+  // }
   &.blnk {
     gap: 0 4px;
     &::before {

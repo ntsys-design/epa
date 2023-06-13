@@ -898,14 +898,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 22px;
   background: url(../images/blt_bar.png) no-repeat center center;
 }
-.needblt.blt_trngl {
-  gap: 0 4px;
-}
-.needblt.blt_trngl::before {
-  content: "▶";
-  width: 16px;
-  height: 22px;
-}
 .needblt.blnk {
   gap: 0 4px;
 }
@@ -2177,6 +2169,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 16px;
   color: #000;
 }
+.contents.sub h5.thmclr {
+  color: #13523B;
+}
 .contents.sub .body01 {
   font-size: 16px;
   color: #333;
@@ -3323,6 +3318,16 @@ article .graphwrap .dvsn_list > li > span {
 .stmwrap .stm_con > h5 a {
   font-size: 24px;
   font-family: "SUIT-B";
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+}
+.stmwrap .stm_con > h5 a::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url(../images/stm_dep1_bg.png) no-repeat center center;
 }
 .stmwrap .stm_con > ul {
   display: flex;
@@ -3342,16 +3347,32 @@ article .graphwrap .dvsn_list > li > span {
     flex: 0 0 calc((100% - 50px) / 3);
   }
 }
+.stmwrap .stm_con > ul > li dl a:hover {
+  position: relative;
+}
+.stmwrap .stm_con > ul > li dl a:hover::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  display: block;
+}
 .stmwrap .stm_con > ul > li dl dt {
   font-family: "SUIT-M";
   font-size: 20px;
   margin-bottom: 16px;
+  line-height: 30px;
 }
 .stmwrap .stm_con > ul > li dl dt a {
   display: inline-block;
 }
+.stmwrap .stm_con > ul > li dl dt a:hover::after {
+  background: #000;
+  bottom: 4px;
+}
 .stmwrap .stm_con > ul > li dl dd {
   margin-bottom: 12px;
+  line-height: 24px;
 }
 .stmwrap .stm_con > ul > li dl dd:last-of-type {
   margin-bottom: unset;
@@ -3359,6 +3380,10 @@ article .graphwrap .dvsn_list > li > span {
 .stmwrap .stm_con > ul > li dl dd a {
   display: inline-block;
   color: #333;
+}
+.stmwrap .stm_con > ul > li dl dd a:hover::after {
+  background: #333;
+  bottom: 3px;
 }
 
 @media screen and (max-width: 1080px) {
