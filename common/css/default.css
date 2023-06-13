@@ -2440,6 +2440,52 @@ article .graphwrap .dvsn_list > li > span {
   font-size: 28px;
   margin-bottom: 24px;
 }
+article .pl_con .txt_box {
+  padding: 32px;
+  background: #F7F7F8;
+}
+article .pl_con .txt_box b {
+  font-family: "SUIT-SB";
+}
+article .pl_con.needflex {
+  align-items: center;
+  padding-top: 40px;
+  border-top: 2px solid #000;
+}
+article .pl_con .p_tit {
+  font-family: "SUIT-M";
+  font-size: 20px;
+  width: 25%;
+  text-align: center;
+}
+article .pl_con > ul {
+  width: 75%;
+}
+article .pl_con > ul > li {
+  margin-bottom: 20px;
+  display: flex;
+}
+article .pl_con > ul > li .num {
+  color: #000;
+  width: 24px;
+  height: 24px;
+  background: #EEEEEE;
+  text-align: center;
+  border-radius: 8px;
+  font-family: "SUIT-SB";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-size: 13px;
+}
+article .pl_con > ul > li ul li span {
+  color: #13523B;
+}
+article .pl_con > ul > li ul li.tit {
+  font-family: "SUIT-M";
+  color: #333;
+}
 
 .sub_tab_con article > div figure {
   width: 25%;
