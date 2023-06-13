@@ -762,7 +762,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .tablewrap table thead tr td {
   text-align: center;
   font-size: 16px;
-  font-family: "SUIT-SB";
+  font-family: "SUIT-M";
   padding: 20px 0;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -791,7 +791,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .tablewrap table tbody tr th {
   text-align: center;
-  font-family: "SUIT-SB";
+  font-family: "SUIT-M";
   color: #000;
   background: #f1f5f3;
 }
@@ -2170,7 +2170,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #000;
 }
 .contents.sub h5.thmclr {
-  color: #13523B;
+  color: #13523b;
 }
 .contents.sub .body01 {
   font-size: 16px;
@@ -2453,7 +2453,7 @@ article .graphwrap .dvsn_list > li > span {
 }
 .sub_tab_con article > div .con_txt p span {
   font-family: "SUIT-SB";
-  color: #13523B;
+  color: #13523b;
 }
 .sub_tab_con article > div.bd_t {
   border-top: 2px solid #000;
@@ -2491,7 +2491,7 @@ article .graphwrap .dvsn_list > li > span {
 }
 .program_info > li .program_detail > p {
   padding: 24px;
-  background: #F7F7F8;
+  background: #f7f7f8;
   margin: 24px 0 40px;
 }
 .program_info > li .program_detail .flxwrap {
@@ -2738,7 +2738,7 @@ article .graphwrap .dvsn_list > li > span {
   margin-top: -1px;
 }
 .board .brd_schwrap .sch_tab.pcef ul > li.active {
-  background: #78B510;
+  background: #78b510;
 }
 .board .brd_schwrap .sch_tab.pcef ul > li.active a {
   color: #fff;
@@ -3042,6 +3042,38 @@ article .graphwrap .dvsn_list > li > span {
 }
 .greet_ext p {
   font-size: 18px;
+}
+
+.hstrywrap > ul > li {
+  display: flex;
+  align-items: center;
+  padding-left: 36px;
+}
+.hstrywrap > ul > li .hstry_yr {
+  font-family: "SUIT-B";
+  font-size: 32px;
+  color: #888;
+  width: 81px;
+  margin-right: 64px;
+  text-align: center;
+  position: relative;
+}
+.hstrywrap > ul > li .spcr {
+  width: 52px;
+}
+.hstrywrap > ul > li .hstry_desc {
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hstrywrap > ul > li .hstry_mnth {
+  font-family: "SUIT-SB";
+  font-size: 20px;
+  color: #13523b;
+  width: 43px;
+  display: inline-block;
+  text-align: center;
 }
 
 .mapwrap > div {
