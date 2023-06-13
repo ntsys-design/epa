@@ -487,27 +487,46 @@ header .gnbwrap {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
+  height: 100%;
 }
-header .gnbwrap ul {
+header .gnbwrap > ul {
   display: flex;
   align-items: center;
   gap: 0 80px;
   font-family: "SUIT-B";
   font-size: 20px;
 }
-header .gnbwrap ul::after {
+header .gnbwrap > ul::after {
   content: none;
 }
-header .gnbwrap ul li a {
+header .gnbwrap > ul > li {
+  height: 100%;
+}
+header .gnbwrap > ul > li > a {
+  display: flex;
+  align-items: center;
+  height: 100%;
   color: #999;
-  display: block;
+  position: relative;
+}
+header .gnbwrap > ul > li .sub_menu {
+  position: absolute;
+  top: 80px;
+  background: #fff;
+  display: none;
+  z-index: 999;
+  font-family: "SUIT-R";
+}
+header .gnbwrap > ul > li .sub_menu li a {
+  padding: 5px;
+  font-size: 16px;
 }
 @media (hover: hover) {
-  header .gnbwrap ul li:hover a {
+  header .gnbwrap > ul > li:hover a {
     color: #000;
   }
 }
-header .gnbwrap ul li.active a {
+header .gnbwrap > ul > li.active a {
   color: #000;
 }
 header .utilwrap {
@@ -526,6 +545,13 @@ header .utilwrap > div.search_btn {
 }
 header .utilwrap > div.menu_btn {
   background: url(../images/hdr_menu_btn_b.png) no-repeat center center;
+}
+header .bg {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  background: #ebc4c4;
 }
 
 footer {
