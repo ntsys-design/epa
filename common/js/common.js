@@ -394,5 +394,17 @@ function goToTab(abs_idx, selecElm){
       $('.gnbwrap').mouseleave(function(){
         $('.gnb2dep > ul').stop().slideUp(200);
       })
+
+      // $('.gnbwrap>ul>li').mouseenter(function(){
+      //   let smHeight=$(this).find('.sub_menu').innerHeight()
+      //   let hdH=$('header').innerHeight()
+      //   $('.sub_menu').stop().slideUp(100)
+      //   $(this).find('.sub_menu').stop().slideDown(300)
+      //   $('header').stop().animate({'height' : smHeight + hdH},200)
+      // })
+      // $('.gnbwrap>ul>li').mouseleave(function(){
+      //   $('.sub_menu').stop().slideUp(100)
+      //   $('header').stop().animate({'height':'80px'},200)
+      // })
 });
 

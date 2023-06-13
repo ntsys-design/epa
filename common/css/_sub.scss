@@ -775,7 +775,60 @@ article {
     }
   }
 }
-
+.edu_prgr{
+  li{
+    ul{
+      gap: 4px;
+      li{
+        padding: 24px 0;
+        flex: 0 0 calc((100% - 12px)/4);
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        position: relative;
+        &:after{
+          content: '';
+          width: 32px;
+          height: 32px;
+          background: url(../images/sub01_arrws2.png)no-repeat;
+          position: absolute;
+          right: -18px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+        }
+        &:last-child{
+          &:after{
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+.edu_link{
+  border-top: 1px solid #EEEEEE;
+  padding-top: 48px;
+ text-align: center;
+  p{
+    margin-bottom: 80px;
+    font-family: "SUIT-B";
+    color: #CACACA;
+    font-size: 28px;
+    
+    &::before{
+      content: '';
+      width: 40px;
+      height: 40px;
+      background:url(../images/quote.png)no-repeat;
+      display: block;
+      margin:0 auto 32px;
+    }
+  }
+  a{
+    color:#587533 ;
+  }
+}
 // sub02
 .sub_tab_con {
   .needflex {
@@ -1666,5 +1719,17 @@ article {
   }
   article .graphwrap .dvsn_list > li{
     flex: 0 1 100%;
+  }
+  .edu_prgr li ul{
+    flex-direction: column;
+    li{
+      flex: 0 0 1;
+      &:after{
+        left: 50%;
+        top: calc(100% - 15px);
+        right: unset;
+        transform: translateX(-50%) rotate(90deg);
+      }
+    }
   }
 }
