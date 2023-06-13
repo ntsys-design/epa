@@ -108,6 +108,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 0 80px;
+    height: 80px;
   }
   .logowrap {
     flex-shrink: 0;
@@ -193,11 +194,11 @@ header {
     width: 100%;
     height: 0;
     left: 0;
+    top: 80px;
     background: #ebc4c4;
   }
 }
 
-// 푸터 0413 지은
 footer {
   border-top: 1px solid #000;
   .footer_top {
@@ -525,8 +526,7 @@ footer {
 }
 
 .pbl_btn {
-  width: 225px;
-  padding: 13px 0;
+  padding: 13px 40px;
   border: 2px solid #587533;
   color: #587533;
   border-radius: 4px;
