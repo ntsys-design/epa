@@ -2486,6 +2486,9 @@ article .pl_con > ul > li .num {
 article .pl_con > ul > li ul li span {
   color: #13523B;
 }
+article .pl_con > ul > li ul li span a.a_link {
+  display: inline-block;
+}
 article .pl_con > ul > li ul li.tit {
   font-family: "SUIT-M";
   color: #333;
@@ -2607,6 +2610,10 @@ article .pl_con > ul.w100 {
 .img_wrap > figure {
   flex: 0 1 calc((100% - 64px) / 3);
   text-align: center;
+}
+.img_wrap > figure figcaption {
+  margin-top: 24px;
+  font-family: "SUIT-M";
 }
 .img_wrap > figure:only-of-type {
   margin: 0 auto;

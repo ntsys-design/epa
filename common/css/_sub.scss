@@ -575,6 +575,9 @@ article {
        li{
         span{
           color: #13523B;
+          a.a_link{
+            display: inline-block;
+          }
         }
         &.tit{
         font-family: 'SUIT-M';
@@ -714,7 +717,10 @@ article {
   > figure {
     flex: 0 1 calc((100% - 64px) / 3);
     text-align: center;
-
+    figcaption{
+      margin-top: 24px;
+      font-family: 'SUIT-M';
+    }
     &:only-of-type {
       margin: 0 auto;
 
