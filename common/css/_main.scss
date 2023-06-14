@@ -626,7 +626,7 @@
 
           &.sv_txt {
             font-size: 30px;
-            margin-bottom: 28px;
+            // margin-bottom: 28px;
           }
         }
         em {
@@ -655,6 +655,7 @@
         color: #007aff;
         border-radius: 21px;
         line-height: 150%;
+        margin-top: 28px;
       }
       > .container {
         position: relative;
@@ -685,14 +686,14 @@
       }
     }
     .sv01 {
-      background: url(../images/sub_visual01.png) no-repeat center center;
+      background: url(../images/bye.png) no-repeat center center;
     }
     .sv02 {
-      background: url(../images/sub_visual02.png) no-repeat center center;
+      background: url(../images/eco.png) no-repeat center center;
     }
-    .sv03 {
-      background: url(../images/sub_visual03.png) no-repeat center center;
-    }
+    // .sv03 {
+    //   background: url(../images/sub_visual03.png) no-repeat center center;
+    // }
   }
 }
 
