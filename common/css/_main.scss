@@ -362,7 +362,7 @@
         }
         .swiper-pagination {
           margin-left: auto;
-          width: 90px;
+          max-width: 150px;
           height: 20px;
           position: static;
 
@@ -414,9 +414,15 @@
             }
 
             .imgwrap {
+              height: 250px;
               margin-bottom: 28px;
               border-radius: 8px;
               overflow: hidden;
+
+              img {
+                height: 100%;
+
+              }
             }
           }
         }

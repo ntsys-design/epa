@@ -1411,7 +1411,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_right .noti_top .swiper-pagination {
   margin-left: auto;
-  width: 90px;
+  max-width: 150px;
   height: 20px;
   position: static;
 }
@@ -1464,9 +1464,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #1281fe;
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .imgwrap {
+  height: 250px;
   margin-bottom: 28px;
   border-radius: 8px;
   overflow: hidden;
+}
+.contents.main .noticewrap .div_right .noti_con .swiper-slide a .imgwrap img {
+  height: 100%;
 }
 .contents.main .newswrap {
   padding-top: 90px;
