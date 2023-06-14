@@ -2451,8 +2451,9 @@ article .pl_con .txt_box b {
 }
 article .pl_con.needflex {
   align-items: center;
-  padding-top: 40px;
+  padding: 40px 0;
   border-top: 2px solid #000;
+  border-bottom: 1px solid #CCCCCC;
 }
 article .pl_con .p_tit {
   font-family: "SUIT-M";
@@ -2470,6 +2471,7 @@ article .pl_con > ul > li {
 article .pl_con > ul > li .num {
   color: #000;
   width: 24px;
+  min-width: 24px;
   height: 24px;
   background: #EEEEEE;
   text-align: center;
@@ -2487,6 +2489,23 @@ article .pl_con > ul > li ul li span {
 article .pl_con > ul > li ul li.tit {
   font-family: "SUIT-M";
   color: #333;
+}
+article .pl_con > ul.needflex {
+  width: 100%;
+  gap: 32px;
+}
+article .pl_con > ul.needflex li {
+  display: block;
+  margin-bottom: unset;
+}
+article .pl_con > ul.needflex li span {
+  display: block;
+  margin-top: 32px;
+  font-family: "SUIT-M";
+  font-size: 20px;
+}
+article .pl_con > ul.w100 {
+  width: 100%;
 }
 
 .sub_tab_con article > div figure {
@@ -2912,6 +2931,7 @@ article .pl_con > ul > li ul li.tit {
   height: 48px;
   color: #ffffff;
   font-family: "SUIT-M";
+  border-radius: 2px;
 }
 .board .brd_list {
   font-family: "SUIT-R";
@@ -3573,5 +3593,11 @@ article .pl_con > ul > li ul li.tit {
     top: calc(100% - 15px);
     right: unset;
     transform: translateX(-50%) rotate(90deg);
+  }
+  article .pl_con > ul.needflex {
+    flex-direction: column;
+  }
+  article .pl_con > ul.needflex li {
+    text-align: center;
   }
 }/*# sourceMappingURL=default.css.map */

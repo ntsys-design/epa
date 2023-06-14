@@ -541,8 +541,9 @@ article {
   }
   &.needflex{
     align-items: center;
-    padding-top: 40px;
+    padding: 40px 0;
     border-top: 2px solid #000;
+    border-bottom: 1px solid #CCCCCC;
   }
   .p_tit{
     font-family: 'SUIT-M';
@@ -558,6 +559,7 @@ article {
       .num{
         color: #000;
         width: 24px;
+        min-width: 24px;
         height: 24px;
         background: #EEEEEE;
         text-align: center;
@@ -570,7 +572,7 @@ article {
         font-size: 13px;
       }
       ul{
-li{
+       li{
         span{
           color: #13523B;
         }
@@ -580,6 +582,23 @@ li{
       }
       }
       } 
+    }
+    &.needflex{
+      width: 100%;
+      gap: 32px;
+      li{
+        display: block;
+        margin-bottom: unset;
+        span{
+          display: block;
+          margin-top: 32px;
+          font-family: 'SUIT-M';
+          font-size: 20px
+        }
+      }
+    }
+    &.w100{
+      width: 100%;
     }
   }
   }
@@ -1072,6 +1091,7 @@ li{
     height: 48px;
     color: #ffffff;
     font-family: "SUIT-M";
+    border-radius: 2px;
   }
   .brd_list {
     font-family: "SUIT-R";
@@ -1841,6 +1861,12 @@ li{
         right: unset;
         transform: translateX(-50%) rotate(90deg);
       }
+    }
+  }
+  article .pl_con > ul.needflex{
+    flex-direction: column;
+    li{
+      text-align: center;
     }
   }
 }
