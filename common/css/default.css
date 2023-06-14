@@ -1112,10 +1112,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: flex;
   align-items: center;
   width: 140px;
-  background: #ffffff;
+  background: #000;
   justify-content: center;
   height: 42px;
-  color: #007aff;
+  color: #fff;
   border-radius: 21px;
   line-height: 150%;
 }
@@ -1157,10 +1157,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .contents.main .main_visualwrap .bgslide .mv_conwrap .needflex .swiper-pagination .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
+  opacity: 0.6;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap .needflex .swiper-pagination .swiper-pagination-bullet-active {
   width: 64px;
   border-radius: 40px;
+  opacity: 1;
 }
 .contents.main .main_visualwrap .bgslide .mv_conwrap .needflex a {
   font-family: "SUIT-B";
