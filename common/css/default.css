@@ -3734,4 +3734,18 @@ header .utilwrap > div.menu_btn a {
   height: 30px;
 }
 
+.stmwrap .stm_con > ul {
+  gap: 40px 0;
+}
+.stmwrap .stm_con > ul > li {
+  padding-right: 20px;
+  flex: 0 0 25%;
+}
+@media screen and (max-width: 960px) {
+  .stmwrap .stm_con > ul > li {
+    flex: 0 0 33%;
+  }
+}
+
+
 /*# sourceMappingURL=default.css.map */
