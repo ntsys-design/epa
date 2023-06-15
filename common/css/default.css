@@ -3729,5 +3729,9 @@ footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::after {
   flex-grow: 1;
 }
 
+header .utilwrap > div.menu_btn a {
+  width: 30px;  
+  height: 30px;
+}
 
 /*# sourceMappingURL=default.css.map */
