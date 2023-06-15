@@ -3746,6 +3746,22 @@ header .utilwrap > div.menu_btn a {
   padding-right: 20px;
   flex: 0 0 25%;
 }
+
+header > div {
+  justify-content: unset;
+  gap: 0 88px;
+}
+
+header .utilwrap {
+  width: auto;
+  margin-left: auto;
+}
+header .gnb2dep > ul {
+  max-height: 672px;
+  overflow-y: auto;
+  background: #F7F7F8;
+}
+
 @media screen and (max-width: 960px) {
   .stmwrap .stm_con > ul > li {
     flex: 0 0 33%;
