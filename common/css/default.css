@@ -3698,6 +3698,11 @@ article .pl_con > ul.w100 {
 }
 
 /* 230615 */
+
+.ulsel > ul > li {
+  padding: 10px 24px;
+}
+
 @media (hover: hover) {
   .ulsel > ul > li:hover {
     background: #efefef;
