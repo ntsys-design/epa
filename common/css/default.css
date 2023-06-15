@@ -3695,4 +3695,39 @@ article .pl_con > ul.w100 {
   article .pl_con > ul.needflex li {
     text-align: center;
   }
-}/*# sourceMappingURL=default.css.map */
+}
+
+/* 230615 */
+@media (hover: hover) {
+  .ulsel > ul > li:hover {
+    background: #efefef;
+  }
+}
+
+footer .footer_top .container .ftt_right .ulsel.rvs > ul {
+  max-height: 256px;
+  overflow-y: auto;
+}
+
+footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #666;
+}
+footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::before {
+  content: '';
+  height: 1px;
+  background: #666;
+  flex-grow: 1;
+}
+footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::after {
+  content: '';
+  height: 1px;
+  background: #666;
+  flex-grow: 1;
+}
+
+
+/*# sourceMappingURL=default.css.map */
