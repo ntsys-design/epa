@@ -3768,5 +3768,8 @@ header .gnb2dep > ul {
   }
 }
 
-
+/* 0616 */
+.a_link {
+  display: inline-block;
+}
 /*# sourceMappingURL=default.css.map */
