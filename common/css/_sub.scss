@@ -1829,7 +1829,7 @@ article {
             flex-wrap: wrap;
             gap: 40px 0;
             @include maxWidth(960px) {
-                gap: 40px 25px;
+                gap: 40px 0;
             }
 
             > li {

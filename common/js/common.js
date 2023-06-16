@@ -22,6 +22,23 @@ $(document).ready(function () {
   //     $('header').removeClass("scrolled");
   //   }
   // })
+  
+
+  $('.gnbwrap > .gnb1dep > li').mouseenter(function(){
+    $('.gnb2dep > section').hide();
+    $(this).parent().siblings().children('section').eq($(this).index()).stop().slideDown();
+    $('body').addClass('dimmed');
+    $('.dimm').addClass('active');
+  })
+  
+  $('.gnbwrap').mouseleave(function(){
+    $('.gnb2dep > section').stop().slideUp(200);
+    $('body').removeClass('dimmed');
+    $('.dimm').removeClass('active');
+  })
+
+
+
 
   //메인 News탭
   $(".newscon_list > li").first().addClass("active");
@@ -385,15 +402,7 @@ function goToTab(abs_idx, selecElm){
       //   $('header .bg').stop().animate({'height':0},100)
       //   $('.sub_menu').stop().slideUp(100)
       // })
-
-      $('.gnbwrap > .gnb1dep > li').mouseenter(function(){
-        $('.gnb2dep > ul').hide();
-        $(this).parent().siblings().children('ul').eq($(this).index()).stop().slideDown();
-      })
-      
-      $('.gnbwrap').mouseleave(function(){
-        $('.gnb2dep > ul').stop().slideUp(200);
-      })
+  
 
       // $('.gnbwrap>ul>li').mouseenter(function(){
       //   let smHeight=$(this).find('.sub_menu').innerHeight()
