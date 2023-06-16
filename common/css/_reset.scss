@@ -379,6 +379,10 @@ $fs-32: 2rem; // 32px
 .needflex {
     display: flex;
 }
+.jc_spc_btw{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .needgrid{
     display: grid;
 }
