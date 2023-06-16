@@ -415,5 +415,10 @@ function goToTab(abs_idx, selecElm){
       //   $('.sub_menu').stop().slideUp(100)
       //   $('header').stop().animate({'height':'80px'},200)
       // })
+
+      $('.pl_index02 li').on('click',function(){
+        $('.pl_index02 li').removeClass('active')
+        $(this).addClass('active')
+      })
 });
 
