@@ -95,6 +95,11 @@ header {
         .utilwrap {
             .search_btn {
                 background: url(../images/hdr_search_btn_b.png) no-repeat center center;
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                }
             }
             .menu_btn {
                 background: url(../images/hdr_menu_btn_b.png) no-repeat center center;
@@ -106,8 +111,7 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 0 80px;
+        gap: 0 88px;
     }
     .logowrap {
         flex-shrink: 0;
@@ -171,7 +175,7 @@ header {
     .utilwrap {
         display: flex;
         gap: 0 30px;
-        width: 250px;
+        margin-left: auto;
         justify-content: flex-end;
         > div {
             width: 30px;
@@ -206,6 +210,10 @@ header {
             z-index: 9;
 
             border-top: 1px solid #83955a;
+
+            max-height: 672px;
+            overflow-y: auto;
+            background: #f7f7f8;
         }
     }
 }
@@ -282,6 +290,29 @@ footer {
                             width: 100%;
                             font-size: 15px;
                             display: none;
+                            max-height: 250px;
+                            overflow-y: auto;
+
+                            .dvdr {  
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                flex-shrink: 0;
+                                color: #666;
+
+                                &::before {
+                                    content: '';
+                                    height: 1px;
+                                    background: #666;
+                                    flex-grow: 1;
+                                  }
+                                  &::after {
+                                    content: '';
+                                    height: 1px;
+                                    background: #666;
+                                    flex-grow: 1;
+                                  }
+                            }
                         }
                     }
                 }
@@ -411,7 +442,13 @@ footer {
         display: none;
 
         li {
-            padding: 5px 24px;
+            padding: 10px 24px;
+
+            @media (hover: hover) {
+                &:hover {
+                  background: #efefef;
+                }
+              }
         }
     }
 }

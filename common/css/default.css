@@ -469,6 +469,10 @@ header.scrolled .gnbwrap li.active a {
 header.scrolled .utilwrap .search_btn {
   background: url(../images/hdr_search_btn_b.png) no-repeat center center;
 }
+header.scrolled .utilwrap .search_btn a {
+  width: 30px;
+  height: 30px;
+}
 header.scrolled .utilwrap .menu_btn {
   background: url(../images/hdr_menu_btn_b.png) no-repeat center center;
 }
@@ -476,8 +480,7 @@ header > div {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0 80px;
+  gap: 0 88px;
 }
 header .logowrap {
   flex-shrink: 0;
@@ -520,7 +523,7 @@ header .gnbwrap > ul > li.active a {
 header .utilwrap {
   display: flex;
   gap: 0 30px;
-  width: 250px;
+  margin-left: auto;
   justify-content: flex-end;
 }
 header .utilwrap > div {
@@ -553,6 +556,9 @@ header .gnb2dep > ul {
   position: relative;
   z-index: 9;
   border-top: 1px solid #83955a;
+  max-height: 672px;
+  overflow-y: auto;
+  background: #f7f7f8;
 }
 
 footer {
@@ -625,6 +631,27 @@ footer .footer_top .container .ftt_right .ulsel.rvs > ul {
   width: 100%;
   font-size: 15px;
   display: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #666;
+}
+footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::before {
+  content: "";
+  height: 1px;
+  background: #666;
+  flex-grow: 1;
+}
+footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::after {
+  content: "";
+  height: 1px;
+  background: #666;
+  flex-grow: 1;
 }
 footer .footer_btm {
   background: unset;
@@ -743,7 +770,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: none;
 }
 .ulsel > ul li {
-  padding: 5px 24px;
+  padding: 10px 24px;
+}
+@media (hover: hover) {
+  .ulsel > ul li:hover {
+    background: #efefef;
+  }
 }
 
 .tablewrap {
@@ -2513,9 +2545,6 @@ article .pl_con > ul > li .num {
 article .pl_con > ul > li ul li span {
   color: #13523b;
 }
-article .pl_con > ul > li ul li span a.a_link {
-  display: inline-block;
-}
 article .pl_con > ul > li ul li.tit {
   font-family: "SUIT-M";
   color: #333;
@@ -2536,6 +2565,10 @@ article .pl_con > ul.needflex li span {
 }
 article .pl_con > ul.w100 {
   width: 100%;
+}
+
+.a_link {
+  display: inline-block;
 }
 
 .sub_tab_con article > div figure {
@@ -3608,7 +3641,7 @@ article .pl_con > ul.w100 {
 .stmwrap .stm_con > ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px 20px;
+  gap: 40px 0;
 }
 @media screen and (max-width: 960px) {
   .stmwrap .stm_con > ul {
@@ -3616,11 +3649,12 @@ article .pl_con > ul.w100 {
   }
 }
 .stmwrap .stm_con > ul > li {
-  flex: 0 0 calc((100% - 60px) / 4);
+  flex: 0 0 25%;
+  padding-right: 20px;
 }
 @media screen and (max-width: 960px) {
   .stmwrap .stm_con > ul > li {
-    flex: 0 0 calc((100% - 50px) / 3);
+    flex: 0 0 33%;
   }
 }
 .stmwrap .stm_con > ul > li dl a:hover {
@@ -3695,81 +3729,4 @@ article .pl_con > ul.w100 {
   article .pl_con > ul.needflex li {
     text-align: center;
   }
-}
-
-/* 230615 */
-
-.ulsel > ul > li {
-  padding: 10px 24px;
-}
-
-@media (hover: hover) {
-  .ulsel > ul > li:hover {
-    background: #efefef;
-  }
-}
-
-footer .footer_top .container .ftt_right .ulsel.rvs > ul {
-  max-height: 256px;
-  overflow-y: auto;
-}
-
-footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  color: #666;
-}
-footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::before {
-  content: '';
-  height: 1px;
-  background: #666;
-  flex-grow: 1;
-}
-footer .footer_top .container .ftt_right .ulsel.rvs > ul .dvdr::after {
-  content: '';
-  height: 1px;
-  background: #666;
-  flex-grow: 1;
-}
-
-header .utilwrap > div.menu_btn a {
-  width: 30px;  
-  height: 30px;
-}
-
-.stmwrap .stm_con > ul {
-  gap: 40px 0;
-}
-.stmwrap .stm_con > ul > li {
-  padding-right: 20px;
-  flex: 0 0 25%;
-}
-
-header > div {
-  justify-content: unset;
-  gap: 0 88px;
-}
-
-header .utilwrap {
-  width: auto;
-  margin-left: auto;
-}
-header .gnb2dep > ul {
-  max-height: 672px;
-  overflow-y: auto;
-  background: #F7F7F8;
-}
-
-@media screen and (max-width: 960px) {
-  .stmwrap .stm_con > ul > li {
-    flex: 0 0 33%;
-  }
-}
-
-/* 0616 */
-.a_link {
-  display: inline-block;
-}
-/*# sourceMappingURL=default.css.map */
+}/*# sourceMappingURL=default.css.map */
