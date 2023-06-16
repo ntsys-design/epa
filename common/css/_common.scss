@@ -107,11 +107,11 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
-        gap: 0 88px;
+        gap: 0 48px;
     }
     .logowrap {
         flex-shrink: 0;
-        width: 250px;
+        max-width: 232px;
     }
     .gnbwrap {
         flex-shrink: 0;
@@ -121,7 +121,6 @@ header {
         .gnb1dep {
             display: flex;
             align-items: center;
-            gap: 0 80px;
             font-size: 20px;
 
             &::after {
@@ -133,10 +132,17 @@ header {
 
                 > a {
                     display: flex;
+                    padding: 0 40px;
                     align-items: center;
                     height: 100%;
                     color: #333;
                     position: relative;
+
+                    @include maxWidth(1260px) {
+                        padding: 0 30px;
+                    }
+            
+                        
                 }
 
                 &.active {
@@ -147,11 +153,14 @@ header {
 
                         &::after {
                             content: '';
-                            width: 100%;
+                            width: calc(100% - 80px);
                             height: 3px;
                             background: #00945E;
                             position: absolute;
-                            bottom: 0;
+                            bottom: 0;  
+                            @include maxWidth(1260px) {
+                                width: calc(100% - 60px);
+                            }
                         }
                     }
                 }
@@ -177,13 +186,6 @@ header {
                 //     }
                 //   }
                 //   }
-                @media (hover: hover) {
-                    &:hover {
-                        a {
-                            color: #000;
-                        }
-                    }
-                }
 
                 &.active {
                     a {
@@ -202,7 +204,7 @@ header {
             top: 80px;
             left: 0;
             background: #fff;
-    
+
             > section {
                 padding: 20px 0;
                 width: 100%;
@@ -216,6 +218,11 @@ header {
                 max-height: 672px;
                 overflow-y: auto;
                 background: #f7f7f8;
+                
+            @include maxWidth(1260px) {
+                padding: 20px 10px;
+            }
+    
                 
     
                 > ul {

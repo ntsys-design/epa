@@ -486,11 +486,11 @@ header > div {
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 0 88px;
+  gap: 0 48px;
 }
 header .logowrap {
   flex-shrink: 0;
-  width: 250px;
+  max-width: 232px;
 }
 header .gnbwrap {
   flex-shrink: 0;
@@ -501,7 +501,6 @@ header .gnbwrap {
 header .gnbwrap .gnb1dep {
   display: flex;
   align-items: center;
-  gap: 0 80px;
   font-size: 20px;
 }
 header .gnbwrap .gnb1dep::after {
@@ -512,10 +511,16 @@ header .gnbwrap .gnb1dep > li {
 }
 header .gnbwrap .gnb1dep > li > a {
   display: flex;
+  padding: 0 40px;
   align-items: center;
   height: 100%;
   color: #333;
   position: relative;
+}
+@media screen and (max-width: 1260px) {
+  header .gnbwrap .gnb1dep > li > a {
+    padding: 0 30px;
+  }
 }
 header .gnbwrap .gnb1dep > li.active a {
   font-family: "SUIT-SB";
@@ -524,21 +529,21 @@ header .gnbwrap .gnb1dep > li.active a {
 }
 header .gnbwrap .gnb1dep > li.active a::after {
   content: "";
-  width: 100%;
+  width: calc(100% - 80px);
   height: 3px;
   background: #00945E;
   position: absolute;
   bottom: 0;
 }
-@media (hover: hover) {
-  header .gnbwrap .gnb1dep > li:hover a {
-    color: #000;
-    font-family: "SUIT-SB";
+@media screen and (max-width: 1260px) {
+  header .gnbwrap .gnb1dep > li.active a::after {
+    width: calc(100% - 60px);
   }
 }
 @media (hover: hover) {
   header .gnbwrap .gnb1dep > li:hover a {
     color: #000;
+    font-family: "SUIT-SB";
   }
 }
 header .gnbwrap .gnb1dep > li.active a {
@@ -566,6 +571,11 @@ header .gnbwrap .gnb2dep > section {
   max-height: 672px;
   overflow-y: auto;
   background: #f7f7f8;
+}
+@media screen and (max-width: 1260px) {
+  header .gnbwrap .gnb2dep > section {
+    padding: 20px 10px;
+  }
 }
 header .gnbwrap .gnb2dep > section > ul {
   display: flex;
@@ -3737,6 +3747,294 @@ article .graphwrap .dvsn_list > li > span {
 }
 .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_next, .board_view .viewwrap .cont_foot .board_nav li a .brd_title.nomore_prev {
   color: #777;
+}
+
+.orgobjwrap {
+  border-top: 2px solid #000;
+  padding-top: 40px;
+}
+.orgobjwrap .mid_tit {
+  font-family: "SUIT-M";
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.orgobjwrap .mnbwrap {
+  gap: 20px 32px;
+}
+@media screen and (max-width: 720px) {
+  .orgobjwrap .mnbwrap {
+    flex-direction: column;
+  }
+}
+.orgobjwrap .mnbwrap dl {
+  padding: 64px 10px 64px;
+  flex: 1 0 49%;
+  background: #F7F7F8;
+  text-align: center;
+}
+@media screen and (max-width: 720px) {
+  .orgobjwrap .mnbwrap dl {
+    padding: 40px 10px;
+  }
+}
+.orgobjwrap .mnbwrap dl dt {
+  margin-bottom: 24px;
+  letter-spacing: -5%;
+}
+.orgobjwrap .mnbwrap dl dt figure {
+  margin-bottom: 28px;
+}
+.orgobjwrap .mnbwrap dl dt figcaption {
+  font-size: 24px;
+}
+.orgobjwrap .mnbwrap dl dd {
+  min-height: 67px;
+}
+.orgobjwrap .crvalwrap {
+  border: 1px solid #94B75B;
+  border-radius: 200px;
+  position: relative;
+}
+.orgobjwrap .crvalwrap::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url(../images/sub_05_03_psuedo01.png) no-repeat center center;
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  right: 50%;
+}
+@media screen and (max-width: 980px) {
+  .orgobjwrap .crvalwrap::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .orgobjwrap .crvalwrap::after {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .orgobjwrap .crvalwrap::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .orgobjwrap .crvalwrap {
+    flex-direction: column;
+    border-radius: 25%;
+  }
+}
+.orgobjwrap .crvalwrap .ccl_list {
+  padding: 40px;
+  flex: 1 1 calc((100% - 20px) / 2);
+  gap: 0 80px;
+  position: relative;
+}
+.orgobjwrap .crvalwrap .ccl_list::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url(../images/sub_05_03_psuedo01.png) no-repeat center center;
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  right: 50%;
+}
+@media screen and (max-width: 980px) {
+  .orgobjwrap .crvalwrap .ccl_list::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .orgobjwrap .crvalwrap .ccl_list::after {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .orgobjwrap .crvalwrap .ccl_list::after {
+    content: none;
+  }
+}
+@media screen and (max-width: 980px) {
+  .orgobjwrap .crvalwrap .ccl_list {
+    padding: 20px;
+    flex: 1 1 calc((100% - 10px) / 2);
+    gap: 0 40px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .orgobjwrap .crvalwrap .ccl_list {
+    padding: 10px;
+    flex: 1 1 calc((100% - 5px) / 2);
+    gap: 0 20px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .orgobjwrap .crvalwrap .ccl_list {
+    padding: 10px;
+    flex: 1 1 calc((100% - 5px) / 2);
+    gap: 0 20px;
+  }
+  .orgobjwrap .crvalwrap .ccl_list:first-of-type {
+    padding-bottom: unset;
+    margin-bottom: 10px;
+  }
+  .orgobjwrap .crvalwrap .ccl_list:last-of-type {
+    padding-top: unset;
+  }
+}
+.orgobjwrap .crvalwrap .ccl_list .ccl_wrap {
+  flex: 1 1 calc((100% - 80px) / 2);
+  padding-bottom: calc((100% - 80px) / 2);
+  position: relative;
+}
+@media screen and (max-width: 980px) {
+  .orgobjwrap .crvalwrap .ccl_list .ccl_wrap {
+    flex: 1 1 calc((100% - 40px) / 2);
+    padding-bottom: calc((100% - 40px) / 2);
+  }
+}
+@media screen and (max-width: 720px) {
+  .orgobjwrap .crvalwrap .ccl_list .ccl_wrap {
+    flex: 1 1 calc((100% - 20px) / 2);
+    padding-bottom: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 580px) {
+  .orgobjwrap .crvalwrap .ccl_list .ccl_wrap {
+    flex: 1 1 calc((100% - 40px) / 2);
+    padding-bottom: calc((100% - 40px) / 2);
+  }
+}
+.orgobjwrap .crvalwrap .ccl_list .ccl_wrap .inner_ccl {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 0;
+}
+@media screen and (max-width: 820px) {
+  .orgobjwrap .strtskwrap ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.orgobjwrap .strtskwrap ul li {
+  flex: 1 0 20%;
+}
+.orgobjwrap .strtskwrap ul li:nth-child(odd) dt {
+  background: #F7F7F8;
+}
+.orgobjwrap .strtskwrap ul li:nth-child(2) dt {
+  background: #DEECC8;
+}
+.orgobjwrap .strtskwrap ul li:nth-child(4) dt {
+  background: #C9E19F;
+}
+@media screen and (max-width: 820px) {
+  .orgobjwrap .strtskwrap ul li dl {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+  }
+}
+.orgobjwrap .strtskwrap ul li dl dt {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 80px;
+}
+.orgobjwrap .strtskwrap ul li dl dt p {
+  width: 90%;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media screen and (max-width: 1280px) {
+  .orgobjwrap .strtskwrap ul li dl dt p {
+    font-size: 18px;
+  }
+}
+.orgobjwrap .strtskwrap ul li dl dt::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #13523B;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 24px;
+  left: 50%;
+}
+@media screen and (max-width: 820px) {
+  .orgobjwrap .strtskwrap ul li dl dt::before {
+    bottom: unset;
+    left: unset;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 12px;
+  }
+}
+.orgobjwrap .strtskwrap ul li dl dt::after {
+  content: "";
+  width: 1px;
+  height: 80px;
+  background: #13523B;
+  position: absolute;
+  transform: translate(-50%, 100%);
+  bottom: 27px;
+  left: 50%;
+}
+@media screen and (max-width: 820px) {
+  .orgobjwrap .strtskwrap ul li dl dt::after {
+    width: 40px;
+    height: 1px;
+    bottom: unset;
+    left: unset;
+    transform: translate(100%, 0);
+    top: 50%;
+    right: 15px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .orgobjwrap .strtskwrap ul li dl dt {
+    width: 40%;
+    flex-shrink: 0;
+    padding-bottom: 40%;
+    margin-bottom: unset;
+  }
+}
+.orgobjwrap .strtskwrap ul li dl dd {
+  padding: 0 5px;
+}
+.orgobjwrap .strtskwrap ul li dl dd ul li {
+  color: #333;
+  margin-bottom: 12px;
+}
+.orgobjwrap .strtskwrap ul li dl dd ul li:last-of-type {
+  margin-bottom: unset;
+}
+.orgobjwrap .strtskwrap ul li dl dd .needblt.blt_dot {
+  gap: 0 8px;
 }
 
 .stmwrap .stm_con {
