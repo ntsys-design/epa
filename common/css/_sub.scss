@@ -2035,6 +2035,9 @@ article {
                     justify-content: center;
                     align-items: center;
                     gap: 20px 0;
+                    @include maxWidth(460px) {
+                        gap: 10px 0;
+                    }
                 }
 
             }
@@ -2075,6 +2078,9 @@ article {
                         gap: 0 20px;
                         align-items: center;
                     }
+                    @include maxWidth(460px) {
+                        flex-direction: column;
+                    }
 
 
                     dt {
@@ -2096,6 +2102,15 @@ article {
                             @include maxWidth(1280px) {
                                 font-size: 18px;
                             }
+                            @include maxWidth(460px) {
+                                width: 100%;
+                                position: unset;
+                                transform: unset;
+
+                                > .br {
+                                    display: inline-block;
+                                }
+                            }
                         }
                         &::before {
                             content: '';
@@ -2113,6 +2128,9 @@ article {
                                 transform: translate(-50%,-50%);
                                 top: 50%;
                                 right: 12px;
+                            }
+                            @include maxWidth(460px) {
+                                content: none;
                             }
                         }
                         &::after {
@@ -2133,6 +2151,9 @@ article {
                                 top: 50%;
                                 right: 15px;
                             }
+                            @include maxWidth(460px) {
+                                content: none;
+                            }
                         }
                         
                         @include maxWidth(820px) {
@@ -2141,10 +2162,17 @@ article {
                             padding-bottom: 40%;
                             margin-bottom: unset;
                         }
+                        @include maxWidth(460px) {
+                            width: 100%;
+                            border-radius: 0;
+                            margin-bottom: 20px;
+                            padding: 10px;
+                        }
                     }
 
                     dd {
                         padding: 0 5px;
+                            width: 100%;
                         ul {
                             li {
                                 color: #333;
@@ -2156,6 +2184,9 @@ article {
                         }
                         .needblt.blt_dot {
                             gap: 0 8px;
+                        }
+                        @include maxWidth(460px) {
+                            padding: 0 10px;
                         }
                     }
                 }

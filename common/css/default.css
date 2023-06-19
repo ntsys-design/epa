@@ -3936,6 +3936,11 @@ article .graphwrap .dvsn_list > li > span {
   align-items: center;
   gap: 20px 0;
 }
+@media screen and (max-width: 460px) {
+  .orgobjwrap .crvalwrap .ccl_list .ccl_wrap .inner_ccl {
+    gap: 10px 0;
+  }
+}
 @media screen and (max-width: 820px) {
   .orgobjwrap .strtskwrap ul {
     flex-direction: column;
@@ -3961,6 +3966,11 @@ article .graphwrap .dvsn_list > li > span {
     align-items: center;
   }
 }
+@media screen and (max-width: 460px) {
+  .orgobjwrap .strtskwrap ul li dl {
+    flex-direction: column;
+  }
+}
 .orgobjwrap .strtskwrap ul li dl dt {
   width: 100%;
   padding-bottom: 100%;
@@ -3982,6 +3992,16 @@ article .graphwrap .dvsn_list > li > span {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 460px) {
+  .orgobjwrap .strtskwrap ul li dl dt p {
+    width: 100%;
+    position: unset;
+    transform: unset;
+  }
+  .orgobjwrap .strtskwrap ul li dl dt p > .br {
+    display: inline-block;
+  }
+}
 .orgobjwrap .strtskwrap ul li dl dt::before {
   content: "";
   width: 5px;
@@ -4000,6 +4020,11 @@ article .graphwrap .dvsn_list > li > span {
     transform: translate(-50%, -50%);
     top: 50%;
     right: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .orgobjwrap .strtskwrap ul li dl dt::before {
+    content: none;
   }
 }
 .orgobjwrap .strtskwrap ul li dl dt::after {
@@ -4023,6 +4048,11 @@ article .graphwrap .dvsn_list > li > span {
     right: 15px;
   }
 }
+@media screen and (max-width: 460px) {
+  .orgobjwrap .strtskwrap ul li dl dt::after {
+    content: none;
+  }
+}
 @media screen and (max-width: 820px) {
   .orgobjwrap .strtskwrap ul li dl dt {
     width: 40%;
@@ -4031,8 +4061,17 @@ article .graphwrap .dvsn_list > li > span {
     margin-bottom: unset;
   }
 }
+@media screen and (max-width: 460px) {
+  .orgobjwrap .strtskwrap ul li dl dt {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+}
 .orgobjwrap .strtskwrap ul li dl dd {
   padding: 0 5px;
+  width: 100%;
 }
 .orgobjwrap .strtskwrap ul li dl dd ul li {
   color: #333;
@@ -4043,6 +4082,11 @@ article .graphwrap .dvsn_list > li > span {
 }
 .orgobjwrap .strtskwrap ul li dl dd .needblt.blt_dot {
   gap: 0 8px;
+}
+@media screen and (max-width: 460px) {
+  .orgobjwrap .strtskwrap ul li dl dd {
+    padding: 0 10px;
+  }
 }
 
 .stmwrap .stm_con {
