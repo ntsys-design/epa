@@ -2822,6 +2822,11 @@ article .graphwrap .dvsn_list > li > span {
   flex: 0 1 calc((100% - 64px) / 3);
   text-align: center;
 }
+.img_wrap > figure img {
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .img_wrap > figure figcaption {
   margin-top: 24px;
   font-family: "SUIT-M";

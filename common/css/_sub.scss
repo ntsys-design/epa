@@ -805,6 +805,11 @@ article {
     > figure {
         flex: 0 1 calc((100% - 64px) / 3);
         text-align: center;
+
+        img {
+            height: 270px;
+            object-fit: cover;
+        }
         figcaption {
             margin-top: 24px;
             font-family: "SUIT-M";
