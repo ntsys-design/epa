@@ -614,6 +614,11 @@ header .utilwrap > div {
   height: 30px;
   cursor: pointer;
 }
+header .utilwrap > div a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
 header .utilwrap > div.search_btn {
   background: url(../images/hdr_search_btn_b.png) no-repeat center center;
 }
