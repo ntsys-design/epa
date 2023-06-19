@@ -416,9 +416,21 @@ function goToTab(abs_idx, selecElm){
       //   $('header').stop().animate({'height':'80px'},200)
       // })
 
-      $('.pl_index02 li').on('click',function(){
-        $('.pl_index02 li').removeClass('active')
-        $(this).addClass('active')
-      })
+      // $('.pl_index02 li').on('click',function(){
+      //   $('.pl_index02 li').removeClass('active')
+      //   $(this).addClass('active')
+      // })
+
+
+      // 푸름이 이동환경교실 운영 scrolltop 탭
+      $(".pl_index02 a[href^='#']").click(function(e) {
+        e.preventDefault();
+        
+        var position = $($(this).attr("href")).offset().top;
+      
+        $("body, html").animate({
+          scrollTop: position - 120
+        } /* speed */ );
+      });
 });
 
