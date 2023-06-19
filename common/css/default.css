@@ -627,7 +627,7 @@ header .utilwrap > div.menu_btn {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 99;
   background: #000;
   opacity: 0.5;
   display: none;
