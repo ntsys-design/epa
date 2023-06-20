@@ -235,9 +235,6 @@
         margin-bottom: 16px;
         color: #000;
 
-        &.thmclr {
-            color: #13523b;
-        }
     }
     .body01 {
         font-size: 16px;
@@ -1677,10 +1674,53 @@ article {
 }
 
 // 지도
-.mapwrap {
-    > div {
-        width: 100%;
+
+.waytowrap {
+    padding: 16px 0 40px;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    border-bottom: 1px solid #ccc;
+
+    @include maxWidth(980px) {
+        flex-direction: column;
     }
+
+    .textwrap {
+        flex: 1 1 50%;
+        padding: 0 24px;
+        dl {
+            display: flex;
+            gap: 0 64px;
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: unset;
+            }
+
+
+            dt {
+                width: 92px;
+                flex-shrink: 0;
+                font-size: 20px;
+                font-family: 'SUIT-M';
+            }
+            dd {
+                color: #333;
+            }
+        }
+    }
+    .mapwrap {
+        flex: 1 0 50%;
+
+        > div {
+            width: 100%;
+        }
+    }
+}
+
+.pbtpwrap {
+    padding: 16px 24px 40px;
+    border-bottom: 1px solid #ccc;
 }
 
 // 통합검색

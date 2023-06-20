@@ -2333,9 +2333,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 16px;
   color: #000;
 }
-.contents.sub h5.thmclr {
-  color: #13523b;
-}
 .contents.sub .body01 {
   font-size: 16px;
   color: #333;
@@ -3619,8 +3616,48 @@ article .graphwrap .dvsn_list > li > span {
   flex-grow: 1;
 }
 
-.mapwrap > div {
+.waytowrap {
+  padding: 16px 0 40px;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 980px) {
+  .waytowrap {
+    flex-direction: column;
+  }
+}
+.waytowrap .textwrap {
+  flex: 1 1 50%;
+  padding: 0 24px;
+}
+.waytowrap .textwrap dl {
+  display: flex;
+  gap: 0 64px;
+  margin-bottom: 20px;
+}
+.waytowrap .textwrap dl:last-of-type {
+  margin-bottom: unset;
+}
+.waytowrap .textwrap dl dt {
+  width: 92px;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-family: "SUIT-M";
+}
+.waytowrap .textwrap dl dd {
+  color: #333;
+}
+.waytowrap .mapwrap {
+  flex: 1 0 50%;
+}
+.waytowrap .mapwrap > div {
   width: 100%;
+}
+
+.pbtpwrap {
+  padding: 16px 24px 40px;
+  border-bottom: 1px solid #ccc;
 }
 
 .search_desc {
