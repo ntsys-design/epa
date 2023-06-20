@@ -268,6 +268,18 @@
     margin-bottom: 80px;
 }
 
+.taskslide {
+    .swiper-slide {
+        height: 350px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
+
 article {
     .artcl_tit {
         font-size: 40px;
@@ -807,7 +819,8 @@ article {
         text-align: center;
 
         img {
-            height: 270px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
         figcaption {
@@ -924,6 +937,7 @@ article {
         width: 55%;
     }
 }
+
 .swiperwrap {
     position: relative;
 
@@ -946,11 +960,61 @@ article {
         }
     }
 }
-.edu_prgr {
-    li {
+
+.stepperwrap {
+    .stepper_list {
+        > li {  
+                margin-bottom: 20px;
+                display: flex;
+                border: 1px solid #eee;
+                border-radius: 4px;
+
+                .step_label {
+                    flex: 0 0 20%;
+                    background: #DEECC8;
+                    display: flex;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    border-right: 1px solid #eee;
+
+                    h5 {
+                        width: 100%;
+                        align-self: center;
+                        display: unset;
+                        margin-bottom: unset;
+                        font-family: 'SUIT-R';
+                        font-size: 18px;
+                    }
+
+                    &.nonum {
+                        text-align: center;
+                    }
+                }
+
+                .step_con {
+                    padding: 10px 20px;
+                    flex: 1 0 80%;
+                    border-left: unset;
+                }
+
+                &:last-of-type {
+                    margin-bottom: unset;
+                }
+        }
+    }
+}
+
+.leveling_list {
+    > li {
+
         ul {
             gap: 4px;
-            li {
+
+            @include maxWidth(980px) {
+                flex-wrap: wrap;
+            }
+
+            > li {
                 padding: 24px 0;
                 flex: 0 0 calc((100% - 12px) / 4);
                 text-align: center;
@@ -961,11 +1025,11 @@ article {
                     content: "";
                     width: 32px;
                     height: 32px;
-                    background: url(../images/sub01_arrws2.png) no-repeat;
+                    background: url(../images/sub01_arrws2.png) no-repeat center center;
                     position: absolute;
-                    right: -18px;
+                    right: -35px;
                     top: 50%;
-                    transform: translateY(-50%);
+                    transform: translate(-50%, -50%);
                     z-index: 1;
                 }
                 &:last-child {
@@ -973,10 +1037,51 @@ article {
                         content: none;
                     }
                 }
+
+                @include maxWidth(980px) {
+                    flex: 0 0 calc((100% - 12px) / 2);
+
+                    &:nth-child(2) {
+                        &::after {
+                            right: 50%;
+                            top: unset;
+                            bottom: -35px;
+                            transform: rotate(90deg) translate(-50%, -50%);
+                        }
+                    }
+                    &:nth-child(3) {
+                        order: 4;
+                        &::after {
+                            right: unset;
+                            left: -35px;
+                            top: unset;
+                            bottom: 50%;
+                            transform: rotate(180deg) translate(-50%, -50%);
+                        }
+                    }
+                }
+                @include maxWidth(460px) {
+                    flex: 0 0 100%;
+
+                    &:after { 
+                        right: 50% !important;
+                        top: unset !important;
+                        bottom: -35px !important;
+                        transform: rotate(90deg) translate(-50%, -50%) !important;
+                    } 
+                    &:nth-child(3) {
+                        order: unset;
+
+                        &::after {
+                            left: unset;
+                        }
+                    }
+                }
             }
         }
     }
 }
+
 .edu_link {
     border-top: 1px solid #eeeeee;
     padding-top: 48px;

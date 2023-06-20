@@ -286,8 +286,8 @@ header {
 
 // dimm
 .dimm {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -470,6 +470,11 @@ footer {
 }
 
 // 공용 스타일
+
+
+.thmclr {
+    color: #13523b;
+}
 .ta_l {
     text-align: left;
 }
@@ -478,6 +483,9 @@ footer {
 }
 .ta_r {
     text-align: right;
+}
+.ai_c {
+    align-items: center;
 }
 // 공용 셀렉트
 .ulsel {
@@ -690,6 +698,12 @@ footer {
     padding-bottom: 24px;
     border-bottom: 2px solid #000;
 }
+.bd_n {
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
 
 // 공통불릿
 .needblt {
@@ -749,6 +763,14 @@ footer {
     height: 64px;
     display: flex;
     border-collapse: collapse;
+
+    &.clm {
+        li {
+            a {
+                flex-direction: column;
+            }
+        }
+    }
 
     > li {
         flex: 1 1 20%;

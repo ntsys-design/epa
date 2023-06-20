@@ -444,62 +444,68 @@
         <!-- <h3 class="subcon_title">
             국제환경산업기술&<span class="fc_grn">그린에너지전</span>
           </h3> -->
-        <div class="search_result">
-          <div class="result_top">
-            <form action="" class="search_form">
-              <ul class="popinput_list black">
-                <li>
-                  <label for="main_select" class="hide">사업실명제셀렉트</label>
-                  <select name="lecture_list" id="main_select">
-                    <option value="" disabled>전체</option>
-                    <option value="">사업실명제</option>
-                    <option value="">신뢰성 검증</option>
-                    <option value="">자료실</option>
-                    <option value="">커뮤니티</option>
-                  </select>
-                </li>
-                <li>
-                  <label for="main_search" class="hide">검색창</label>
-                  <input type="text" name="pop_search" id="main_search" placeholder="검색어를 입력하세요" />
-                </li>
-                <li>
-                  <label for="main_button" class="hide">검색버튼</label>
-                  <input type="button" id="main_button" value="검색" />
-                </li>
-                <li>
-                  <input type="checkbox" name="resultcheck" id="checkbox" />
-                  <label for="checkbox">결과 내 재검색 </label>
-                </li>
-              </ul>
-            </form>
+        <div class="board">
+          <div class="brd_sch needflex">
+            <div class="ulsel brd_slt">
+                <button class="ulsel_btn">제목</button>
+                <ul class="ulsel_list">
+                    <li>
+                        <a href="">제목</a>
+                    </li>
+                    <li>
+                        <a href="">내용</a>
+                    </li>
+                    <li>
+                        <a href="">제목/내용</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="brd_search_bar">
+                <label for="brd_search" class="hide">검색</label>
+                <input type="text" name="brd_search" id="brd_search" placeholder="검색어를 입력하세요." value="">
+            </div>
+            <button class="brd_search_btn">검색</button>
+            
+            <div>
+              <input type="checkbox" name="resultcheck" id="checkbox" />
+              <label for="checkbox">결과 내 재검색 </label>
+            </div>
+        </div>
+    
+          <div>    
             <p class="search_desc">
-              검색어 "<em class="src_hltd">인공지능</em>"에 대한 검색결과는
+              검색어 "<b class="thmclr">ABCD</b>"에 대한 검색결과는
               <span class="red">00</span>건 입니다.
             </p>
-          </div>
-          <div class="result_tab">
-            <ul>
+            <ul class="sub_tab_list clm mb80">
               <li>
-                <p class="data-name">전체</p>
-                (<span>00</span>)건
+                <a>
+                  <p class="data-name">전체</p>
+                  <span class="br">(00) 건</span>
+                </a>
               </li>
               <li>
-                <p class="data-name">사업실명제</p>
-                (<span>00</span>)건
+                <a>
+                  <p class="data-name">사업실명제</p>
+                  <span class="br">(00) 건</span>
+                </a>
               </li>
               <li>
-                <p class="data-name">자료실</p>
-                (<span>00</span>)건
+                <a><p class="data-name">자료실</p>
+                  <span class="br">(00) 건</span>
+                </a>
               </li>
               <li>
-                <p class="data-name">알림·홍보</p>
-                (<span>00</span>)건
+                <a><p class="data-name">알림·홍보</p>
+                  <span class="br">(00) 건</span>
+                </a>
               </li>
             </ul>
           </div>
           <div class="resultview_list board">
             <div class="resultview" data-type="사업실명제">
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>열린경영</em><em>사업실명제</em>&nbsp;(<span class="red">000</span>)건
               </p>
               <div class="boardwrap mb24">
@@ -657,7 +663,7 @@
               </div>
             </div>
             <div class="resultview" data-type="자료실">
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>참여·소통</em><em>자료실</em>&nbsp;(<span class="red">000</span>)건
               </p>
               <div class="boardwrap mb24">
@@ -815,7 +821,7 @@
               </div>
             </div>
             <div class="resultview" data-type="알림·홍보">
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>알림·홍보</em><em>채용정보</em>&nbsp;(<span class="red">000</span>)건
               </p>
               <div class="boardwrap mb60">
@@ -971,7 +977,7 @@
                   <button class="redcross"><span></span>더 보기</button>
                 </div>
               </div>
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>알림·홍보</em><em>공지사항</em>&nbsp;(<span class="red">000</span>)건
               </p>
               <div class="boardwrap mb60">
@@ -1127,10 +1133,10 @@
                   <button class="redcross"><span></span>더 보기</button>
                 </div>
               </div>
-              <p class="resultview_tit">
+              <p class=" bd_b">
                 <em>알림·홍보</em><em>행사소식</em>&nbsp;(<span class="red">000</span>)건
               </p>
-              <div class="boardwrap mb60 brd_list thmb">
+              <div class="boardwrap mb60 brd_list thmb bd_n">
                 <ul class="board_list ">
                   <!-- list item -->
                   <li class="resultview_item">
@@ -1235,10 +1241,10 @@
                   <button class="redcross"><span></span>더 보기</button>
                 </div>
               </div>
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>알림·홍보</em><em>언론보도</em>&nbsp;(<span class="red">000</span>)건
               </p>
-              <div class="boardwrap mb60 brd_list thmb">
+              <div class="boardwrap mb60 brd_list thmb bd_n">
                 <ul class="board_list ">
                   <!-- list item -->
                   <li class="resultview_item">
@@ -1343,10 +1349,10 @@
                   <button class="redcross"><span></span>더 보기</button>
                 </div>
               </div>
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>알림·홍보</em><em>기관홍보</em>&nbsp;(<span class="red">000</span>)건
               </p>
-              <div class="boardwrap mb60 brd_list thmb">
+              <div class="boardwrap mb60 brd_list thmb bd_n">
                 <ul class="board_list ">
                   <!-- list item -->
                   <li class="resultview_item">
@@ -1451,7 +1457,7 @@
                   <button class="redcross"><span></span>더 보기</button>
                 </div>
               </div>
-              <p class="resultview_tit">
+              <p class="resultview_tit bd_b">
                 <em>알림·홍보</em><em>소규모 사업장 방지시설 지원사업</em>&nbsp;(<span class="red">000</span>)건
               </p>
               <div class="boardwrap mb60">

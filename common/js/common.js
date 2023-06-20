@@ -250,6 +250,15 @@ function goToTab(abs_idx, selecElm){
     });
   });
 
+// sub_01_03_01 주요업무사진
+var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  navigation: {
+        nextEl: ".swiperwrap1 .swiper-button-next",
+        prevEl: ".swiperwrap1 .swiper-button-prev",
+      },
+});
 
 
 // sub_01_04_02 slide
@@ -369,12 +378,12 @@ function goToTab(abs_idx, selecElm){
     $(".resultview_list .resultview").each(function (i, e) {
         arraySlide.push(e);
     });
-    $(".result_tab ul li:first-child").first().addClass("active");
-    $(".result_tab ul li").on("click", function () {
+    $(".sub_tab_list li:first-child").first().addClass("on");
+    $(".sub_tab_list li").on("click", function () {
         const type = $(this).children(".data-name").text();
 
-        $(".result_tab ul li").removeClass("active");
-        $(this).addClass("active");
+        $(".sub_tab_list li").removeClass("on");
+        $(this).addClass("on");
         $(".resultview_list").empty();
 
         if (type === "전체") {

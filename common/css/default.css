@@ -130,6 +130,10 @@ body {
   font-family: "SUIT-R";
 }
 
+b {
+  font-family: "SUIT-SB";
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -627,8 +631,8 @@ header .utilwrap > div.menu_btn {
 }
 
 .dimm {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -795,6 +799,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   background-position-x: -87px;
 }
 
+.thmclr {
+  color: #13523b;
+}
+
 .ta_l {
   text-align: left;
 }
@@ -805,6 +813,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .ta_r {
   text-align: right;
+}
+
+.ai_c {
+  align-items: center;
 }
 
 .ulsel {
@@ -986,6 +998,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-bottom: 2px solid #000;
 }
 
+.bd_n {
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
 .needblt {
   display: flex;
   align-items: flex-start;
@@ -1036,6 +1055,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 64px;
   display: flex;
   border-collapse: collapse;
+}
+.sub_tab_list.clm li a {
+  flex-direction: column;
 }
 .sub_tab_list > li {
   flex: 1 1 20%;
@@ -2342,6 +2364,18 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 80px;
 }
 
+.taskslide .swiper-slide {
+  height: 350px;
+}
+.taskslide .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
 article .artcl_tit {
   font-size: 40px;
   font-family: "SUIT-B";
@@ -2823,7 +2857,8 @@ article .graphwrap .dvsn_list > li > span {
   text-align: center;
 }
 .img_wrap > figure img {
-  height: 270px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2939,10 +2974,49 @@ article .graphwrap .dvsn_list > li > span {
   content: none;
 }
 
-.edu_prgr li ul {
+.stepperwrap .stepper_list > li {
+  margin-bottom: 20px;
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.stepperwrap .stepper_list > li .step_label {
+  flex: 0 0 20%;
+  background: #DEECC8;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-right: 1px solid #eee;
+}
+.stepperwrap .stepper_list > li .step_label h5 {
+  width: 100%;
+  align-self: center;
+  display: unset;
+  margin-bottom: unset;
+  font-family: "SUIT-R";
+  font-size: 18px;
+}
+.stepperwrap .stepper_list > li .step_label.nonum {
+  text-align: center;
+}
+.stepperwrap .stepper_list > li .step_con {
+  padding: 10px 20px;
+  flex: 1 0 80%;
+  border-left: unset;
+}
+.stepperwrap .stepper_list > li:last-of-type {
+  margin-bottom: unset;
+}
+
+.leveling_list > li ul {
   gap: 4px;
 }
-.edu_prgr li ul li {
+@media screen and (max-width: 980px) {
+  .leveling_list > li ul {
+    flex-wrap: wrap;
+  }
+}
+.leveling_list > li ul > li {
   padding: 24px 0;
   flex: 0 0 calc((100% - 12px) / 4);
   text-align: center;
@@ -2950,19 +3024,57 @@ article .graphwrap .dvsn_list > li > span {
   border-radius: 8px;
   position: relative;
 }
-.edu_prgr li ul li:after {
+.leveling_list > li ul > li:after {
   content: "";
   width: 32px;
   height: 32px;
-  background: url(../images/sub01_arrws2.png) no-repeat;
+  background: url(../images/sub01_arrws2.png) no-repeat center center;
   position: absolute;
-  right: -18px;
+  right: -35px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
-.edu_prgr li ul li:last-child:after {
+.leveling_list > li ul > li:last-child:after {
   content: none;
+}
+@media screen and (max-width: 980px) {
+  .leveling_list > li ul > li {
+    flex: 0 0 calc((100% - 12px) / 2);
+  }
+  .leveling_list > li ul > li:nth-child(2)::after {
+    right: 50%;
+    top: unset;
+    bottom: -35px;
+    transform: rotate(90deg) translate(-50%, -50%);
+  }
+  .leveling_list > li ul > li:nth-child(3) {
+    order: 4;
+  }
+  .leveling_list > li ul > li:nth-child(3)::after {
+    right: unset;
+    left: -35px;
+    top: unset;
+    bottom: 50%;
+    transform: rotate(180deg) translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 460px) {
+  .leveling_list > li ul > li {
+    flex: 0 0 100%;
+  }
+  .leveling_list > li ul > li:after {
+    right: 50% !important;
+    top: unset !important;
+    bottom: -35px !important;
+    transform: rotate(90deg) translate(-50%, -50%) !important;
+  }
+  .leveling_list > li ul > li:nth-child(3) {
+    order: unset;
+  }
+  .leveling_list > li ul > li:nth-child(3)::after {
+    left: unset;
+  }
 }
 
 .edu_link {
