@@ -392,10 +392,14 @@ body {
   height: 100%;
 }
 body.dimmed {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden;
+  padding-right: 16px;
+}
+body.dimmed header {
+  padding: 0 46px 0 30px;
+}
+body.dimmed header .gnbwrap .gnb2dep > section {
+  padding: 20px 16px 20px 0;
 }
 
 #wrap {
