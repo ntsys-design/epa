@@ -3659,6 +3659,36 @@ article .graphwrap .dvsn_list > li > span {
   padding: 16px 24px 40px;
   border-bottom: 1px solid #ccc;
 }
+.pbtpwrap ul li {
+  gap: 0 120px;
+}
+.pbtpwrap ul li p {
+  width: 320px;
+  flex-shrink: 0;
+}
+.pbtpwrap ul li dl {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+.pbtpwrap ul li dl .bustag {
+  width: 41px;
+  height: 20px;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "SUIT-SB";
+  font-size: 14px;
+  display: block;
+  text-align: center;
+}
+.pbtpwrap ul li dl .bustag.gan {
+  background: #7482ED;
+  border: 1px solid #6672D0;
+}
+.pbtpwrap ul li dl .bustag.ji {
+  background: #74B54F;
+  border: 1px solid #669F45;
+}
 
 .search_desc {
   font-weight: 300;

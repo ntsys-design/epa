@@ -1721,6 +1721,41 @@ article {
 .pbtpwrap {
     padding: 16px 24px 40px;
     border-bottom: 1px solid #ccc;
+
+    ul {
+        li {
+            gap: 0 120px;
+            p {
+                width: 320px;
+                flex-shrink: 0;
+            }
+            dl {
+                display: flex;
+                align-items: center;
+                gap: 0 8px;
+
+                .bustag {
+                    width: 41px;
+                    height: 20px;
+                    border-radius: 2px;
+                    color: #fff;
+                    font-family: 'SUIT-SB';
+                    font-size: 14px;
+                    display: block;
+                    text-align: center;
+
+                    &.gan {
+                        background: #7482ED;
+                        border: 1px solid #6672D0;
+                    }
+                    &.ji {
+                        background: #74B54F;
+                        border: 1px solid #669F45;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // 통합검색
