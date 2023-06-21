@@ -1724,15 +1724,41 @@ article {
 
     ul {
         li {
-            gap: 0 120px;
+            gap: 8px 16px;
+            &.needflex {
+                @include maxWidth(720px) {
+                    flex-direction: column;
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: 0 16px;
+                    }
+                }
+            }
             p {
-                width: 320px;
+                width: 420px;
                 flex-shrink: 0;
+                @include maxWidth(720px) {
+                    width: 100%;
+                }
             }
             dl {
                 display: flex;
                 align-items: center;
                 gap: 0 8px;
+
+                margin-bottom: 8px;
+
+                
+                @include maxWidth(720px) {
+                    margin-bottom: unset;
+                }
+
+                &:last-of-type {
+                    margin-bottom: unset;
+                }
+               
 
                 .bustag {
                     width: 41px;
@@ -1752,7 +1778,70 @@ article {
                         background: #74B54F;
                         border: 1px solid #669F45;
                     }
+                    &.spcr {
+                        &::after {
+                            content: '';
+                            width: 1px;
+                            height: 14px;
+                            background: #eee;
+                        }
+                    }
                 }
+
+            }
+            > p {
+                gap: 8px;
+                align-items: center;
+                flex-wrap: wrap;
+                
+                .sbtag {
+                    display: block;
+                    width: 16px;
+                    text-align: center;
+                    flex-shrink: 0;
+                    position: relative;
+                    color: #fff;
+                    font-family: 'SUIT-SB';
+                    font-size: 13px;
+
+                    &.sb2 {
+                        &::after {
+                            content: '';
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background: #72762B;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            z-index: -1;
+                        }
+                    }
+                    &.sb7 {
+                        &::after {
+                            content: '';
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background: #5EB257;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            z-index: -1;
+                        }
+                    }
+
+                  
+                }
+            }
+            
+            .spcr {
+                display: block;
+                width: 1px;
+                height: 14px;
+                background: #eee;
             }
         }
     }
