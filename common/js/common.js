@@ -76,6 +76,23 @@ $(document).ready(function () {
     }
   });
 
+//옵션 선택 및 선택 후 옵션 숨기기
+$(".ulsel_list li a").on('click', function(e) {
+  e.preventDefault();
+  var text = $(this).html();
+  //$(".drop-down .selected a span").html(text);
+  //$(".drop-down .options ul").hide();
+  
+  var $selected = $(this).parents('ul').siblings('.ulsel_btn');
+  $selected.html(text);
+  $selected.removeClass("open");
+  $selected.siblings().fadeOut(100);
+}); 
+
+
+
+
+
   // 외부영역 클릭 시 셀렉트 닫기
   $(document).mouseup(function (e) {
     e.stopPropagation();
@@ -443,3 +460,11 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
       });
 });
 
+
+// //페이지의 다른 위치를 클릭하면 옵션 숨기기
+// $(document).bind('click', function(e) {
+//   var $clicked = $(e.target);
+//   if (!$clicked.parents().hasClass("drop-down")){
+//           $(".drop-down .options ul").hide();
+//       }
+// });

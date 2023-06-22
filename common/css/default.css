@@ -3285,6 +3285,9 @@ article .graphwrap .dvsn_list > li > span {
   border-radius: 2px;
   padding: 0 16px;
 }
+.board .ulsel.brd_slt ul {
+  border-radius: 2px;
+}
 .board .ulsel.brd_count {
   width: 96px;
 }
