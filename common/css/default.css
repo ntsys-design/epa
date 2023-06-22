@@ -3050,6 +3050,9 @@ article .graphwrap .dvsn_list > li > span {
   padding: 10px 20px;
   flex: 1 0 80%;
   border-left: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .stepperwrap .stepper_list > li:last-of-type {
   margin-bottom: unset;
@@ -3287,6 +3290,7 @@ article .graphwrap .dvsn_list > li > span {
 }
 .board .ulsel.brd_slt ul {
   border-radius: 2px;
+  overflow: hidden;
 }
 .board .ulsel.brd_count {
   width: 96px;

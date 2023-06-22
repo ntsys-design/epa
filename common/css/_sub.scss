@@ -1017,6 +1017,9 @@ article {
                     padding: 10px 20px;
                     flex: 1 0 80%;
                     border-left: unset;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                 }
 
                 &:last-of-type {
@@ -1293,6 +1296,7 @@ article {
 
             ul {
                 border-radius: 2px;
+                overflow: hidden;
             }
         }
         &.brd_count {
