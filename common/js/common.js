@@ -63,21 +63,27 @@ $(document).ready(function () {
 
 
   //공용 셀렉트
-  $(".ulsel_btn").on("click", function (e) {
-    $(this).parent().siblings().find(".ulsel_btn").removeClass("open");
-    $(this).parent().siblings().find(".ulsel_btn").siblings().fadeOut(100);
-    e.preventDefault();
-    if ($(this).hasClass("open")) {
-      $(this).removeClass("open");
-      $(this).siblings().fadeOut(100);
-    } else {
-      $(this).addClass("open");
-      $(this).siblings().fadeIn(100);
-    }
-  });
 
-//옵션 선택 및 선택 후 옵션 숨기기
-$(".ulsel_list li a").on('click', function(e) {
+  pblSel();
+
+  function pblSel(){
+    $(".ulsel_btn").on("click", function (e) {
+      $(this).parent().siblings().find(".ulsel_btn").removeClass("open");
+      $(this).parent().siblings().find(".ulsel_btn").siblings().fadeOut(100);
+      e.preventDefault();
+      if ($(this).hasClass("open")) {
+        $(this).removeClass("open");
+        $(this).siblings().fadeOut(100);
+      } else {
+        $(this).addClass("open");
+        $(this).siblings().fadeIn(100);
+      }
+    });
+  }
+
+  
+//게시판 옵션 선택 및 선택 후 옵션 숨기기
+$(".brd_slt .ulsel_list li a").on('click', function(e) {
   e.preventDefault();
   var text = $(this).html();
   //$(".drop-down .selected a span").html(text);
@@ -91,17 +97,26 @@ $(".ulsel_list li a").on('click', function(e) {
 
 
 
+//외부영역 클릭 시 셀렉트 닫기
+$(document).bind('click', function(e) {
+  var $clicked = $(e.target);
+  if (!$clicked.hasClass("open")){
+          $(".ulsel_btn").removeClass('open');
+          $(".ulsel_list").fadeOut(100);
+      }
+});
+
+// 
+// $(document).mouseup(function (e) {
+//   e.stopPropagation();
+//   var selBox = $(".ulsel_list li a");
+//   if (selBox.has(e.target).length === 0) {
+//     $(".ulsel_btn").removeClass("open");
+//     $(".ulsel_list").fadeOut(100);
+//   }
+// });
 
 
-  // 외부영역 클릭 시 셀렉트 닫기
-  $(document).mouseup(function (e) {
-    e.stopPropagation();
-    var selBox = $(".ulsel");
-    if (selBox.has(e.target).length === 0) {
-      $(".ulsel_btn").removeClass("open");
-      $(".ulsel_list").fadeOut(100);
-    }
-  });
 
   $(window).resize(function () {
     toFunc();
@@ -460,11 +475,3 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
       });
 });
 
-
-// //페이지의 다른 위치를 클릭하면 옵션 숨기기
-// $(document).bind('click', function(e) {
-//   var $clicked = $(e.target);
-//   if (!$clicked.parents().hasClass("drop-down")){
-//           $(".drop-down .options ul").hide();
-//       }
-// });
