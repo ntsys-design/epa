@@ -876,6 +876,80 @@ footer {
     }
 }
 
+
+
+// 컨텐츠 만족도 조사
+
+.contents_eval {
+    max-width: 1280px;
+    margin: 0 auto;
+
+
+    .addr {
+        padding: 40px 0;
+        border-top: 1px solid #ccc;
+        text-align: center;
+
+        > span {
+            padding: 0 20px;
+
+            .bar {
+                padding: 0 5px;
+                vertical-align: 1px;
+            }
+        }
+        img {
+            width: 18px;
+            height: auto;
+            vertical-align: -3px;
+            margin-left: 5px;
+        }
+        a {
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+
+    .satisfaction_box {
+        margin-bottom: 120px;
+        padding: 30px 50px;
+        background: #eee;
+
+        .top {
+            display: flex;
+            align-items: center;
+
+            .tit {
+                align-self: center;
+                text-align: center;
+                position: relative;
+                flex: 0 0 10%;
+
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 20px);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: #999;
+                }
+            }
+
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+
+                dt {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 1260px) {
     header {
         padding: 0 20px;

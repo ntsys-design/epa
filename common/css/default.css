@@ -1165,6 +1165,64 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: block;
 }
 
+.contents_eval {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.contents_eval .addr {
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+.contents_eval .addr > span {
+  padding: 0 20px;
+}
+.contents_eval .addr > span .bar {
+  padding: 0 5px;
+  vertical-align: 1px;
+}
+.contents_eval .addr img {
+  width: 18px;
+  height: auto;
+  vertical-align: -3px;
+  margin-left: 5px;
+}
+.contents_eval .addr a {
+  display: inline-block;
+  padding-left: 10px;
+}
+.contents_eval .satisfaction_box {
+  margin-bottom: 120px;
+  padding: 30px 50px;
+  background: #eee;
+}
+.contents_eval .satisfaction_box .top {
+  display: flex;
+  align-items: center;
+}
+.contents_eval .satisfaction_box .top .tit {
+  align-self: center;
+  text-align: center;
+  position: relative;
+  flex: 0 0 10%;
+}
+.contents_eval .satisfaction_box .top .tit::after {
+  content: "";
+  width: 1px;
+  height: calc(100% + 20px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #999;
+}
+.contents_eval .satisfaction_box .top dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contents_eval .satisfaction_box .top dl dt {
+  flex: 0 0 100%;
+}
+
 @media screen and (max-width: 1260px) {
   header {
     padding: 0 20px;
@@ -2408,7 +2466,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .exhb_slide {
   overflow: hidden;
-  height: 350px;
   margin-bottom: 80px;
 }
 .exhb_slide .swiper-slide {
