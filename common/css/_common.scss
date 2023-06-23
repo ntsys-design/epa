@@ -899,17 +899,20 @@ footer {
 
         > span {
             padding: 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 0 7px;
 
             .bar {
-                padding: 0 5px;
-                vertical-align: 1px;
+                width: 1px;
+                height: 14px;
+                background: #999;
+                display: block;
             }
         }
         img {
             width: 18px;
             height: auto;
-            vertical-align: -3px;
-            margin-left: 5px;
         }
         a {
             display: inline-block;

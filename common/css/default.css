@@ -1184,16 +1184,19 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents_eval .addr > span {
   padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 0 7px;
 }
 .contents_eval .addr > span .bar {
-  padding: 0 5px;
-  vertical-align: 1px;
+  width: 1px;
+  height: 14px;
+  background: #999;
+  display: block;
 }
 .contents_eval .addr img {
   width: 18px;
   height: auto;
-  vertical-align: -3px;
-  margin-left: 5px;
 }
 .contents_eval .addr a {
   display: inline-block;
