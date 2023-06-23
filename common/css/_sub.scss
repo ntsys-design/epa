@@ -207,6 +207,9 @@
 .mb16 {
     margin-bottom: 16px !important;
 }
+.mb20 {
+    margin-bottom: 20px !important;
+}
 .mb24 {
     margin-bottom: 24px !important;
 }
@@ -1113,6 +1116,16 @@ article {
                             left: unset;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    &.thrpcs {
+        > li {
+            ul {
+                li {
+                    flex: 0 0 calc((100% - 8px) /3);
                 }
             }
         }
@@ -2613,6 +2626,135 @@ article {
                 }
             }
         }
+    }
+}
+
+// sub01_07_06 업무추진 체계도
+.system{
+    background: url(../images/sys_bg.png)no-repeat;
+    padding: 137px 67px 48px;
+    .sys_top{
+        border: 1px solid #EEEEEE;
+        border-radius: 8px;
+        max-width: 600px;
+        margin:0  auto 88px;
+        position: relative;
+        p{
+            font-family: 'SUIT-M';
+        border-radius: 8px 8px 0 0;
+            font-size: 20px;
+            color: #fff;
+            background: #94B75B;
+            text-align: center;
+            padding: 8px 0;
+        }
+        ul{
+            gap:0 24px;
+            justify-content: center;
+            padding: 26px 0;
+            position: relative;
+            &::after{
+                content: '';
+                width: 7px;
+                height: 7px;
+                border: 1px solid #EEEEEE;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::before{
+                content: '';
+                width: 3px;
+                height: 3px;
+                background:  #cccccc;
+                position: absolute;
+                bottom: -2px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:after{
+            content: '';
+            width: 1px;
+            height: 85px;
+            background: #eee;
+            position: absolute;
+            left: 50%;
+            bottom: -89px;
+            transform: translateX(-50%);
+        }
+        &::before{
+            content: '';
+            background: url(../images/systop.png);
+            position: absolute;
+            width: 79px;
+            height: 62px;
+            left: 15px;
+            top: -62px;
+        }
+    }
+    .sys_btt{
+            gap: 24px;
+            position: relative;
+            &::before{
+                content: '';
+                width: calc(100% - (100% -  96px)/5);
+                height: 1px;
+                background: #eeeeee;
+                position: absolute;
+                top: -24px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after{
+                content: '';
+                width: 67px;
+                height: 58px;
+                background: url(../images/sys_btt.png);
+                position: absolute;
+                right: 15px;
+                top: -58px;
+            }
+            dl{
+                border: 1px solid #eeeeee;
+                border-radius: 8px;
+                flex: 0 1 calc((100% -  96px)/5);
+                
+                dt{
+                    color: #333;
+                    border-radius: 8px 8px 0 0;
+                    background: #F7F7F8;
+                    height: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                    text-align: center;
+                    position: relative;
+
+                    &::before{
+                    content: '';
+                    width: 1px;
+                    height: 24px;
+                    background: #eeeeee;
+                    position: absolute;
+                    top: -24px;
+                    left: 50%;
+                }
+                }
+                dd{
+                    color: #666;
+                    height: 85px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    word-break: keep-all;
+                    padding: 0 10px;
+                }
+            }
+    
     }
 }
 
