@@ -886,12 +886,19 @@ footer {
 
 
     .addr {
-        padding: 40px 0;
+        padding: 20px 0;
         border-top: 1px solid #ccc;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px 20px;
+
+        @include maxWidth(720px) {
+            flex-direction: column;
+        }
 
         > span {
-            padding: 0 20px;
+            padding: 0 10px;
 
             .bar {
                 padding: 0 5px;
@@ -914,38 +921,115 @@ footer {
         margin-bottom: 120px;
         padding: 30px 50px;
         background: #eee;
+        height: 100%;
 
         .top {
             display: flex;
             align-items: center;
+            margin-bottom: 30px;
+
+            @include maxWidth(720px) {
+                flex-direction: column;
+                gap: 10px;
+            }
 
             .tit {
                 align-self: center;
                 text-align: center;
-                position: relative;
                 flex: 0 0 10%;
-
-                &::after {
-                    content: '';
-                    width: 1px;
-                    height: calc(100% + 20px);
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: #999;
-                }
+                min-width: 85px;
+                padding: 0 15px;
+                word-break: keep-all;
             }
 
             dl {
+                flex: 1 1 90%;
                 display: flex;
                 flex-wrap: wrap;
+                position: relative;
+                gap: 10px;
 
                 dt {
                     flex: 0 0 100%;
+                    padding: 7px 15px;
                 }
+
+                dd {
+                    
+                    padding: 7px 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 0 5px;
+
+                    input[type="radio"] {
+                        flex-shrink: 0;
+                        position: relative;
+                        padding: 0;
+                        margin: 0;
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid #999;
+                        cursor: pointer;
+
+                        &:checked {
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background-color: #13523b;
+                            }
+                        }
+                    }
+
+                    label {
+                        cursor: pointer;
+                    }
+                }
+
+                
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    background: #999;
+
+                    
+                    @include maxWidth(720px) {
+                        width: 100%;
+                        height: 1px;
+                    }
+                }
+            }
+            
+        }
+
+        .bottom {
+            display: flex;
+            gap: 0 10px;
+            height: 85px;
+
+            > textarea {
+                resize: none;
+                padding: 10px 15px;
+                border: 1px solid #999;
+                overflow-y: auto;
+            }
+            > button {
+                flex: 0 0 80px;
+                border: 1px solid #999;
             }
         }
     }
+
 }
 
 
