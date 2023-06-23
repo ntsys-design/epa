@@ -81,6 +81,15 @@ $(document).ready(function () {
     });
   }
 
+
+//외부영역 클릭 시 셀렉트 닫기
+$(document).bind('click', function(e) {
+  var $clicked = $(e.target);
+  if (!$clicked.hasClass("open")){
+          $(".ulsel_btn").removeClass('open');
+          $(".ulsel_list").fadeOut(100);
+      }
+});
   
 //게시판 옵션 선택 및 선택 후 옵션 숨기기
 $(".brd_slt .ulsel_list li a").on('click', function(e) {
@@ -96,15 +105,6 @@ $(".brd_slt .ulsel_list li a").on('click', function(e) {
 }); 
 
 
-
-//외부영역 클릭 시 셀렉트 닫기
-$(document).bind('click', function(e) {
-  var $clicked = $(e.target);
-  if (!$clicked.hasClass("open")){
-          $(".ulsel_btn").removeClass('open');
-          $(".ulsel_list").fadeOut(100);
-      }
-});
 
 // 
 // $(document).mouseup(function (e) {
