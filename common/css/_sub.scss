@@ -1124,8 +1124,24 @@ article {
     &.thrpcs {
         > li {
             ul {
+                @include maxWidth(980px) {
+                    flex-wrap: wrap;
+                }
                 li {
                     flex: 0 0 calc((100% - 8px) /3);
+                    
+                    @include maxWidth(980px) {
+                        flex: 0 0 100%;
+                        
+                        &::after {
+                            @include maxWidth(980px) {
+                                right: 50%;
+                                top: unset;
+                                bottom: -35px;
+                                transform: rotate(90deg) translate(-50%, -50%);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -2632,6 +2648,12 @@ article {
 .system{
     
     padding: 0 67px 48px;
+    @include maxWidth(980px) {
+        padding: 0 30px 28px;
+    }
+    @include maxWidth(720px) {
+        padding: 0;
+    }
   
     position: relative;
     .sys_bg_lft{

@@ -3277,8 +3277,26 @@ article .graphwrap .dvsn_list > li > span {
     left: unset;
   }
 }
+@media screen and (max-width: 980px) {
+  .leveling_list.thrpcs > li ul {
+    flex-wrap: wrap;
+  }
+}
 .leveling_list.thrpcs > li ul li {
   flex: 0 0 calc((100% - 8px) / 3);
+}
+@media screen and (max-width: 980px) {
+  .leveling_list.thrpcs > li ul li {
+    flex: 0 0 100%;
+  }
+}
+@media screen and (max-width: 980px) and (max-width: 980px) {
+  .leveling_list.thrpcs > li ul li::after {
+    right: 50%;
+    top: unset;
+    bottom: -35px;
+    transform: rotate(90deg) translate(-50%, -50%);
+  }
 }
 
 .edu_link {
@@ -4648,6 +4666,16 @@ article .graphwrap .dvsn_list > li > span {
 .system {
   padding: 0 67px 48px;
   position: relative;
+}
+@media screen and (max-width: 980px) {
+  .system {
+    padding: 0 30px 28px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .system {
+    padding: 0;
+  }
 }
 .system .sys_bg_lft {
   position: absolute;
