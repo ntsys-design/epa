@@ -92,18 +92,27 @@ $(document).bind('click', function(e) {
 });
   
 //게시판 옵션 선택 및 선택 후 옵션 숨기기
-$(".brd_slt .ulsel_list li a").on('click', function(e) {
+
+$(".board .ulsel_btn").each( function (){
+  var initVal = $(this).siblings().children().first('li').find('a').attr('value');
+
+  $(this).attr('value', initVal);
+  
+})
+$(".board .ulsel_list li a").on('click', function(e) {
   e.preventDefault();
   var text = $(this).html();
+  var attr = $(this).attr('value');
   //$(".drop-down .selected a span").html(text);
   //$(".drop-down .options ul").hide();
   
   var $selected = $(this).parents('ul').siblings('.ulsel_btn');
   $selected.html(text);
+  $selected.attr('value', attr);
   $selected.removeClass("open");
   $selected.siblings().fadeOut(100);
 }); 
-
+  
 
 
 // 

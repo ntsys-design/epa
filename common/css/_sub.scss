@@ -1303,6 +1303,8 @@ article {
         button {
             border: 1px solid #cccccc;
             color: #333;
+            border-radius: 2px;
+            padding: 0 16px;
             &::after {
                 content: "";
                 width: 20px;
@@ -1311,18 +1313,15 @@ article {
                 right: 14px;
             }
         }
+        
+         > ul {
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
         &.brd_slt {
             flex-shrink: 0;
             width: 144px;
-            button {
-                border-radius: 2px;
-                padding: 0 16px;
-            }
-
-            ul {
-                border-radius: 2px;
-                overflow: hidden;
-            }
         }
         &.brd_count {
             width: 96px;

@@ -3426,6 +3426,8 @@ article .graphwrap .dvsn_list > li > span {
 .board .ulsel button {
   border: 1px solid #cccccc;
   color: #333;
+  border-radius: 2px;
+  padding: 0 16px;
 }
 .board .ulsel button::after {
   content: "";
@@ -3434,17 +3436,13 @@ article .graphwrap .dvsn_list > li > span {
   background: url(../images/slt_down.png);
   right: 14px;
 }
+.board .ulsel > ul {
+  border-radius: 2px;
+  overflow: hidden;
+}
 .board .ulsel.brd_slt {
   flex-shrink: 0;
   width: 144px;
-}
-.board .ulsel.brd_slt button {
-  border-radius: 2px;
-  padding: 0 16px;
-}
-.board .ulsel.brd_slt ul {
-  border-radius: 2px;
-  overflow: hidden;
 }
 .board .ulsel.brd_count {
   width: 96px;
