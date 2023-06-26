@@ -1869,6 +1869,16 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .newswrap .newscon_list li .newscon_item article a .imgwrap {
   margin-bottom: 16px;
+  height: 250px;
+  overflow: hidden;
+}
+.contents.main .newswrap .newscon_list li .newscon_item article a .imgwrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .contents.main .newswrap .newscon_list li .newscon_item article a .atc_textwrap .atc_tag {
   display: block;
@@ -2188,6 +2198,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   .slide_tab .list .list_box .tabPanels .info_box ul li:hover a .img {
     transform: translate(0, -10%);
   }
+}
+.slide_tab .list .list_box .tabPanels .info_box ul::after {
+  content: "";
+  display: block;
+  width: 30%;
+  flex-grow: 1;
+  height: auto;
 }
 .slide_tab.on .list .tab_box {
   transform: translate(0, 0);
