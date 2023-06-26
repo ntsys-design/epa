@@ -4648,15 +4648,48 @@ article .graphwrap .dvsn_list > li > span {
 }
 
 .system {
-  background: url(../images/sys_bg.png) no-repeat;
-  padding: 137px 67px 48px;
+  padding: 0 67px 48px;
+  position: relative;
+}
+.system .sys_bg_lft {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../images/sys_bg_left.png) no-repeat center;
+  background-size: cover;
+  background-position: 0%;
+}
+.system .sys_bg_rght {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0px;
+  background: url(../images/sys_bg_right.png) no-repeat center;
+  background-size: cover;
+  background-position: 100%;
 }
 .system .sys_top {
-  border: 1px solid #EEEEEE;
-  border-radius: 8px;
+  padding-top: 137px;
   max-width: 600px;
   margin: 0 auto 88px;
   position: relative;
+}
+.system .sys_top > div {
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
+  position: relative;
+}
+.system .sys_top > div::before {
+  content: "";
+  background: url(../images/systop.png);
+  position: absolute;
+  width: 79px;
+  height: 62px;
+  left: 15px;
+  top: -62px;
 }
 .system .sys_top p {
   font-family: "SUIT-M";
@@ -4665,12 +4698,12 @@ article .graphwrap .dvsn_list > li > span {
   color: #fff;
   background: #94B75B;
   text-align: center;
-  padding: 8px 0;
+  padding: 8px 10px;
 }
 .system .sys_top ul {
   gap: 0 24px;
   justify-content: center;
-  padding: 26px 0;
+  padding: 26px 10px;
   position: relative;
 }
 .system .sys_top ul::after {
@@ -4702,15 +4735,6 @@ article .graphwrap .dvsn_list > li > span {
   left: 50%;
   bottom: -89px;
   transform: translateX(-50%);
-}
-.system .sys_top::before {
-  content: "";
-  background: url(../images/systop.png);
-  position: absolute;
-  width: 79px;
-  height: 62px;
-  left: 15px;
-  top: -62px;
 }
 .system .sys_btt {
   gap: 24px;
@@ -4787,6 +4811,22 @@ article .graphwrap .dvsn_list > li > span {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  .system .sys_top {
+    padding-top: 220px;
+  }
+  .system .sys_top::after {
+    height: 62px;
+    bottom: -65px;
+  }
+  .system .sys_btt {
+    flex-wrap: wrap;
+  }
+  .system .sys_btt dl {
+    flex: 0 1 calc((100% - 48px) / 3);
+  }
+  .system .sys_btt::before {
+    width: calc(100% - (100% - 48px) / 3);
+  }
 }
 @media screen and (max-width: 720px) {
   .img_wrap > figure {
@@ -4829,12 +4869,77 @@ article .graphwrap .dvsn_list > li > span {
   .pl_con ul.pl_index li {
     flex: 0 1 calc((100% - 32px) / 2);
   }
+  .system .sys_bg_lft {
+    background: none;
+  }
+  .system .sys_bg_rght {
+    background: none;
+  }
+  .system .sys_top {
+    padding-top: 100px;
+  }
+  .system .sys_top ul {
+    flex-wrap: wrap;
+  }
+  .system .sys_top ul li {
+    width: 100%;
+  }
+  .sys_btt {
+    flex-wrap: wrap;
+  }
+  .sys_btt dl {
+    flex: 0 1 calc((100% - 24px) / 2);
+  }
+  .sys_btt::before {
+    width: calc(100% - (100% - 24px) / 2);
+  }
 }
+.chtr article > ul.needflex {
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #CCCCCC;
+  gap: 20px;
+}
+.chtr article > ul.needflex li p {
+  margin-top: 20px;
+  font-family: "SUIT-SB";
+  color: #888;
+  font-size: 24px;
+  max-width: 530px;
+}
+.chtr article > ul.needflex li p span {
+  color: #13523B;
+}
+.chtr article ul.oath {
+  padding: 40px 0 0 15px;
+}
+.chtr article ul.oath li p {
+  font-family: "SUIT-R";
+  font-size: 20px;
+  color: #000;
+}
+.chtr article ul.oath li p span {
+  padding-right: 16px;
+  font-family: "SUIT-SB";
+  color: #587533;
+  font-size: 24px;
+}
+
 @media screen and (max-width: 500px) {
   article .pl_con > ul.needflex.pl_index {
     justify-content: center;
   }
   .pl_con ul.pl_index li {
     flex: unset;
+  }
+  .system .sys_btt {
+    flex-wrap: wrap;
+  }
+  .system .sys_btt dl {
+    width: 100%;
+    flex: unset;
+  }
+  .system .sys_btt::before {
+    width: 0;
   }
 }/*# sourceMappingURL=default.css.map */
