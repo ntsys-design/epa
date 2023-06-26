@@ -2932,6 +2932,11 @@ article .pl_con > ul.needflex.pl_index{
     }
 }
 
+.bg_ul{
+    background: #F7F7F8;
+    padding: 32px;
+}
+
 @media screen and (max-width: 500px) {
     article .pl_con > ul.needflex.pl_index{
         justify-content: center;
