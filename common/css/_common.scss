@@ -5,8 +5,15 @@ body {
         padding-right: 16px;
         header{
             padding: 0 46px 0 30px;
+
+            @include maxWidth(1260px) {
+                padding: 0 36px 0 20px;
+            }
            .gnbwrap .gnb2dep > section{
             padding: 20px 16px 20px 0;
+            @include maxWidth(1260px) {
+                padding: 20px 26px 20px 10px;
+            }
            }
         }
     }
