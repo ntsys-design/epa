@@ -10,9 +10,9 @@ body {
                 padding: 0 36px 0 20px;
             }
            .gnbwrap .gnb2dep > section{
-            padding: 20px 16px 20px 0;
+            padding: 56px 16px 56px 0;
             @include maxWidth(1260px) {
-                padding: 20px 26px 20px 10px;
+                padding: 56px 26px 56px 10px;
             }
            }
         }
@@ -217,7 +217,7 @@ header {
             background: #fff;
 
             > section {
-                padding: 20px 0;
+                padding: 56px 0;
                 width: 100%;
                 text-align: center;
                 display: none;
@@ -226,12 +226,11 @@ header {
     
                 border-top: 1px solid #eee;
     
-                max-height: 672px;
                 overflow-y: auto;
                 background: #f7f7f8;
                 
             @include maxWidth(1260px) {
-                padding: 20px 10px;
+                padding: 56px 10px;
             }
     
                 
@@ -795,7 +794,7 @@ footer {
     > li {
         flex: 1 1 20%;
         vertical-align: middle;
-        border: 1px solid #ccc;
+        border: 1px solid #fff;
         box-sizing: border-box;
         background: #eee;
         color: #333;
@@ -814,7 +813,6 @@ footer {
         }
         &.on {
             background: #13523b;
-            border: 1px solid transparent;
             a {
                 color: #fff;
             }
