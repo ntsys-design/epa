@@ -251,13 +251,14 @@ header {
                         dl {
                             font-size: 16px;
                             dt {
-                                margin-bottom: 16px;
                                 font-family: 'SUIT-SB';
                             }
                             dd {
                                 font-family: 'SUIT-R';
                                 margin-bottom: 12px;
-
+                                &:first-of-type {
+                                    margin-top: 16px;
+                                }
                                 &:last-of-type {
                                     margin-bottom: unset;
                                 }

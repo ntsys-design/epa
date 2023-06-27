@@ -611,12 +611,14 @@ header .gnbwrap .gnb2dep > section > ul > li dl {
   font-size: 16px;
 }
 header .gnbwrap .gnb2dep > section > ul > li dl dt {
-  margin-bottom: 16px;
   font-family: "SUIT-SB";
 }
 header .gnbwrap .gnb2dep > section > ul > li dl dd {
   font-family: "SUIT-R";
   margin-bottom: 12px;
+}
+header .gnbwrap .gnb2dep > section > ul > li dl dd:first-of-type {
+  margin-top: 16px;
 }
 header .gnbwrap .gnb2dep > section > ul > li dl dd:last-of-type {
   margin-bottom: unset;
@@ -2668,10 +2670,10 @@ article .artclinfo_list > li .logo_list {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 20px 0;
+  gap: 20px 40px;
 }
 article .artclinfo_list > li .logo_list > li {
-  flex: 0 0 25%;
+  flex: 0 0 calc((100% - 120px) / 4);
   padding-bottom: 5%;
   position: relative;
   overflow: hidden;
@@ -2681,8 +2683,8 @@ article .artclinfo_list > li .logo_list > li img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: left;
+     object-position: left;
   position: absolute;
   top: 0;
   left: 0;
