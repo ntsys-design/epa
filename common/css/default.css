@@ -1028,6 +1028,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-right: none !important;
 }
 
+.sclx {
+  overflow-x: auto;
+}
+
 .needblt {
   display: flex;
   align-items: flex-start;
@@ -2566,6 +2570,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 48px;
   color: #13523b;
   margin-bottom: 80px;
+  word-break: keep-all;
 }
 .contents.sub h4 {
   display: flex;
@@ -2574,6 +2579,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-family: "SUIT-SB";
   margin-bottom: 24px;
   color: #000;
+  word-break: keep-all;
 }
 .contents.sub h5 {
   display: flex;
@@ -2582,11 +2588,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-family: "SUIT-M";
   margin-bottom: 16px;
   color: #000;
+  word-break: keep-all;
 }
 .contents.sub .body01 {
   font-size: 16px;
   color: #333;
   margin-bottom: 12px;
+  word-break: keep-all;
 }
 .contents.sub .body01:last-of-type {
   margin-bottom: unset;
@@ -2595,6 +2603,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 16px;
   color: #666;
   margin-bottom: 8px;
+  word-break: keep-all;
 }
 .contents.sub .body02:last-of-type {
   margin-bottom: unset;
@@ -3400,6 +3409,10 @@ article .graphwrap .dvsn_list > li > span {
   width: 49%;
   flex-shrink: 0;
 }
+.sub_tab_con .sclx img {
+  min-width: 1277px;
+}
+
 .iframewrap {
   text-align: center;
   margin: 0 auto;

@@ -246,6 +246,7 @@
         font-size: 48px;
         color: #13523b;
         margin-bottom: 80px;
+        word-break: keep-all;
     }
     h4 {
         display: flex;
@@ -254,6 +255,7 @@
         font-family: "SUIT-SB";
         margin-bottom: 24px;
         color: #000;
+        word-break: keep-all;
     }
     h5 {
         display: flex;
@@ -262,12 +264,14 @@
         font-family: "SUIT-M";
         margin-bottom: 16px;
         color: #000;
+        word-break: keep-all;
 
     }
     .body01 {
         font-size: 16px;
         color: #333;
         margin-bottom: 12px;
+        word-break: keep-all;
         &:last-of-type {
             margin-bottom: unset;
         }
@@ -276,6 +280,7 @@
         font-size: 16px;
         color: #666;
         margin-bottom: 8px;
+        word-break: keep-all;
         &:last-of-type {
             margin-bottom: unset;
         }
@@ -1194,7 +1199,11 @@ article {
             }
         }
     }
-    ul {
+    
+    .sclx {
+        img {
+            min-width: 1277px;
+        }
     }
 }
 // sub03
