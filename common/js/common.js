@@ -361,7 +361,7 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
     }
   })
     // sub_02_02 검색탭
-  $(".sch_tab > ul > li").first().addClass("active");
+  // $(".sch_tab > ul > li").first().addClass("active");
   $(".sch_tab > ul > li").on("click", function (e) {
     e.preventDefault();
     $(".sch_tab > ul > li").removeClass("active");
