@@ -807,8 +807,13 @@
     border-top: 2px solid #000;
     > li {
         border-bottom: 2px solid #eee;
+        p{
+            a{
+                display: inline-block;
+            }
+        }
         > a {
-            padding: 27px 8px;
+            padding: 24px 8px;
             position: relative;
             font-family: "SUIT-M";
             font-size: 20px;
@@ -827,8 +832,7 @@
         }
         .program_detail {
             display: none;
-            border-top: 2px solid #eee;
-            padding-bottom: 40px;
+            padding-bottom: 48px;
             > p {
                 padding: 24px;
                 background: #f7f7f8;
@@ -836,7 +840,29 @@
             }
             .flxwrap {
                 justify-content: space-between;
-                margin: 40px;
+                margin: 40px 0;
+                .img_wrap{
+                    display: unset;
+                }
+                ul{
+                    li{
+                        a{
+                            color: #0057CB;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .img_wrap{
+                margin-top: 40px;
+                figure{
+                    img{
+                        height: unset;
+                    }
+                    figcaption{
+                        margin-top: 16px;
+                    }
+                }
             }
         }
         &.active {
@@ -1032,50 +1058,60 @@
 .stepperwrap {
     .stepper_list {
         > li {  
-                margin-bottom: 20px;
+                margin-bottom: 4px;
                 display: flex;
-                border: 1px solid #eee;
-                border-radius: 4px;
+                border: 1px solid #DDDDDD;
+                border-radius: 8px;
+                position: relative;
 
-                @include maxWidth(720px) {
-                    flex-direction: column;
-                } 
+                &:after{
+                    content: '';
+                    width: 32px;
+                    height: 32px;
+                    background:url(../images/sub01_arrws2.png);
+                    position: absolute;
+                    left: 50%;
+                    bottom: -19px;
+                    transform: translateX(-50%) rotate(90deg);
+                    z-index: 1;
+                }
+                &:last-of-type{
+                    &:after{
+                        content: none;
+                    }
+                }
 
                 .step_label {
-                    flex: 0 0 20%;
-                    min-width: 160px;
-                    background: #DEECC8;
-                    display: flex;
-                    padding: 10px 20px;
+                    padding: 24px 40px;
                     border-radius: 4px;
-                    border-right: 1px solid #eee;
                     flex-shrink: 0;
-
-                    h5 {
-                        width: 100%;
-                        align-self: center;
-                        display: unset;
-                        margin-bottom: unset;
-                        font-family: 'SUIT-R';
-                        font-size: 18px;
-                    }
-
+                    color: #13523B;
+                    font-size: 20px;
+                    font-family: "SUIT-SB";
                     &.nonum {
                         text-align: center;
                     }
-
-                    @include maxWidth(720px) {
-                        flex-direction: column;
-                    } 
                 }
 
                 .step_con {
-                    padding: 10px 20px;
-                    flex: 1 1 80%;
+                    padding: 24px 20px 24px 0;
                     border-left: unset;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    h5 {
+                        width: 100%;
+                        align-self: center;
+                        display: unset;
+                        color: #13523B;
+                    font-size: 20px;
+                    font-family: "SUIT-SB";
+                        margin-bottom: 16px;
+                    }
+                    em{
+                        font-family: 'SUIT-M';
+                        margin-bottom: 12px;
+                    }
                 }
 
                 &:last-of-type {
@@ -2952,6 +2988,14 @@ article .pl_con > ul.needflex.pl_index{
     &::before{
         width: calc(100% - (100% - 24px) / 2);
     }
+}
+.program_info > li .program_detail .flxwrap{
+    flex-wrap: wrap;
+    gap: 20px 0;
+}
+.program_info > li .program_detail .flxwrap .img_wrap{
+    width: 100%;
+    text-align: center;
 }
 }
 
