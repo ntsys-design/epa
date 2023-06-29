@@ -565,8 +565,19 @@
           navigation: false,
           observer: true,
           observeParents: true,
-          slidesPerView: 3,
-          spaceBetween: 32,
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+          breakpoints: {
+            980: {
+              slidesPerView: 3,
+              spaceBetween: 32,
+            },
+
+            720: {
+              slidesPerView: 2,
+              spaceBetween: 26,
+            },
+          },
         });
       </script>
       <!-- // 알림 스크립트 -->

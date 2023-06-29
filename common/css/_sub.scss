@@ -300,8 +300,16 @@
 
     .swiper-slide {
         overflow: hidden;
+        width: calc((100% - 64px)/3);
         padding-bottom: 21%;
         position: relative;
+
+        @include maxWidth(980px) {
+            padding-bottom: 32%;
+        }
+        @include maxWidth(720px) {
+            padding-bottom: 43%;
+        }
     }
     img {
         width: 100%;
@@ -341,6 +349,11 @@
                 align-items: flex-start;
                 gap: 0 56px;
                 padding: 40px 0 40px 8px;
+
+                
+                @include maxWidth(720px) {
+                    gap: 0 30px;
+                }
                 
                 &.needbdb{
                     border-bottom: 2px solid #eee;
@@ -375,11 +388,15 @@
                     gap: 24px 32px;
 
                     > li {
-                        flex: 0 0 calc((100% - 190px)/5);
-                        padding-bottom: 4.6%;
+                        // flex: 0 0 calc((100% - 190px)/5);
+                        // padding-bottom: 4.6%;
+                        width: 186px;
+                        height: 52px;
                         position: relative;
                         overflow: hidden;
     
+
+
                         img {
                             max-width: 100%;
                             object-fit: contain;

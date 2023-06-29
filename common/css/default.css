@@ -2633,8 +2633,19 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .exhb_slide .swiper-slide {
   overflow: hidden;
+  width: calc((100% - 64px) / 3);
   padding-bottom: 21%;
   position: relative;
+}
+@media screen and (max-width: 980px) {
+  .exhb_slide .swiper-slide {
+    padding-bottom: 32%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .exhb_slide .swiper-slide {
+    padding-bottom: 43%;
+  }
 }
 .exhb_slide img {
   width: 100%;
@@ -2671,6 +2682,11 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   gap: 0 56px;
   padding: 40px 0 40px 8px;
 }
+@media screen and (max-width: 720px) {
+  .contents.sub article .artclinfo_list > li {
+    gap: 0 30px;
+  }
+}
 .contents.sub article .artclinfo_list > li.needbdb {
   border-bottom: 2px solid #eee;
 }
@@ -2703,8 +2719,8 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   gap: 24px 32px;
 }
 .contents.sub article .artclinfo_list > li .logo_list > li {
-  flex: 0 0 calc((100% - 190px) / 5);
-  padding-bottom: 4.6%;
+  width: 186px;
+  height: 52px;
   position: relative;
   overflow: hidden;
 }
