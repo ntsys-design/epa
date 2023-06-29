@@ -113,11 +113,13 @@ $(".board .ulsel_btn").each( function (){
    
   $(".board .sch_tab > ul li a").on('click', function(e) {
     e.preventDefault();
+    var text = $(this).html();
     var attr = $(this).attr('value');
     //$(".drop-down .selected a span").html(text);
     //$(".drop-down .options ul").hide();
     
     var $selected = $(this).parents('ul').siblings('.ulsel_btn');
+    $selected.html(text);
     $selected.attr('value', attr);
   }); 
 })

@@ -1111,6 +1111,18 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .sub_tab_list > li.on a {
   color: #fff;
 }
+@media screen and (max-width: 720px) {
+  .sub_tab_list {
+    flex-direction: column;
+    height: auto;
+  }
+  .sub_tab_list li a {
+    padding: 5px 0;
+  }
+  .sub_tab_list br {
+    display: none;
+  }
+}
 
 .sub_con_list .sub_tab_con {
   display: none;
@@ -2646,65 +2658,74 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
      object-position: center center;
 }
 
-article .artcl_tit {
-  font-size: 40px;
-  font-family: "SUIT-B";
-  text-align: center;
-  margin-bottom: 40px;
-}
-article .artclinfo_list > li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0 80px;
-  margin-bottom: 40px;
-}
-article .artclinfo_list > li:last-child {
+.contents.sub article h4.artcl_tit {
   margin-bottom: unset;
 }
-article .artclinfo_list > li > span {
-  display: block;
-  width: 128px;
-  flex-shrink: 0;
-  color: #444;
-  border: 3px solid #6b80ff;
-  border-radius: 20px;
-  text-align: center;
-  padding: 7px 0;
+.contents.sub article .artclinfo_list {
+  display: flex;
+  flex-direction: column;
 }
-article .artclinfo_list > li p {
+.contents.sub article .artclinfo_list > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 56px;
+  padding: 40px 0 40px 8px;
+}
+.contents.sub article .artclinfo_list > li.needbdb {
+  border-bottom: 2px solid #eee;
+}
+.contents.sub article .artclinfo_list > li:last-child {
+  margin-bottom: unset;
+}
+.contents.sub article .artclinfo_list > li .artcl_label {
+  font-family: "SUIT-SB";
+  font-size: 20px;
+  display: block;
+  width: 81px;
+  flex-shrink: 0;
+  padding-left: 8px;
+}
+.contents.sub article .artclinfo_list > li .artcl_label.mt12 {
+  margin-top: 12px;
+}
+.contents.sub article .artclinfo_list > li .artcl_label.mt17 {
+  margin-top: 17px;
+}
+.contents.sub article .artclinfo_list > li p {
   align-self: center;
 }
-article .artclinfo_list > li .logo_list {
+.contents.sub article .artclinfo_list > li .logo_list {
   align-self: center;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   width: 100%;
-  gap: 20px 40px;
+  gap: 24px 32px;
 }
-article .artclinfo_list > li .logo_list > li {
-  flex: 0 0 calc((100% - 120px) / 4);
-  padding-bottom: 5%;
+.contents.sub article .artclinfo_list > li .logo_list > li {
+  flex: 0 0 calc((100% - 190px) / 5);
+  padding-bottom: 4.6%;
   position: relative;
   overflow: hidden;
 }
-article .artclinfo_list > li .logo_list > li img {
-  width: 100%;
-  height: 100%;
+.contents.sub article .artclinfo_list > li .logo_list > li img {
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: center center;
+     object-position: center center;
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
 }
-article .graphwrap .diagwrap {
+.contents.sub article .graphwrap .diagwrap {
   width: 100%;
   height: 100%;
   margin-bottom: 140px;
   position: relative;
 }
-article .graphwrap .diagwrap .diag_midline {
+.contents.sub article .graphwrap .diagwrap .diag_midline {
   display: block;
   box-sizing: border-box;
   position: absolute;
@@ -2716,11 +2737,11 @@ article .graphwrap .diagwrap .diag_midline {
   border-bottom: 1px solid #ccc;
   z-index: 1;
 }
-article .graphwrap .diagwrap .diag_mthr {
+.contents.sub article .graphwrap .diagwrap .diag_mthr {
   padding: 0 25px;
   position: relative;
 }
-article .graphwrap .diagwrap .diag_mthr::before {
+.contents.sub article .graphwrap .diagwrap .diag_mthr::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2731,7 +2752,7 @@ article .graphwrap .diagwrap .diag_mthr::before {
   background: #13523b;
   z-index: 6;
 }
-article .graphwrap .diagwrap .diag_mthr::after {
+.contents.sub article .graphwrap .diagwrap .diag_mthr::after {
   content: "";
   position: absolute;
   right: 0;
@@ -2742,31 +2763,31 @@ article .graphwrap .diagwrap .diag_mthr::after {
   background: #13523b;
   z-index: 6;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox {
   display: flex;
   max-width: 482px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap {
   max-width: 241px;
   width: 100%;
   padding-bottom: 50%;
   position: relative;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap:first-of-type {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap:first-of-type {
   right: -0.5px;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap:last-of-type {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap:last-of-type {
   left: -0.5px;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap::after {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap::after {
   content: "";
   position: absolute;
   z-index: 4;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2778,7 +2799,7 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle {
   display: flex;
   flex-direction: column;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::before {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::before {
   content: "";
   width: 3px;
   height: 3px;
@@ -2789,7 +2810,7 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::befor
   transform: translate(-50%, -50%);
   z-index: 6;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after {
   content: "";
   width: 5px;
   height: 5px;
@@ -2800,22 +2821,22 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle::after
   transform: translate(-50%, -50%);
   z-index: 6;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div {
   height: 50%;
   display: flex;
   justify-content: center;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap {
   align-items: flex-end;
   padding-bottom: 23px;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap img {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.imgwrap img {
   max-width: 48px;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.textwrap {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .in_circle > div.textwrap {
   padding-top: 27px;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle {
   position: absolute;
   left: 0;
   z-index: 3;
@@ -2823,7 +2844,7 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle {
   width: 100%;
   height: 50%;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
   top: 0;
   border: 1px solid #eee;
   border-top-left-radius: 50% 100%;
@@ -2833,11 +2854,11 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top {
   z-index: 2;
   border-bottom: none;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top.rvs {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.top.rvs {
   border: 1px solid #8eaa5e;
   border-bottom: none;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
   bottom: 0;
   border: 1px solid #8eaa5e;
   border-top-left-radius: 0;
@@ -2846,12 +2867,12 @@ article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom {
   border-bottom-right-radius: 50% 100%;
   border-top: none;
 }
-article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom.rvs {
+.contents.sub article .graphwrap .diagwrap .diag_mthr .circlebox .circlewrap .circle.bottom.rvs {
   z-index: 2;
   border: 1px solid #eee;
   border-top: none;
 }
-article .graphwrap .midgreen {
+.contents.sub article .graphwrap .midgreen {
   font-size: 24px;
   font-family: "SUIT-M";
   color: #13523b;
@@ -2862,7 +2883,7 @@ article .graphwrap .midgreen {
   position: relative;
   margin-bottom: 88px;
 }
-article .graphwrap .midgreen::before {
+.contents.sub article .graphwrap .midgreen::before {
   content: "";
   display: block;
   position: absolute;
@@ -2874,24 +2895,24 @@ article .graphwrap .midgreen::before {
   height: 60px;
   background: url(../images/sub01_arrws.png) no-repeat center center;
 }
-article .graphwrap .dvsn_list {
+.contents.sub article .graphwrap .dvsn_list {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px 60px;
 }
-article .graphwrap .dvsn_list > li {
+.contents.sub article .graphwrap .dvsn_list > li {
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
   padding: 0 56px 48px 56px;
   flex: 0 1 calc((100% - 120px) / 3);
   max-height: 233px;
 }
-article .graphwrap .dvsn_list > li img {
+.contents.sub article .graphwrap .dvsn_list > li img {
   position: relative;
   top: -40px;
   left: -16px;
   margin-bottom: -15px;
 }
-article .graphwrap .dvsn_list > li > span {
+.contents.sub article .graphwrap .dvsn_list > li > span {
   display: block;
   font-family: "SUIT-SB";
   font-size: 28px;
@@ -3261,13 +3282,20 @@ article .graphwrap .dvsn_list > li > span {
   border: 1px solid #eee;
   border-radius: 4px;
 }
+@media screen and (max-width: 720px) {
+  .stepperwrap .stepper_list > li {
+    flex-direction: column;
+  }
+}
 .stepperwrap .stepper_list > li .step_label {
   flex: 0 0 20%;
+  min-width: 160px;
   background: #DEECC8;
   display: flex;
   padding: 10px 20px;
   border-radius: 4px;
   border-right: 1px solid #eee;
+  flex-shrink: 0;
 }
 .stepperwrap .stepper_list > li .step_label h5 {
   width: 100%;
@@ -3280,9 +3308,14 @@ article .graphwrap .dvsn_list > li > span {
 .stepperwrap .stepper_list > li .step_label.nonum {
   text-align: center;
 }
+@media screen and (max-width: 720px) {
+  .stepperwrap .stepper_list > li .step_label {
+    flex-direction: column;
+  }
+}
 .stepperwrap .stepper_list > li .step_con {
   padding: 10px 20px;
-  flex: 1 0 80%;
+  flex: 1 1 80%;
   border-left: unset;
   display: flex;
   flex-direction: column;
@@ -4708,7 +4741,7 @@ article .graphwrap .dvsn_list > li > span {
 }
 @media screen and (max-width: 960px) {
   .stmwrap .stm_con > ul > li {
-    flex: 0 0 33%;
+    flex: 0 0 33.33%;
   }
 }
 .stmwrap .stm_con > ul > li dl a:hover {

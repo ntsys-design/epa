@@ -821,6 +821,19 @@ footer {
             }
         }
     }
+    @include maxWidth(720px) {
+        flex-direction: column;
+        height: auto;
+        li {
+            a {
+                padding: 5px 0;
+            }
+        }
+        br {
+            display: none;
+        }
+    }
+
 }
 .sub_con_list {
     .sub_tab_con {
