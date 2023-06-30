@@ -3512,8 +3512,18 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .mngdcwrap {
   display: flex;
 }
+@media screen and (max-width: 720px) {
+  .mngdcwrap {
+    flex-direction: column;
+  }
+}
 .mngdcwrap .linkwrap {
   flex: 0 0 33.33%;
+}
+@media screen and (max-width: 720px) {
+  .mngdcwrap .linkwrap {
+    flex: 0 0 100%;
+  }
 }
 .mngdcwrap .linkwrap:nth-of-type(2) {
   position: relative;
@@ -3524,6 +3534,11 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 100%;
   background: #eee;
   position: absolute;
+}
+@media screen and (max-width: 720px) {
+  .mngdcwrap .linkwrap:nth-of-type(2)::before, .mngdcwrap .linkwrap:nth-of-type(2)::after {
+    content: none;
+  }
 }
 .mngdcwrap .linkwrap:nth-of-type(2)::before {
   top: 0;
