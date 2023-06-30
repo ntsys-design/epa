@@ -1282,6 +1282,98 @@
         }
     }
 }
+
+.mngdcwrap {
+    display: flex;
+
+    .linkwrap {
+        flex: 0 0 33.33%;
+
+        &:nth-of-type(2) {
+            position: relative;
+
+            &::before, &::after {
+                content: '';
+                width: 1px;
+                height: 100%;
+                background: #eee;
+                position: absolute;
+            }
+            &::before {
+                top: 0;
+                left: 0;
+            }
+            &::after {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .link_hd {
+            padding: 24px 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            justify-content: center;
+            font-size: 18px;
+            color: #2d2d2d;
+            margin-bottom: unset;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                z-index: 3;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .link_list {
+            padding: 20px 24px;
+            p {
+                color: #333;
+                margin-bottom: 20px;
+            }
+            a {
+                display: inline-block;
+                color: #333;
+                @media (hover: hover) {
+                    &:hover {
+                        color: #13523B;
+                        font-family: 'SUIT-M';
+                        position: relative;
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 1px;
+                            background: #13523B;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            li {
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: unset;
+                }
+
+                &.haschild {
+                    > a {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
 // sub03
 .iframewrap {
     text-align: center;
