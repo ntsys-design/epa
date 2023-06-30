@@ -930,8 +930,8 @@
         text-align: center;
 
         img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            //height: 100%;
             object-fit: cover;
         }
         figcaption {
@@ -1080,7 +1080,11 @@
                 border: 1px solid #DDDDDD;
                 border-radius: 8px;
                 position: relative;
-
+                &.noafter{
+                    &:after{
+                        content:none
+                    }
+                }
                 &:after{
                     content: '';
                     width: 32px;
@@ -1092,12 +1096,33 @@
                     transform: translateX(-50%) rotate(90deg);
                     z-index: 1;
                 }
-                &:last-of-type{
+                &:last-child{
                     &:after{
                         content: none;
                     }
                 }
-
+                &.spc_stepper{
+                    border: 1px solid #13523B;
+                    padding: 0 40px;
+                    margin-top: 66px;
+                    position: relative;
+                    .step_con{
+                        p{
+                            font-size: 20px;
+                            color: #13523B ;
+                        }
+                    }
+                    &:before{
+                        content: '';
+                        width: 40px;
+                        height: 18px;
+                        background:url(../images/stepper_spc_arrow.png);
+                        position: absolute;
+                        left: 50%;
+                        top: -40px;
+                        transform: translateX(-50%);
+                    }
+                }
                 .step_label {
                     padding: 24px 40px;
                     border-radius: 4px;
