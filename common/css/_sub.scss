@@ -2037,9 +2037,13 @@
             p {
                 width: 420px;
                 flex-shrink: 0;
+                .hltd {
+                    color: #0057CB;
+                }
                 @include maxWidth(720px) {
                     width: 100%;
                 }
+
             }
             dl {
                 display: flex;
@@ -2061,6 +2065,7 @@
                 .bustag {
                     width: 41px;
                     height: 20px;
+                    line-height: 18px;
                     border-radius: 2px;
                     color: #fff;
                     font-family: 'SUIT-SB';
@@ -2095,6 +2100,8 @@
                 .sbtag {
                     display: block;
                     width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
                     text-align: center;
                     flex-shrink: 0;
                     position: relative;
@@ -2103,31 +2110,29 @@
                     font-size: 13px;
 
                     &.sb2 {
+                        background: #72762B;
                         &::after {
-                            content: '';
-                            width: 16px;
-                            height: 16px;
-                            border-radius: 50%;
-                            background: #72762B;
+                            content: '2';
+                            font-size: 1em;
                             position: absolute;
+                            display: block;
+                            color: #fff;
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            z-index: -1;
                         }
                     }
                     &.sb7 {
+                        background: #5EB257;
                         &::after {
-                            content: '';
-                            width: 16px;
-                            height: 16px;
+                            content: '7';
+                            font-size: 1em;
                             border-radius: 50%;
-                            background: #5EB257;
                             position: absolute;
+                            display: block;
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            z-index: -1;
                         }
                     }
 
@@ -2141,6 +2146,12 @@
                 height: 14px;
                 background: #eee;
             }
+        }
+
+        &.sblist {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
         }
     }
 }

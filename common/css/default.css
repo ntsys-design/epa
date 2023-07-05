@@ -4182,6 +4182,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   width: 420px;
   flex-shrink: 0;
 }
+.pbtpwrap ul li p .hltd {
+  color: #0057CB;
+}
 @media screen and (max-width: 720px) {
   .pbtpwrap ul li p {
     width: 100%;
@@ -4204,6 +4207,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .pbtpwrap ul li dl .bustag {
   width: 41px;
   height: 20px;
+  line-height: 18px;
   border-radius: 2px;
   color: #fff;
   font-family: "SUIT-SB";
@@ -4233,6 +4237,8 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .pbtpwrap ul li > p .sbtag {
   display: block;
   width: 16px;
+  height: 16px;
+  border-radius: 50%;
   text-align: center;
   flex-shrink: 0;
   position: relative;
@@ -4240,35 +4246,42 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-family: "SUIT-SB";
   font-size: 13px;
 }
-.pbtpwrap ul li > p .sbtag.sb2::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+.pbtpwrap ul li > p .sbtag.sb2 {
   background: #72762B;
+}
+.pbtpwrap ul li > p .sbtag.sb2::after {
+  content: "2";
+  font-size: 1em;
   position: absolute;
+  display: block;
+  color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+}
+.pbtpwrap ul li > p .sbtag.sb7 {
+  background: #5EB257;
 }
 .pbtpwrap ul li > p .sbtag.sb7::after {
-  content: "";
-  width: 16px;
-  height: 16px;
+  content: "7";
+  font-size: 1em;
   border-radius: 50%;
-  background: #5EB257;
   position: absolute;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
 }
 .pbtpwrap ul li .spcr {
   display: block;
   width: 1px;
   height: 14px;
   background: #eee;
+}
+.pbtpwrap ul.sblist {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
 }
 
 .search_desc {
