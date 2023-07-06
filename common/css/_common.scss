@@ -746,6 +746,10 @@ footer {
     }
     &.blt_dot {
         gap: 0 4px;
+
+        &.gap8 {
+            gap: 0 8px;
+        }
         &::before {
             width: 16px;
             height: 22px;
@@ -801,6 +805,8 @@ footer {
         box-sizing: border-box;
         background: #eee;
         color: #333;
+        font-size: 18px;
+        font-family: 'SUIT-M';
 
         &:not(:last-child) {
             border-right: none;

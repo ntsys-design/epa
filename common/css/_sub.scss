@@ -275,6 +275,12 @@
         &:last-of-type {
             margin-bottom: unset;
         }
+
+        &.var01 {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 24px;
+        }
     }
     .body02 {
         font-size: 16px;
@@ -2879,7 +2885,145 @@
         }
     }
 }
+// sub01_06_01 환경교육사 양성 현황
+.grwsttswrap {
+    background: #E2E8E4;
+    padding: 64px 64px 64px 83px;
+    gap: 30px 135px;
 
+
+    .krmapwrap {
+        flex-basis: 40%;
+        max-width: 422px;
+        height: 619px;
+        background: url(../images/sub_01_06_01_bg.png) no-repeat center center;
+
+        dl {
+            flex-direction: column;
+
+            dt {
+                flex-direction: column;
+                &::before {
+                    border: 8px solid #fff;
+                }
+            }
+            dd {
+                text-align: center;
+                color: #0057CB;
+            }
+        }
+    }
+    .infotxtwrap {
+        flex-grow: 1;
+            li {
+                width: 100%;
+                background: #fff;
+                border-radius: 16px;
+                display: flex;
+                padding: 24px 24px 24px 32px;
+                margin-bottom: 16px;
+
+                &:last-of-type {
+                    margin-bottom: unset;
+                }
+
+                dl {
+                    dt {
+                        font-family: 'SUIT-M';
+                        font-size: 20px;
+                        margin-right: 32px;
+                    }
+                    dd {
+                        color: #666;
+
+                        > span {
+                            color: #000;
+                            margin-left: 8px;
+                        }
+                        &.spcr {
+                            display: block;
+                            width: 1px;
+                            height: 14px;
+                            background: #eee;
+                            margin: 0 8px;
+                        }
+                    }
+                }
+                p {
+                    margin-left: auto;
+                    font-size: 20px;
+                    font-family: 'SUIT-M';
+                }
+                
+                &.ttl {
+                    background: #13523B;
+                }
+            }
+    }
+    dl {
+        display: flex;
+        align-items: center;
+        dt {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+    
+            &::before {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                position: relative;
+                background: #000;
+            }
+        }
+    }
+    // 지역별 psuedo
+    // 수도권
+    li.sd {
+        dt::before {
+            background: #396EFF;
+            border-color: #EAEFFE;
+        }
+    }
+    // 충청권
+    li.chngchng {
+        dt::before {
+            background: #FFB011;
+            border-color: #FEEFD1;
+        }
+    }
+    // 호남권
+    li.hnm {
+        dt::before {
+            background: #13523B;
+            border-color: #DAF4EC;
+        }
+    }
+    // 강원권
+    li.kngwn {
+        dt::before {
+            background: #FE4694;
+            border-color: #FEE6F0;
+        }
+    }
+    // 영남권
+    li.yngnm {
+        dt::before {
+            background: #B846FE;
+            border-color: #F2DFFE;
+        }
+    }
+    // 제주권
+    li.jj {
+        dt::before {
+            background: #46DDFE;
+            border-color: #E7F4FA;
+        }
+    }
+
+}
 // sub01_07_06 업무추진 체계도
 .system{
     
@@ -3160,7 +3304,6 @@ article .pl_con > ul.needflex.pl_index{
         >ul{
             &.needflex{
                 align-items: center ;
-            padding-bottom: 40px;
             border-bottom: 1px solid #CCCCCC;
             gap: 20px;
             li{
@@ -3174,13 +3317,21 @@ article .pl_con > ul.needflex.pl_index{
                         color: #13523B;
                     }
                 }
+
+                &:first-of-type {
+                    padding-bottom: 40px;
+                }
+                &:last-of-type {
+                    padding-bottom: 32px;
+                    padding-right: 24px;
+                }
             }
             }
             
             
         }
         ul.oath{
-            padding:40px 0 0 15px;
+            padding:40px 0 0 16px;
             li{
                 p{
                     font-family: 'SUIT-R';
