@@ -2888,16 +2888,63 @@
 // sub01_06_01 환경교육사 양성 현황
 .grwsttswrap {
     background: #E2E8E4;
-    padding: 64px 64px 64px 83px;
-    gap: 30px 135px;
+    padding: 64px 64px 89px 83px;
+    gap: 80px 135px;
+    @include maxWidth(1180px) {
+        padding: 64px 44px 89px 63px;
+        gap: 100px 85px;
+    }
+    @include maxWidth(1080px) {
+        padding: 64px 30px 89px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
 
     .krmapwrap {
-        flex-basis: 40%;
-        max-width: 422px;
+        position: relative;
+        flex-shrink: 0;
+        width: 422px;
         height: 619px;
         background: url(../images/sub_01_06_01_bg.png) no-repeat center center;
+        ul {
+            position: relative;
+            li {
+                position: absolute;
+                transform: translate(-50%,-50%);
 
+                &.sd {
+                    top: 129px;
+                    left: 166px;
+                }
+                &.chngchng {
+                    top: 263px;
+                    left: 192px;
+                }
+                &.hnm {
+                    top: 416px;
+                    left: 138px;
+                }
+                &.kngwn {
+                    top: 108px;
+                    left: 288px;
+                }
+                &.yngnm {
+                    top: 339px;
+                    left: 316px;
+                }
+                &.jj {
+                    top: 625px;
+                    left: 37px;
+                }
+            }
+        }
+        .data_desc {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #666;
+        }
         dl {
             flex-direction: column;
 
@@ -2915,13 +2962,28 @@
     }
     .infotxtwrap {
         flex-grow: 1;
+        min-width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        @include maxWidth(1080px) {
+            min-width: unset;
+            width: 100%;
+        }
+
             li {
-                width: 100%;
+                flex: 1 1 100%;
                 background: #fff;
                 border-radius: 16px;
                 display: flex;
                 padding: 24px 24px 24px 32px;
                 margin-bottom: 16px;
+                gap: 0 20px;
+
+                @media (hover:hover) {
+                    &:hover {
+                        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.08);
+                    }
+                }
 
                 &:last-of-type {
                     margin-bottom: unset;
@@ -2932,6 +2994,7 @@
                         font-family: 'SUIT-M';
                         font-size: 20px;
                         margin-right: 32px;
+                        flex: 1 0 20%;
                     }
                     dd {
                         color: #666;
@@ -2957,6 +3020,20 @@
                 
                 &.ttl {
                     background: #13523B;
+                    dd {
+                        font-size: 20px;
+                        color: #fff;
+                        font-family: 'SUIT-M';
+                        > span {
+                            color: #fff;
+                            font-family: 'SUIT-R';
+                        }
+                    }
+
+                    p {
+                        color: #fff;
+                        font-family: 'SUIT-SB';
+                    }
                 }
             }
     }

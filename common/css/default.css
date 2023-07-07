@@ -4967,14 +4967,65 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .grwsttswrap {
   background: #E2E8E4;
-  padding: 64px 64px 64px 83px;
-  gap: 30px 135px;
+  padding: 64px 64px 89px 83px;
+  gap: 80px 135px;
+}
+@media screen and (max-width: 1180px) {
+  .grwsttswrap {
+    padding: 64px 44px 89px 63px;
+    gap: 100px 85px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .grwsttswrap {
+    padding: 64px 30px 89px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .grwsttswrap .krmapwrap {
-  flex-basis: 40%;
-  max-width: 422px;
+  position: relative;
+  flex-shrink: 0;
+  width: 422px;
   height: 619px;
   background: url(../images/sub_01_06_01_bg.png) no-repeat center center;
+}
+.grwsttswrap .krmapwrap ul {
+  position: relative;
+}
+.grwsttswrap .krmapwrap ul li {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.grwsttswrap .krmapwrap ul li.sd {
+  top: 129px;
+  left: 166px;
+}
+.grwsttswrap .krmapwrap ul li.chngchng {
+  top: 263px;
+  left: 192px;
+}
+.grwsttswrap .krmapwrap ul li.hnm {
+  top: 416px;
+  left: 138px;
+}
+.grwsttswrap .krmapwrap ul li.kngwn {
+  top: 108px;
+  left: 288px;
+}
+.grwsttswrap .krmapwrap ul li.yngnm {
+  top: 339px;
+  left: 316px;
+}
+.grwsttswrap .krmapwrap ul li.jj {
+  top: 625px;
+  left: 37px;
+}
+.grwsttswrap .krmapwrap .data_desc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #666;
 }
 .grwsttswrap .krmapwrap dl {
   flex-direction: column;
@@ -4991,14 +5042,29 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .grwsttswrap .infotxtwrap {
   flex-grow: 1;
+  min-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1080px) {
+  .grwsttswrap .infotxtwrap {
+    min-width: unset;
+    width: 100%;
+  }
 }
 .grwsttswrap .infotxtwrap li {
-  width: 100%;
+  flex: 1 1 100%;
   background: #fff;
   border-radius: 16px;
   display: flex;
   padding: 24px 24px 24px 32px;
   margin-bottom: 16px;
+  gap: 0 20px;
+}
+@media (hover: hover) {
+  .grwsttswrap .infotxtwrap li:hover {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.08);
+  }
 }
 .grwsttswrap .infotxtwrap li:last-of-type {
   margin-bottom: unset;
@@ -5007,6 +5073,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-family: "SUIT-M";
   font-size: 20px;
   margin-right: 32px;
+  flex: 1 0 20%;
 }
 .grwsttswrap .infotxtwrap li dl dd {
   color: #666;
@@ -5029,6 +5096,19 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .grwsttswrap .infotxtwrap li.ttl {
   background: #13523B;
+}
+.grwsttswrap .infotxtwrap li.ttl dd {
+  font-size: 20px;
+  color: #fff;
+  font-family: "SUIT-M";
+}
+.grwsttswrap .infotxtwrap li.ttl dd > span {
+  color: #fff;
+  font-family: "SUIT-R";
+}
+.grwsttswrap .infotxtwrap li.ttl p {
+  color: #fff;
+  font-family: "SUIT-SB";
 }
 .grwsttswrap dl {
   display: flex;
