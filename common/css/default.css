@@ -3620,21 +3620,54 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin: 0 auto;
 }
 
-.board .faq_list .brd_ctgr {
-  flex: 0 0 20%;
+.board .brd_list.faq_list ul li {
+  border-bottom: 2px solid #eee;
 }
-.board .faq_list .brd_title {
-  flex: 0 0 80% !important;
+.board .brd_list.faq_list ul li:first-child {
+  border-bottom: 2px solid #eee;
 }
-.board .faq_list .brd_aswr {
+.board .brd_list.faq_list ul li > div {
+  padding: 24px 0;
+  width: 100%;
+  max-height: unset;
+  display: block;
+}
+.board .brd_list.faq_list ul li > div .brd_title {
+  padding-left: 8px;
+  position: relative;
+  flex: unset;
+}
+.board .brd_list.faq_list ul li > div .brd_title a {
+  font-size: 20px;
+  font-family: "SUIT-M";
+}
+.board .brd_list.faq_list ul li > div .brd_title a span.question {
+  font-family: "SUIT-SB";
+  color: #78B510;
+  font-size: 26px;
+  padding-right: 24px;
+}
+.board .brd_list.faq_list ul li > div .brd_title a::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: url(../images/ic_down.png) no-repeat center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  transition: 0.3s;
+}
+.board .brd_list.faq_list ul li > div.active .brd_title a:after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.board .brd_list.faq_list ul li .brd_aswr {
   display: none;
-  padding: 50px 50px 50px 20%;
+  padding: 40px 64px 48px 63px;
   border: 1px solid #eee;
   border-radius: 20px;
-}
-.board .faq_list.active a {
-  color: #13523b;
-  font-weight: 600;
+  border: none;
+  color: #333;
 }
 
 .board .brd_top {

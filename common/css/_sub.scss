@@ -1421,24 +1421,65 @@
     margin: 0 auto;
 }
 // 아코디언
-.board .faq_list {
-    .brd_ctgr {
-        flex: 0 0 20%;
-    }
-    .brd_title {
-        flex: 0 0 80% !important;
-    }
-    .brd_aswr {
-        display: none;
-        padding: 50px 50px 50px 20%;
-        border: 1px solid #eee;
-        border-radius: 20px;
-    }
-    &.active {
-        a {
-            color: #13523b;
-            font-weight: 600;
+// sub03_02 자주하는 질문
+.board{
+    .brd_list.faq_list{
+        ul{
+            li{
+                border-bottom: 2px solid #eee;
+                &:first-child{
+                    border-bottom: 2px solid #eee;
+                }
+                >div{
+                    padding: 24px 0;
+                    width: 100%;
+                    max-height: unset;
+                    display: block;
+                    .brd_title{
+                        padding-left: 8px;
+                        position: relative;
+                        flex: unset;
+                        a{
+                            font-size: 20px;
+                            font-family: 'SUIT-M';
+                            span.question{
+                                font-family: 'SUIT-SB';
+                                color: #78B510;
+                                font-size: 26px;
+                                padding-right: 24px;
+                            }
+                            &::after{
+                                content: '';
+                                width: 32px;
+                                height: 32px;
+                                background: url(../images/ic_down.png)no-repeat center;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 8px;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    &.active {
+                        .brd_title a {
+                             &:after{
+                                 transform: translateY(-50%) rotate(180deg);
+                             }
+                         }
+                     }
+                }
+                .brd_aswr {
+                    display: none;
+                    padding: 40px 64px 48px 63px;
+                    border: 1px solid #eee;
+                    border-radius: 20px;
+                    border: none;
+                    color: #333;
+                }
+            }
         }
+        
     }
 }
 // sub04 게시판
@@ -3263,6 +3304,8 @@
     
     }
 }
+
+
 
 @media screen and (max-width: 1080px) {
     article .graphwrap .dvsn_list {
