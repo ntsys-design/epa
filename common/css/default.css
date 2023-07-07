@@ -5011,7 +5011,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 @media screen and (max-width: 1080px) {
   .grwsttswrap {
-    padding: 64px 30px 89px 30px;
+    padding: 30px 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -5021,7 +5021,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   flex-shrink: 0;
   width: 422px;
   height: 619px;
-  background: url(../images/sub_01_06_01_bg.png) no-repeat center center;
+  background: url(../images/sub_01_06_01_bg.png) no-repeat center center/cover;
+}
+@media screen and (max-width: 1080px) {
+  .grwsttswrap .krmapwrap {
+    display: none;
+  }
 }
 .grwsttswrap .krmapwrap ul {
   position: relative;
@@ -5094,6 +5099,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-bottom: 16px;
   gap: 0 20px;
 }
+@media screen and (max-width: 480px) {
+  .grwsttswrap .infotxtwrap li {
+    gap: 0 10px;
+    padding: 24px;
+    position: relative;
+  }
+}
 @media (hover: hover) {
   .grwsttswrap .infotxtwrap li:hover {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.08);
@@ -5102,14 +5114,31 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .grwsttswrap .infotxtwrap li:last-of-type {
   margin-bottom: unset;
 }
+@media screen and (max-width: 480px) {
+  .grwsttswrap .infotxtwrap li dl {
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+}
 .grwsttswrap .infotxtwrap li dl dt {
   font-family: "SUIT-M";
   font-size: 20px;
   margin-right: 32px;
   flex: 1 0 20%;
 }
+@media screen and (max-width: 480px) {
+  .grwsttswrap .infotxtwrap li dl dt {
+    flex: 1 0 100%;
+    margin-right: unset;
+  }
+}
 .grwsttswrap .infotxtwrap li dl dd {
   color: #666;
+}
+@media screen and (max-width: 480px) {
+  .grwsttswrap .infotxtwrap li dl dd:first-of-type {
+    padding-left: 20px;
+  }
 }
 .grwsttswrap .infotxtwrap li dl dd > span {
   color: #000;
@@ -5126,6 +5155,14 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   margin-left: auto;
   font-size: 20px;
   font-family: "SUIT-M";
+  flex-shrink: 0;
+}
+@media screen and (max-width: 480px) {
+  .grwsttswrap .infotxtwrap li p {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
 }
 .grwsttswrap .infotxtwrap li.ttl {
   background: #13523B;
@@ -5160,6 +5197,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-radius: 50%;
   position: relative;
   background: #000;
+  flex-shrink: 0;
 }
 .grwsttswrap li.sd dt::before {
   background: #396EFF;

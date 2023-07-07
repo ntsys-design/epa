@@ -2936,7 +2936,7 @@
         gap: 100px 85px;
     }
     @include maxWidth(1080px) {
-        padding: 64px 30px 89px 30px;
+        padding: 30px 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -2947,7 +2947,11 @@
         flex-shrink: 0;
         width: 422px;
         height: 619px;
-        background: url(../images/sub_01_06_01_bg.png) no-repeat center center;
+        background: url(../images/sub_01_06_01_bg.png) no-repeat center center/cover;
+        @include maxWidth(1080px) {
+            display: none;
+        }
+
         ul {
             position: relative;
             li {
@@ -3019,6 +3023,11 @@
                 padding: 24px 24px 24px 32px;
                 margin-bottom: 16px;
                 gap: 0 20px;
+                @include maxWidth(480px) {
+                    gap: 0 10px;
+                    padding: 24px;
+                    position: relative;
+                }
 
                 @media (hover:hover) {
                     &:hover {
@@ -3031,14 +3040,27 @@
                 }
 
                 dl {
+                    @include maxWidth(480px) {
+                        flex-wrap: wrap;
+                        gap: 10px 0;
+                    }
                     dt {
                         font-family: 'SUIT-M';
                         font-size: 20px;
                         margin-right: 32px;
                         flex: 1 0 20%;
+                        @include maxWidth(480px) {
+                            flex: 1 0 100%;
+                            margin-right: unset;
+                        }
                     }
                     dd {
                         color: #666;
+                        @include maxWidth(480px) {
+                            &:first-of-type {
+                                padding-left: 20px;
+                            }
+                        }
 
                         > span {
                             color: #000;
@@ -3057,6 +3079,12 @@
                     margin-left: auto;
                     font-size: 20px;
                     font-family: 'SUIT-M';
+                    flex-shrink: 0;
+                    @include maxWidth(480px) {
+                        position: absolute;
+                        top: 24px;
+                        right: 24px;
+                    }
                 }
                 
                 &.ttl {
@@ -3076,6 +3104,7 @@
                         font-family: 'SUIT-SB';
                     }
                 }
+                
             }
     }
     dl {
@@ -3094,6 +3123,7 @@
                 border-radius: 50%;
                 position: relative;
                 background: #000;
+                flex-shrink: 0;
             }
         }
     }
