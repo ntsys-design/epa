@@ -1010,7 +1010,7 @@
 }
 
 .space_wrap {
-    padding: 80px 0 70px 0;
+    padding-top: 80px;
     background: #f7f7f8;
     .spc_infowrap {
         justify-content: space-between;
@@ -1020,15 +1020,16 @@
         }
     }
     .spc_idx_wrap {
-        width: 45%;
-
+        width: 39%;
+        padding-bottom: 190px;
         &.shr {
             width: 100%;
+            padding-bottom: 84px;
             .spc_idx {
                 width: 100%;
                 height: unset;
                 flex-direction: unset;
-
+                
                 li {
                     width: calc(100% / 6);
                 }
@@ -1039,10 +1040,7 @@
             gap: 20px 0;
             flex-wrap: wrap;
             height: 290px;
-            width: 73%;
-            
             li {
-                width: 50%;
                 a {
                     display: flex;
                     gap: 0 8px;
@@ -1057,7 +1055,8 @@
                         justify-content: center;
                         background: #c6e481;
                         border-radius: 8px;
-                        width: 24px;
+                        min-width: 24px;
+                        height: 24px;
                     }
                 }
                 &.on {
@@ -1073,8 +1072,14 @@
         }
     }
     figure {
-        width: 55%;
-
+        &.map_img{
+            width: 61%;
+            transform: translateY(-60px);
+            text-align: right;
+            &.ysr_map {
+                padding-right: 60px;
+            }
+        }
         &.shr_map {
             width: 100%;
         }
@@ -3415,6 +3420,29 @@
             width: 100%;
         }
         
+    }
+     .space_wrap .spc_map{
+        flex-direction: column;
+        gap: 50px;
+        .spc_idx_wrap{
+            order: 2;
+            width: 100%;
+            ul{
+                height: unset;
+                flex-direction: row;
+                gap: 20px;
+                li{
+                   min-width: 151px;
+                }
+            }
+        }
+        .map_img{
+            order: 1;
+            transform: unset;
+            width: 100%;
+            text-align: center;
+            padding-right: unset;
+        }
     }
 }
 @media screen and (max-width: 720px) {

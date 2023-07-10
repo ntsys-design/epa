@@ -3254,7 +3254,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 
 .space_wrap {
-  padding: 80px 0 70px 0;
+  padding-top: 80px;
   background: #f7f7f8;
 }
 .space_wrap .spc_infowrap {
@@ -3264,10 +3264,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   width: 80px;
 }
 .space_wrap .spc_idx_wrap {
-  width: 45%;
+  width: 39%;
+  padding-bottom: 190px;
 }
 .space_wrap .spc_idx_wrap.shr {
   width: 100%;
+  padding-bottom: 84px;
 }
 .space_wrap .spc_idx_wrap.shr .spc_idx {
   width: 100%;
@@ -3282,10 +3284,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   gap: 20px 0;
   flex-wrap: wrap;
   height: 290px;
-  width: 73%;
-}
-.space_wrap .spc_idx_wrap .spc_idx li {
-  width: 50%;
 }
 .space_wrap .spc_idx_wrap .spc_idx li a {
   display: flex;
@@ -3302,7 +3300,8 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   justify-content: center;
   background: #c6e481;
   border-radius: 8px;
-  width: 24px;
+  min-width: 24px;
+  height: 24px;
 }
 .space_wrap .spc_idx_wrap .spc_idx li.on a {
   color: #13523b;
@@ -3311,8 +3310,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   border-bottom: 1px solid #13523b;
   font-family: "SUIT-M";
 }
-.space_wrap figure {
-  width: 55%;
+.space_wrap figure.map_img {
+  width: 61%;
+  transform: translateY(-60px);
+  text-align: right;
+}
+.space_wrap figure.map_img.ysr_map {
+  padding-right: 60px;
 }
 .space_wrap figure.shr_map {
   width: 100%;
@@ -5452,6 +5456,29 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   }
   .sub_tab_con article > div.needflex.fd_clmn figure {
     width: 100%;
+  }
+  .space_wrap .spc_map {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .space_wrap .spc_map .spc_idx_wrap {
+    order: 2;
+    width: 100%;
+  }
+  .space_wrap .spc_map .spc_idx_wrap ul {
+    height: unset;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .space_wrap .spc_map .spc_idx_wrap ul li {
+    min-width: 151px;
+  }
+  .space_wrap .spc_map .map_img {
+    order: 1;
+    transform: unset;
+    width: 100%;
+    text-align: center;
+    padding-right: unset;
   }
 }
 @media screen and (max-width: 720px) {
