@@ -296,6 +296,10 @@ textarea {
   margin-top: 20px;
 }
 
+.mt24 {
+  margin-top: 24px;
+}
+
 .mt30 {
   margin-top: 30px;
 }
@@ -348,6 +352,10 @@ textarea {
   padding-left: 20px !important;
 }
 
+.pr20 {
+  padding-right: 20px !important;
+}
+
 .fr_wrap {
   height: 50px;
 }
@@ -378,6 +386,9 @@ textarea {
 
 .needflex {
   display: flex;
+}
+.needflex.fdcl {
+  flex-direction: column;
 }
 
 .jc_spc_btw {
@@ -816,6 +827,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .thmclr {
   color: #13523b;
+}
+.thmclr.needbld {
+  font-family: "SUIT-M";
 }
 
 .ta_l {
@@ -5563,6 +5577,18 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
     text-align: center;
   }
 }
+.privacywrap h4 {
+  gap: 0 12px;
+}
+.privacywrap .tdpl20 a {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+}
+.privacywrap a {
+  display: inline-block;
+}
+
 .chtr article > ul.needflex {
   align-items: center;
   border-bottom: 1px solid #CCCCCC;

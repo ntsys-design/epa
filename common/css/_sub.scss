@@ -3520,7 +3520,22 @@ article .pl_con > ul.needflex.pl_index{
     text-align: center;
 }
 }
-
+// sub_06 {
+    .privacywrap {
+        h4 {
+            gap: 0 12px;
+        }
+        .tdpl20 {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0 12px;
+            }
+        }
+        a {
+            display: inline-block;
+        }
+    }
 //sub_06_02 고객헌장
 .chtr{
     article{

@@ -485,6 +485,9 @@ footer {
 
 .thmclr {
     color: #13523b;
+    &.needbld {
+        font-family: 'SUIT-M';
+    }
 }
 .ta_l {
     text-align: left;
