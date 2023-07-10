@@ -1012,14 +1012,35 @@
 .space_wrap {
     padding: 80px 0 70px 0;
     background: #f7f7f8;
+    .spc_infowrap {
+        justify-content: space-between;
+
+        > figure {
+            width: 80px;
+        }
+    }
     .spc_idx_wrap {
         width: 45%;
+
+        &.shr {
+            width: 100%;
+            .spc_idx {
+                width: 100%;
+                height: unset;
+                flex-direction: unset;
+
+                li {
+                    width: calc(100% / 6);
+                }
+            }
+        }
         .spc_idx {
             flex-direction: column;
             gap: 20px 0;
             flex-wrap: wrap;
             height: 290px;
             width: 73%;
+            
             li {
                 width: 50%;
                 a {
@@ -1027,6 +1048,7 @@
                     gap: 0 8px;
                     b {
                         border-bottom: 1px solid transparent;
+                        font-family: 'SUIT-R';
                     }
                     span {
                         font-family: "SUIT-SB";
@@ -1041,9 +1063,9 @@
                 &.on {
                     a {
                         color: #13523b;
-                        font-family: "SUIT-SB";
                         b {
                             border-bottom: 1px solid #13523b;
+                            font-family: "SUIT-M";
                         }
                     }
                 }
@@ -1052,6 +1074,10 @@
     }
     figure {
         width: 55%;
+
+        &.shr_map {
+            width: 100%;
+        }
     }
 }
 
@@ -1681,6 +1707,13 @@
                                 -webkit-box-orient: vertical;
                             }
                         }
+                        &.brd_lnk {
+                            a {
+                                color: #666;
+                                display: inline-block;
+                                border-bottom: 1px solid #666;
+                            }
+                        }
                     }
                 }
             }
@@ -2272,13 +2305,17 @@
                     display: none;
                     > a {
                         align-items: center;
+                        gap: 0 10px;
 
                         > div {
                         }
                         .tsrst_left {
                             padding: 10px;
+                            flex: 0 0 60px;
+                            text-align: center;
                         }
                         .tsrst_right {
+                            flex-grow: 1;
                             > div {
                                 padding: 10px;
                                 align-items: center;

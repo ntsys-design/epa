@@ -3257,8 +3257,25 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   padding: 80px 0 70px 0;
   background: #f7f7f8;
 }
+.space_wrap .spc_infowrap {
+  justify-content: space-between;
+}
+.space_wrap .spc_infowrap > figure {
+  width: 80px;
+}
 .space_wrap .spc_idx_wrap {
   width: 45%;
+}
+.space_wrap .spc_idx_wrap.shr {
+  width: 100%;
+}
+.space_wrap .spc_idx_wrap.shr .spc_idx {
+  width: 100%;
+  height: unset;
+  flex-direction: unset;
+}
+.space_wrap .spc_idx_wrap.shr .spc_idx li {
+  width: 16.6666666667%;
 }
 .space_wrap .spc_idx_wrap .spc_idx {
   flex-direction: column;
@@ -3276,6 +3293,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .space_wrap .spc_idx_wrap .spc_idx li a b {
   border-bottom: 1px solid transparent;
+  font-family: "SUIT-R";
 }
 .space_wrap .spc_idx_wrap .spc_idx li a span {
   font-family: "SUIT-SB";
@@ -3288,13 +3306,16 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .space_wrap .spc_idx_wrap .spc_idx li.on a {
   color: #13523b;
-  font-family: "SUIT-SB";
 }
 .space_wrap .spc_idx_wrap .spc_idx li.on a b {
   border-bottom: 1px solid #13523b;
+  font-family: "SUIT-M";
 }
 .space_wrap figure {
   width: 55%;
+}
+.space_wrap figure.shr_map {
+  width: 100%;
 }
 
 .swiperwrap {
@@ -3857,6 +3878,11 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.board .brd_list ul li div p.brd_lnk a {
+  color: #666;
+  display: inline-block;
+  border-bottom: 1px solid #666;
+}
 .board .brd_list.thmb ul {
   display: flex;
   justify-content: flex-start;
@@ -4387,9 +4413,15 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .resultview_list .resultview .boardwrap .board_list .resultview_item > a {
   align-items: center;
+  gap: 0 10px;
 }
 .resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_left {
   padding: 10px;
+  flex: 0 0 60px;
+  text-align: center;
+}
+.resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right {
+  flex-grow: 1;
 }
 .resultview_list .resultview .boardwrap .board_list .resultview_item > a .tsrst_right > div {
   padding: 10px;
