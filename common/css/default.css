@@ -5414,6 +5414,13 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   .system .sys_btt::before {
     width: calc(100% - (100% - 48px) / 3);
   }
+  .sub_tab_con article > div.needflex.fd_clmn {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .sub_tab_con article > div.needflex.fd_clmn figure {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 720px) {
   .img_wrap > figure {
