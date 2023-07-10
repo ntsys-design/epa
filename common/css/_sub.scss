@@ -3408,6 +3408,14 @@
         }
     }
     }
+    .sub_tab_con article > div.needflex.fd_clmn{
+        gap: 30px;
+        flex-direction: column;
+        figure{
+            width: 100%;
+        }
+        
+    }
 }
 @media screen and (max-width: 720px) {
     .img_wrap > figure {
