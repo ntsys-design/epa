@@ -616,6 +616,15 @@ footer {
                 td {
                     color: #333;
                     font-family: "SUIT-R";
+                    
+                }
+            }
+
+            &.tdpl20 {
+                tr {
+                    td {
+                        padding-left: 20px;
+                    }
                 }
             }
         }
@@ -700,6 +709,12 @@ footer {
         height: 20px;
         &.hngl {
             background: url(../images/ico_hangeul.png) no-repeat center center;
+        }
+    }
+    &.nowdth {
+        span {
+            width: unset;
+            height: unset;
         }
     }
 }
@@ -807,6 +822,7 @@ footer {
         color: #333;
         font-size: 18px;
         font-family: 'SUIT-M';
+        cursor: pointer;
 
         &:not(:last-child) {
             border-right: none;

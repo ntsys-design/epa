@@ -942,6 +942,9 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #333;
   font-family: "SUIT-R";
 }
+.tablewrap table tbody.tdpl20 tr td {
+  padding-left: 20px;
+}
 .tablewrap .bd_r {
   border-right: 1px solid #eee !important;
 }
@@ -1005,6 +1008,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .dl_btn > span.hngl {
   background: url(../images/ico_hangeul.png) no-repeat center center;
+}
+.dl_btn.nowdth span {
+  width: unset;
+  height: unset;
 }
 
 .con_link_btn {
@@ -1098,6 +1105,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #333;
   font-size: 18px;
   font-family: "SUIT-M";
+  cursor: pointer;
 }
 .sub_tab_list > li:not(:last-child) {
   border-right: none;
