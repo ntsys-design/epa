@@ -3377,7 +3377,14 @@
     }
 }
 
-
+@media screen and (max-width: 1420px) {
+.container{
+    .swiperwrap{
+        width: 87%;
+        margin: auto;
+    }
+}
+}
 
 @media screen and (max-width: 1080px) {
     .contents.sub  article .graphwrap .dvsn_list {
@@ -3427,6 +3434,7 @@
         .spc_idx_wrap{
             order: 2;
             width: 100%;
+            padding-bottom: 80px;
             ul{
                 height: unset;
                 flex-direction: row;

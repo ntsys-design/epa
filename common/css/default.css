@@ -5448,6 +5448,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   padding: 0 10px;
 }
 
+@media screen and (max-width: 1420px) {
+  .container .swiperwrap {
+    width: 87%;
+    margin: auto;
+  }
+}
 @media screen and (max-width: 1080px) {
   .contents.sub article .graphwrap .dvsn_list {
     gap: 60px;
@@ -5493,6 +5499,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   .space_wrap .spc_map .spc_idx_wrap {
     order: 2;
     width: 100%;
+    padding-bottom: 80px;
   }
   .space_wrap .spc_map .spc_idx_wrap ul {
     height: unset;
