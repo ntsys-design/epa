@@ -35,13 +35,26 @@ body {
     }
 }
 
-// 게시판 공용
-.cms_board {
-    ol, ul , li {
-        list-style-type: initial !important;
+//ckeditor 대응 스타일
+
+.contents.sub ul, .contents.sub ol {
+    list-style-position: inside;
+    padding-inline-start: 20px;
+
+
+    &.nomarker {
+        padding-inline-start: unset;
+        li {
+            list-style-type: none !important;
+        }
     }
-    ol, ul {
-        padding-left: 20px !important;
+    li {
+        list-style-type: initial;
+        &::after {
+            content: none;
+        }
+        &::marker {
+        }
     }
 }
 

@@ -443,13 +443,24 @@ body.dimmed header .gnbwrap .gnb2dep > section {
   overflow-y: auto;
 }
 
-.cms_board ol, .cms_board ul, .cms_board li {
-  list-style-type: initial !important;
+.contents.sub ul, .contents.sub ol {
+  list-style-position: inside;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
 }
-.cms_board ol, .cms_board ul {
-  padding-left: 20px !important;
+.contents.sub ul.nomarker, .contents.sub ol.nomarker {
+  -webkit-padding-start: unset;
+          padding-inline-start: unset;
 }
-
+.contents.sub ul.nomarker li, .contents.sub ol.nomarker li {
+  list-style-type: none !important;
+}
+.contents.sub ul li, .contents.sub ol li {
+  list-style-type: initial;
+}
+.contents.sub ul li::after, .contents.sub ol li::after {
+  content: none;
+}
 .container {
   max-width: 1280px;
   margin: 0 auto;
