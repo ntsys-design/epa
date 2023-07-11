@@ -443,6 +443,13 @@ body.dimmed header .gnbwrap .gnb2dep > section {
   overflow-y: auto;
 }
 
+.cms_board ol, .cms_board ul, .cms_board li {
+  list-style-type: initial !important;
+}
+.cms_board ol, .cms_board ul {
+  padding-left: 20px !important;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;

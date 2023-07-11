@@ -35,6 +35,17 @@ body {
     }
 }
 
+// 게시판 공용
+.cms_board {
+    ol, ul , li {
+        list-style-type: initial !important;
+    }
+    ol, ul {
+        padding-left: 20px !important;
+    }
+}
+
+
 //공통 스타일
 .container {
     max-width: 1280px;
