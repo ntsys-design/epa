@@ -1088,7 +1088,7 @@
 
 .swiperwrap {
     position: relative;
-
+    margin-top: 24px;
     .swiper-button-next {
         right: -72px;
         width: 48px;
@@ -3381,7 +3381,7 @@
 .container{
     .swiperwrap{
         width: 87%;
-        margin: auto;
+        margin: 24px auto 0;
     }
 }
 }

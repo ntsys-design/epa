@@ -3353,6 +3353,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 
 .swiperwrap {
   position: relative;
+  margin-top: 24px;
 }
 .swiperwrap .swiper-button-next {
   right: -72px;
@@ -5451,7 +5452,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 @media screen and (max-width: 1420px) {
   .container .swiperwrap {
     width: 87%;
-    margin: auto;
+    margin: 24px auto 0;
   }
 }
 @media screen and (max-width: 1080px) {
