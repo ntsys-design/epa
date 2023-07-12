@@ -1080,9 +1080,22 @@
                 padding-right: 60px;
             }
         }
-        &.shr_map {
-            width: 100%;
-        }
+        // &.usr_map {
+        //     @include maxWidth(870px) {
+        //         display: none;
+        //     }
+        // }
+        // &.ysr_map {
+        //     @include maxWidth(870px) {
+        //         display: none;
+        //     }
+        // }
+        // &.shr_map {
+        //     width: 100%;
+        //     @include maxWidth(870px) {
+        //         display: none;
+        //     }
+        // }
     }
 }
 

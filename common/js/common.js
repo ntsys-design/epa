@@ -149,21 +149,21 @@ $(".board .ulsel_btn").each( function (){
   });
 // 서브 탭
   $(".sub_tab_list li").on("click", function (e) {
-    $('img[usemap]').rwdImageMaps(); // 이미지맵 반응형 로드
     e.preventDefault();
     let idx = $(this).index();
     $(".sub_tab_list li").removeClass("on");
     $(this).addClass("on");
+    $('img[usemap]').rwdImageMaps(); // 이미지맵 반응형 로드
     $(".sub_con_list .sub_tab_con").stop().hide();
     $(".sub_con_list .sub_tab_con").eq(idx).stop().show();
   });
 // 서브 탭인탭
   $(".sub_tab_list2 li").on("click", function (e) {
-    $('img[usemap]').rwdImageMaps(); // 이미지맵 반응형 로드
     e.preventDefault();
     let idx = $(this).index();
     $(".sub_tab_list2 li").removeClass("on");
     $(this).addClass("on");
+    $('img[usemap]').rwdImageMaps(); // 이미지맵 반응형 로드
     $(".sub_con_list2 .sub_tab_con2").stop().hide();
     $(".sub_con_list2 .sub_tab_con2").eq(idx).stop().show();
   });
