@@ -325,19 +325,19 @@ textarea {
 }
 
 .mb40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .mb50 {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .mb60 {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 .mb120 {
-  margin-bottom: 120px;
+  margin-bottom: 120px !important;
 }
 
 .pt40 {
@@ -5442,6 +5442,149 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   padding: 0 10px;
 }
 
+.ci_info {
+  gap: 40px 56px;
+  padding-bottom: 40px;
+}
+.ci_info > figure {
+  padding: 54px 84px;
+  background: #F1F5F3;
+}
+.ci_info .ci_dti {
+  padding: 54px 20px;
+  background: #F7F7F8;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+.ci_info .ci_dti li {
+  text-align: center;
+  position: relative;
+  width: 33.3%;
+}
+.ci_info .ci_dti li:nth-child(1):after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url(../images/ci_plus.png) no-repeat center;
+  position: absolute;
+  top: 23%;
+  right: -8px;
+}
+.ci_info .ci_dti li:last-child:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url(../images/ci_plus.png) no-repeat center;
+  position: absolute;
+  top: 23%;
+  left: -1px;
+}
+.ci_info .ci_dti li img {
+  margin-bottom: 16px;
+}
+.ci_info .ci_dti li p {
+  text-align: center;
+  font-family: "SUIT-M";
+  color: #333;
+}
+.ci_info .ci_dti li p span {
+  display: block;
+  font-family: "SUIT-R";
+  font-size: 14px;
+  color: #666;
+}
+
+.ci_info_ul li p {
+  word-break: break-all;
+}
+.ci_info_ul li p span {
+  font-family: "SUIT-SB";
+  color: #13523B;
+}
+
+.ci_rule ul {
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+.ci_rule ul li {
+  text-align: center;
+  width: 33.3%;
+  padding: 40px 0;
+  position: relative;
+}
+.ci_rule ul li:first-child:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 300%;
+  background: #eee;
+  left: 0;
+  bottom: 0;
+}
+.ci_rule ul li p {
+  font-family: "SUIT-M";
+  font-size: 20px;
+  padding-bottom: 24px;
+}
+
+.ci_color {
+  padding: 0 68px 40px;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  gap: 40px;
+}
+.ci_color ul {
+  gap: 17px;
+  flex-grow: 1;
+  justify-content: end;
+}
+.ci_color ul li {
+  width: 33.3%;
+  min-width: 188px;
+}
+.ci_color ul li p {
+  padding-left: 4px;
+  font-family: "SUIT-SB";
+  color: #333;
+}
+.ci_color ul li p span {
+  display: block;
+  font-family: "SUIT-R";
+  font-size: 14px;
+  color: #666;
+  padding-top: 8px;
+}
+.ci_color ul li p span:last-child {
+  padding-top: 4px;
+}
+.ci_color ul li .colorbox {
+  padding: 64px 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.ci_color ul li .colorbox p {
+  padding-left: 0;
+  color: #fff;
+  font-family: "SUIT-R";
+}
+.ci_color ul li .colorbox p span {
+  padding-top: 0;
+  color: #fff;
+  font-family: "SUIT-SB";
+  font-size: 16px;
+}
+.ci_color ul li .colorbox.c340 {
+  background: #00945E;
+}
+.ci_color ul li .colorbox.c341 {
+  background: #007853;
+}
+.ci_color ul li .colorbox.c375 {
+  background: #93D500;
+}
+
 @media screen and (max-width: 1420px) {
   .container .swiperwrap {
     width: 87%;
@@ -5515,6 +5658,39 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   }
   .space_wrap .spc_idx_wrap.shr .spc_idx li {
     width: 20%;
+  }
+  .ci_info {
+    flex-wrap: wrap;
+  }
+  .ci_info figure {
+    width: 100%;
+    text-align: center;
+  }
+  .ci_rule ul {
+    flex-wrap: wrap;
+  }
+  .ci_rule ul li {
+    width: 50%;
+  }
+  .ci_rule ul li:nth-child(3):after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 300%;
+    background: #eee;
+    left: 0;
+    bottom: 0;
+  }
+  .ci_color {
+    flex-wrap: wrap;
+    padding: 0 0 40px;
+  }
+  .ci_color figure {
+    width: 100%;
+    text-align: center;
+  }
+  .ci_color ul li {
+    min-width: unset;
   }
 }
 @media screen and (max-width: 870px) {
@@ -5602,6 +5778,18 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
     width: 100%;
     text-align: center;
   }
+  .ci_rule ul li {
+    width: 100%;
+  }
+  .ci_rule ul li:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 300%;
+    background: #eee;
+    left: 0;
+    bottom: 0;
+  }
 }
 .privacywrap h4 {
   gap: 0 12px;
@@ -5681,5 +5869,28 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   }
   .system .sys_btt::before {
     width: 0;
+  }
+  .ci_info .ci_dti {
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+  .ci_info .ci_dti li {
+    width: 100%;
+  }
+  .ci_info .ci_dti li:first-child::after {
+    top: 120%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .ci_info .ci_dti li:last-child::before {
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ci_color ul {
+    flex-wrap: wrap;
+  }
+  .ci_color ul li {
+    width: 100%;
   }
 }/*# sourceMappingURL=default.css.map */
