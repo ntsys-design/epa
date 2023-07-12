@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../common/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../common/css/nice-select.css" />
     <script src="../common/js/jquery-3.6.0.min.js"></script>
+    <script src="../common/js/jquery.rwdImageMaps.min.js"></script>
     <script src="../common/js/swiper-bundle.min.js"></script>
     <script src="../common/js/common.js"></script>
     <script src="../common/js/jquery.nice-select.min.js"></script>
@@ -781,7 +782,7 @@
                     <div class="needflex spc_map jc_spc_btw">
                       <div class="spc_idx_wrap">
                         <ul class="spc_idx needflex">
-                          <li class="on">
+                          <li>
                             <a href="#"
                               ><span class="spc_num">1</span
                               ><b>수풀로 운심리 입구</b></a
@@ -862,44 +863,59 @@
                       <figure class="map_img">
                         <img
                           src="../common/images/수풀로_운심리_약도.png"
-                          alt="수풀로 운심리 약도"
+                          alt="수풀로 운심리 약도" usemap="#imagemap_01"
                         />
+                        <!-- 위의 리스트와 같은 링크 기능 -->
+                        <map name="imagemap_01">
+                          <area target="" alt="수풀로 운심리 입구 보기" title="수풀로 운심리 입구 보기" href="" coords="350,340,14" shape="circle">
+                          <area target="" alt="강하하수처리장 보기" title="강하하수처리장 보기" href="" coords="457,393,14" shape="circle">
+                          <area target="" alt="교육실 보기" title="교육실 보기" href="" coords="373,394,14" shape="circle">
+                          <area target="" alt="양서류 서식공간 보기" title="양서류 서식공간 보기" href="" coords="409,306,13" shape="circle">
+                          <area target="" alt="습지여상 보기" title="습지여상 보기" href="" coords="581,260,14" shape="circle">
+                          <area target="" alt="마름연못 보기" title="마름연못 보기" href="" coords="542,224,14" shape="circle">
+                          <area target="" alt="경관조망대 보기" title="경관조망대 보기" href="" coords="593,174,13" shape="circle">
+                          <area target="" alt="노랑어리연못 보기" title="노랑어리연못 보기" href="" coords="526,160,14" shape="circle">
+                          <area target="" alt="여울소 보기" title="여울소 보기" href="" coords="480,76,14" shape="circle">
+                          <area target="" alt="습지생태관찰원 보기" title="습지생태관찰원 보기" href="" coords="423,104,14" shape="circle">
+                          <area target="" alt="창포연못 보기" title="창포연못 보기" href="" coords="404,198,14" shape="circle">
+                          <area target="" alt="잠자리연못 보기" title="잠자리연못 보기" href="" coords="347,158,14" shape="circle">
+                          <area target="" alt="조류관찰대 보기" title="조류관찰대 보기" href="" coords="348,69,15" shape="circle">
+                          <area target="" alt="보전지구연못 보기" title="보전지구연못 보기" href="" coords="200,193,14" shape="circle">
+                      </map>
+                      
                       </figure>
                     </div>
                   </div>
                 </div>
+            
 
+                <!-- 공간별 보기 버튼 클릭시 교체 -->
                 <article>
                   <div class="container">
-                    <h5 class="mb0">습지여상</h5>
+                    <!-- 해당 제목으로 타이틀 교체 -->
+                    <h5 class="mb0">수풀로 운심리 입구</h5>
                     <div class="swiperwrap swiperwrap1">
                       <div class="swiper-button-next"></div>
                       <div class="swiper-button-prev"></div>
                       <div class="swiper sub_con_slide">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="../common/images/spc_01.png" alt="" />
+                            <img src="../common/images/수풀로_운심리_01_01.png" alt="수풀로 운심리 입구 사진01" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="../common/images/spc_02.png" alt="" />
+                            <!-- <img src="../common/images/spc_02.png" alt="" /> -->
+                            <!-- 이미지 없을 때 -->
+                            <img src="../common/images/epa_slide_noimg.png" alt="이미지 없음">
                           </div>
                           <div class="swiper-slide">
-                            <img src="../common/images/spc_03.png" alt="" />
+                            <!-- <img src="../common/images/spc_02.png" alt="" /> -->
+                            <!-- 이미지 없을 때 -->
+                            <img src="../common/images/epa_slide_noimg.png" alt="이미지 없음">
                           </div>
                           <div class="swiper-slide">
-                            <img src="../common/images/spc_04.png" alt="" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="../common/images/spc_01.png" alt="" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="../common/images/spc_02.png" alt="" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="../common/images/spc_03.png" alt="" />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="../common/images/spc_04.png" alt="" />
+                            <!-- <img src="../common/images/spc_02.png" alt="" /> -->
+                            <!-- 이미지 없을 때 -->
+                            <img src="../common/images/epa_slide_noimg.png" alt="이미지 없음">
                           </div>
                         </div>
                       </div>
@@ -988,7 +1004,7 @@
                     <div class="needflex spc_map jc_spc_btw">
                       <div class="spc_idx_wrap">
                         <ul class="spc_idx needflex">
-                          <li class="on">
+                          <li>
                             <a href="#"
                               ><span class="spc_num">1</span
                               ><b>수풀로 양수리 입구</b></a
@@ -1065,8 +1081,24 @@
                       <figure class="map_img ysr_map">
                         <img
                           src="../common/images/수풀로_양수리_약도.png"
-                          alt="수풀로 양수리 약도"
+                          alt="수풀로 양수리 약도" usemap="#imagemap_02"
                         />
+                        <map name="imagemap_02">
+                            <area target="" alt="수풀로 양수리 입구 보기" title="수풀로 양수리 입구 보기" href="" coords="314,415,13" shape="circle">
+                            <area target="" alt="종합안내판 보기" title="종합안내판 보기" href="" coords="327,326,13" shape="circle">
+                            <area target="" alt="주차장 보기" title="주차장 보기" href="" coords="274,378,13" shape="circle">
+                            <area target="" alt="잔디광장 보기" title="잔디광장 보기" href="" coords="185,314,13" shape="circle">
+                            <area target="" alt="자연형수로 보기" title="자연형수로 보기" href="" coords="227,263,14" shape="circle">
+                            <area target="" alt="달팽이물길 보기" title="달팽이물길 보기" href="" coords="382,303,13" shape="circle">
+                            <area target="" alt="두층나무숲 보기" title="두층나무숲 보기" href="" coords="470,251,13" shape="circle">
+                            <area target="" alt="야생화광장 보기" title="야생화광장 보기" href="" coords="468,140,13" shape="circle">
+                            <area target="" alt="양수철교 보기" title="양수철교 보기" href="" coords="553,35,13" shape="circle">
+                            <area target="" alt="목교 보기" title="목교 보기" href="" coords="356,37,13" shape="circle">
+                            <area target="" alt="저습지 보기" title="저습지 보기" href="" coords="303,57,13" shape="circle">
+                            <area target="" alt="학습데크 보기" title="학습데크 보기" href="" coords="235,66,13" shape="circle">
+                            <area target="" alt="수풀로 조형물 보기" title="수풀로 조형물 보기" href="" coords="146,26,14" shape="circle">
+                            <area target="" alt="기념광장 보기" title="기념광장 보기" href="" coords="158,87,13" shape="circle">
+                        </map>
                       </figure>
                     </div>
                
@@ -1177,12 +1209,25 @@
                     <figure class="shr_map mb56">
                       <img
                         src="../common/images/수풀로_삼회리_약도.png"
-                        alt="수풀로 삼회리 약도"
+                        alt="수풀로 삼회리 약도" usemap="#imagemap_03"
                       />
+                      <map name="imagemap_03">
+                        <area target="" alt="수풀로 삼회리 입구 보기" title="수풀로 삼회리 입구 보기" href="" coords="467,226,13" shape="circle">
+                        <area target="" alt="교육장(탐방객센터) 보기" title="교육장(탐방객센터) 보기" href="" coords="507,125,13" shape="circle">
+                        <area target="" alt="탐방로 보기" title="탐방로 보기" href="" coords="458,142,13" shape="circle">
+                        <area target="" alt="인공섬 보기" title="인공섬 보기" href="" coords="417,117,13" shape="circle">
+                        <area target="" alt="디딤석 보기" title="디딤석 보기" href="" coords="386,152,13" shape="circle">
+                        <area target="" alt="층층둥굴레 보기" title="층층둥굴레 보기" href="" coords="430,192,12" shape="circle">
+                        <area target="" alt="2코스 탐방로 보기" title="2코스 탐방로 보기" href="" coords="611,229,11" shape="circle">
+                        <area target="" alt="수변산책로 보기" title="수변산책로 보기" href="" coords="738,102,14" shape="circle">
+                        <area target="" alt="목교 보기" title="목교 보기" href="" coords="851,124,13" shape="circle">
+                        <area target="" alt="탄소먹는나무숲 보기" title="탄소먹는나무숲 보기" href="" coords="893,136,13" shape="circle">
+                        <area target="" alt="수풀로 조형물 보기" title="수풀로 조형물 보기" href="" coords="927,89,13" shape="circle">
+                    </map>
                     </figure>
                     <div class="spc_idx_wrap shr mb84">
                       <ul class="spc_idx needflex">
-                        <li class="on">
+                        <li>
                           <a href="#"
                             ><span class="spc_num">1</span
                             ><b>수풀로 삼회리 입구</b></a
@@ -2277,6 +2322,5 @@
       <!-- // 푸터 -->
     </div>
 
-    <script></script>
   </body>
 </html>
