@@ -493,5 +493,16 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
           scrollTop: position - 120
         } /* speed */ );
       });
+
+       // 개인정보처리방침 idlink scrolltop
+       $(".privacywrap a[href^='#']").click(function(e) {
+        e.preventDefault();
+        
+        var position = $($(this).attr("href")).offset().top;
+      
+        $("body, html").animate({
+          scrollTop: position - 100
+        }, 100);
+      });
 });
 

@@ -3263,6 +3263,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   font-size: 18px;
   color: #333;
 }
+.img_wrap.links > a > span {
+  display: block;
+  font-size: 18px;
+  font-family: "SUIT-M";
+  color: #333;
+}
 .img_wrap.links > a:only-of-type {
   margin: 0 auto;
 }

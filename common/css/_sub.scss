@@ -980,6 +980,12 @@
                 font-size: 18px;
                 color: #333;
             }
+            > span {
+                display: block;
+                font-size: 18px;
+                font-family: 'SUIT-M';
+                color: #333;
+            }
             &:only-of-type {
                 margin: 0 auto;
             }
