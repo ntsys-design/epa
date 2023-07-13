@@ -1434,11 +1434,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .main_visualwrap h2 span {
   display: block;
-  font-size: 40px;
+  font-size: 32px;
   font-family: "SUIT-M";
 }
 .contents.main .main_visualwrap h2 span.sv_txt {
-  font-size: 30px;
+  font-size: 24px;
+  padding-top: 8px;
   margin-bottom: 28px;
   font-family: "SUIT-R";
 }
@@ -1454,7 +1455,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
     font-size: 28px;
   }
   .contents.main .main_visualwrap h2 span.sv_txt {
-    font-size: 24px;
+    font-size: 20px;
   }
   .contents.main .main_visualwrap h2 em {
     font-size: 36px;
@@ -1470,6 +1471,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   color: #000;
   border-radius: 21px;
   line-height: 150%;
+  font-family: "SUIT-M";
 }
 .contents.main .main_visualwrap .bgslide {
   width: 100%;
@@ -1487,7 +1489,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
   z-index: -1;
 }
 .contents.main .main_visualwrap .bgslide .mv01 {
@@ -1575,8 +1577,8 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   flex-grow: 1;
   box-sizing: border-box;
   text-align: center;
-  color: #007aff;
-  border-right: 2px solid #007aff;
+  color: #13523B;
+  border-right: 2px solid #13523B;
   font-size: 48px;
   padding: 20px 0;
   line-height: 36px;
@@ -1708,7 +1710,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .contents.main .noticewrap .div_left .tab_list li.active {
   font-size: 26px;
-  border-color: #007aff;
+  border-color: #00945E;
   font-family: "SUIT-B";
   position: relative;
   z-index: 6;
@@ -1734,7 +1736,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 @media (hover: hover) {
   .contents.main .noticewrap .div_left .tab_con_list > div ul li:hover {
-    background: #f2f6ff;
+    background: #F1F5F3;
   }
 }
 .contents.main .noticewrap .div_left .tab_con_list > div ul li {
@@ -1806,6 +1808,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   width: 20px;
   height: 20px;
 }
+.contents.main .noticewrap .div_right .noti_top .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #13523B;
+}
 .contents.main .noticewrap .div_right .noti_con {
   flex-grow: 1;
   height: 640px;
@@ -1831,7 +1837,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   height: 100%;
   padding: 50px;
   border-radius: 20px;
-  background: #f2f6ff;
+  background: #F1F5F3;
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .noti_tit {
   font-size: 20px;
@@ -1844,7 +1850,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: block;
   font-size: 26px;
   font-family: "SUIT-SB";
-  color: #1281fe;
+  color: #13523B;
 }
 .contents.main .noticewrap .div_right .noti_con .swiper-slide a .imgwrap {
   padding-bottom: 60%;
@@ -2221,7 +2227,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   width: 90px;
   height: 26px;
   line-height: 26px;
-  background: #007aff;
+  background: #13523B;
   color: #fff;
   margin-bottom: 10px;
   font-family: "SUIT-R";
