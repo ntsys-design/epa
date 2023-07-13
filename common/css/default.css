@@ -3353,6 +3353,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   padding-right: 60px;
 }
 
+.site_slide > div {
+  display: none;
+}
+
 .swiperwrap {
   position: relative;
   margin-top: 24px;

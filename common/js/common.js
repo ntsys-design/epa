@@ -160,6 +160,8 @@ $(".board .ulsel_btn").each( function (){
 // 서브 탭인탭
   $(".sub_tab_list2 li").on("click", function (e) {
     e.preventDefault();
+    siteslidehide();
+    siteslideRenew();
     let idx = $(this).index();
     $(".sub_tab_list2 li").removeClass("on");
     $(this).addClass("on");
@@ -167,6 +169,35 @@ $(".board .ulsel_btn").each( function (){
     $(".sub_con_list2 .sub_tab_con2").stop().hide();
     $(".sub_con_list2 .sub_tab_con2").eq(idx).stop().show();
   });
+
+  
+      //수풀로 공간별보기
+      function siteslidehide(){
+        $(".spc_idx > li").each(function(){
+          $('.spc_idx > li').removeClass('on');
+        })
+        $('.site_slide').each(function(){
+          $(this).children('div').hide();
+        })
+      }
+      function siteslideRenew(){
+        $(".spc_idx").each(function(){
+          $(this).children().first().addClass('on');
+        })
+        $('.site_slide').each(function(){
+          $(this).children('div').first().show();
+        })
+      }
+      siteslideRenew();
+      $(".spc_idx > li").each(function(){
+        $(".spc_idx > li > a").on('click', function(e){
+          e.preventDefault();
+          var siteIdx = $(this).parent('li').index();
+          console.log(siteIdx);
+          $('.site_slide').children('div').hide();
+          $(this).parents('.space_wrap').siblings('.site_slide').children('div').eq(siteIdx).show();
+        })
+      })
 
   $(".sub_tab_list2_1 li").on("click", function (e) {
     e.preventDefault();
@@ -504,5 +535,10 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
           scrollTop: position - 100
         }, 100);
       });
+
+
+
+
+
 });
 
