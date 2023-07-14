@@ -27,18 +27,22 @@ $(document).ready(function () {
   $('.gnbwrap > .gnb1dep > li').mouseenter(function(){
     $('.gnb2dep > section').hide();
     $(this).parent().siblings().children('section').eq($(this).index()).stop().slideDown();
-    $('body').addClass('dimmed');
     $('.dimm').addClass('active');
+    scrollLock();
   })
   
   $('.gnbwrap').mouseleave(function(){
     $('.gnb2dep > section').stop().slideUp(200);
-    $('body').removeClass('dimmed');
     $('.dimm').removeClass('active');
+    scrollRelease();
   })
 
-
-
+  function scrollLock(){
+    $('body').addClass('dimmed');
+  }
+  function scrollRelease(){
+    $('body').removeClass('dimmed');
+  }
 
   //메인 News탭
   $(".newscon_list > li").first().addClass("active");
@@ -216,8 +220,22 @@ $(".board .ulsel_btn").each( function (){
       //   }
       // -----------------
 
-      $('.site_slide > div').on('click', function() {
+      $('#usr_site_all > div').on('click', function() {
+        var siteIdx = $(this).index();
+        console.log(siteIdx);
+
+        $('.site_layerpopwrap').addClass('active');
+        scrollLock();
       })
+
+      //외부영역 클릭 시 site layer 닫기
+      $('.site_layerpopwrap').bind('click', function(e) {
+        var $clicked = $(e.target);
+        if ($clicked.hasClass("active")){
+                $('.site_layerpopwrap').removeClass('active');
+            }
+      });
+        
 
   $(".sub_tab_list2_1 li").on("click", function (e) {
     e.preventDefault();
