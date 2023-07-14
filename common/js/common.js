@@ -160,8 +160,8 @@ $(".board .ulsel_btn").each( function (){
 // 서브 탭인탭
   $(".sub_tab_list2 li").on("click", function (e) {
     e.preventDefault();
-    siteslidehide();
-    siteslideRenew();
+    // siteslidehide();
+    // siteslideRenew();
     let idx = $(this).index();
     $(".sub_tab_list2 li").removeClass("on");
     $(this).addClass("on");
@@ -172,31 +172,51 @@ $(".board .ulsel_btn").each( function (){
 
   
       //수풀로 공간별보기
-      function siteslidehide(){
-        $(".spc_idx > li").each(function(){
-          $('.spc_idx > li').removeClass('on');
-        })
-        $('.site_slide').each(function(){
-          $(this).children('div').hide();
-        })
-      }
-      function siteslideRenew(){
-        $(".spc_idx").each(function(){
-          $(this).children().first().addClass('on');
-        })
-        $('.site_slide').each(function(){
-          $(this).children('div').first().show();
-        })
-      }
-      siteslideRenew();
-      $(".spc_idx > li").each(function(){
-        $(".spc_idx > li > a").on('click', function(e){
-          e.preventDefault();
-          var siteIdx = $(this).parent('li').index();
-          console.log(siteIdx);
-          $('.site_slide').children('div').hide();
-          $(this).parents('.space_wrap').siblings('.site_slide').children('div').eq(siteIdx).show();
-        })
+      // function siteslidehide(){
+      //   $(".spc_idx > li").each(function(){
+      //     $('.spc_idx > li').removeClass('on');
+      //   })
+      //   $('.site_slide').each(function(){
+      //     $(this).children('div').hide();
+      //   })
+      // }
+      // function siteslideRenew(){
+      //   $(".spc_idx").each(function(){
+      //     $(this).children().first().addClass('on');
+      //   })
+      //   $('.site_slide').each(function(){
+      //     $(this).children('div').first().show();
+      //   })
+      // }
+      // siteslideRenew();
+      // $(".spc_idx > li").each(function(){
+      //   $(".spc_idx > li > a").on('click', function(e){
+      //     e.preventDefault();
+      //     var siteIdx = $(this).parent('li').index();
+      //     console.log(siteIdx);
+      //     $('.site_slide').children('div').hide();
+      //     $(this).parents('.space_wrap').siblings('.site_slide').children('div').eq(siteIdx).show();
+      //   })
+      // })
+
+
+      // 대표님 작업 ----
+      // // 수풀로 공간별보기
+      //   function siteslidehide1(){
+      //     $(".spc_idx > li").each(function(){
+      //       $('.spc_idx > li').removeClass('on');
+      //     })
+      //   }
+      // // 이미지 맵 클릭시 이베느 처리
+      //   function mapView(indx){
+      //     siteslidehide1();
+      //     $('.site_slide').children('div').hide();
+      //     $("#"+indx).show();
+      //     $("#"+indx+"_li").addClass("on");
+      //   }
+      // -----------------
+
+      $('.site_slide > div').on('click', function() {
       })
 
   $(".sub_tab_list2_1 li").on("click", function (e) {

@@ -3369,8 +3369,19 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   padding-right: 60px;
 }
 
-.site_slide > div {
+.site_layerpopwrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: #000;
+  opacity: 0.5;
   display: none;
+}
+.site_layerpopwrap.layerd {
+  display: block;
 }
 
 .swiperwrap {
