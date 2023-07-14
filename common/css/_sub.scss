@@ -3508,7 +3508,7 @@
         justify-content: end;
         li{
             width: 33.3%;
-            min-width: 188px;
+            max-width: 188px;
             p{
                 padding-left: 4px;
                 font-family: 'SUIT-SB';
@@ -3672,7 +3672,7 @@
         }
         ul{
             li{
-                min-width: unset;
+                max-width: unset;
             }
         }
     }

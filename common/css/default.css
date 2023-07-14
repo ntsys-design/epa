@@ -5555,7 +5555,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 }
 .ci_color ul li {
   width: 33.3%;
-  min-width: 188px;
+  max-width: 188px;
 }
 .ci_color ul li p {
   padding-left: 4px;
@@ -5703,7 +5703,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
     text-align: center;
   }
   .ci_color ul li {
-    min-width: unset;
+    max-width: unset;
   }
 }
 @media screen and (max-width: 870px) {
