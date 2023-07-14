@@ -799,9 +799,10 @@
 .sub_tab_con {
     article {
         > div {
-            // gap: 40px;
+            gap: 40px;
             figure {
                 width: 25%;
+                min-width: 220px;
                 text-align: center;
 
                 &.ffix {
@@ -930,10 +931,22 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 40px 32px;
+    @include maxWidth(515px) {
+        gap: 20px;
+        justify-content: center;
+    }
+    &.jcc {
+        justify-content: center;
+    }
 
     > figure {
         flex: 0 1 calc((100% - 64px) / 3);
         text-align: center;
+
+        &.ver2 {
+            flex: 0 1 calc((100% - 64px) / 3.5);
+
+        }
 
         img {
             max-width: 100%;

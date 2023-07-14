@@ -3110,8 +3110,12 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   display: inline-block;
 }
 
+.sub_tab_con article > div {
+  gap: 40px;
+}
 .sub_tab_con article > div figure {
   width: 25%;
+  min-width: 220px;
   text-align: center;
 }
 .sub_tab_con article > div figure.ffix {
@@ -3226,9 +3230,21 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   flex-wrap: wrap;
   gap: 40px 32px;
 }
+@media screen and (max-width: 515px) {
+  .img_wrap {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+.img_wrap.jcc {
+  justify-content: center;
+}
 .img_wrap > figure {
   flex: 0 1 calc((100% - 64px) / 3);
   text-align: center;
+}
+.img_wrap > figure.ver2 {
+  flex: 0 1 calc((100% - 64px) / 3.5);
 }
 .img_wrap > figure img {
   max-width: 100%;
