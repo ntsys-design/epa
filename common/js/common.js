@@ -163,6 +163,7 @@ $(".board .ulsel_btn").each( function (){
   });
 // 서브 탭인탭
   $(".sub_tab_list2 li").on("click", function (e) {
+
     e.preventDefault();
     // siteslidehide();
     // siteslideRenew();
@@ -220,22 +221,88 @@ $(".board .ulsel_btn").each( function (){
       //   }
       // -----------------
 
-      $('#usr_site_all > div').on('click', function() {
-        var siteIdx = $(this).index();
-        console.log(siteIdx);
+      $('.site_slide').each(function() {
+        var callSlide = $(this).find('.swiper-wrapper').html();
+        function appendSlide() {
+          $('.layersliderwrap .layerswiperwrapper').append(callSlide);
+        }
+  
+        function removeSlide() {
+          $('.layersliderwrap .layerswiperwrapper').empty();
+        }
+  
+  
+        function siteSlideFunc() {
+          var swiperSLST = new Swiper(".siteLayerSwiperThumbs", {
+            spaceBetween: 24,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+          var swiperSLS = new Swiper(".siteLayerSwiper", {
+            slidesPerView: 1,
+            navigation: {
+              nextEl: ".layersliderwrap .swiper-button-next",
+              prevEl: ".layersliderwrap .swiper-button-prev",
+            },
+            thumbs: {
+              swiper: swiperSLST,
+            },
+          });
+          
+          swiperSLST.on('slideChange',function(){
+            var siteTitle = $('.swiper-slide-active').children('img').attr('alt');
+                siteTitle = siteTitle.replace(" 사진01","");
+                console.log(siteTitle)
+                $('.layer_tit').text(siteTitle);
+                
+          })
+    
+    
+            $('.site_layerpopwrap').addClass('active');
+            scrollLock();
+    
+            removeSlide();
+    
+            appendSlide();
+            swiperSLS.init()
+            swiperSLST.init()
+            swiperSLS.update()
+            swiperSLST.update()
+            
+            
+            
+            //외부영역 클릭 시 site layer 닫기
+            $('.site_layerpopwrap').bind('click', function(e) {
+              var $clicked = $(e.target);
+              if ($clicked.hasClass("active")){
+                      $('.site_layerpopwrap').removeClass('active');
+                      scrollRelease();
+                      swiperSLS.destroy();
+                      swiperSLST.destroy();
+                      removeSlide();
+                  }
+      
+            });
+          }
+          $(this).find('.swiper-wrapper').children('div').on('click',function(){
+            siteSlideFunc();
 
-        $('.site_layerpopwrap').addClass('active');
-        scrollLock();
+            var siteTitle = $(this).children('img').attr('alt');
+            siteTitle = siteTitle.replace(" 사진01","");
+            $('.layer_tit').text(siteTitle);
+/* 
+            var thisIndex = $(this).index();
+            console.log(thisIndex + 1); */
+          })
+
+
       })
 
-      //외부영역 클릭 시 site layer 닫기
-      $('.site_layerpopwrap').bind('click', function(e) {
-        var $clicked = $(e.target);
-        if ($clicked.hasClass("active")){
-                $('.site_layerpopwrap').removeClass('active');
-            }
-      });
-        
+      // layerSwiper
+
+
+     
 
   $(".sub_tab_list2_1 li").on("click", function (e) {
     e.preventDefault();

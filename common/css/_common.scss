@@ -327,8 +327,7 @@ header {
     top: 0;
     left: 0;
     z-index: 99;
-    background: #000;
-    opacity: 0.5;
+    background: rgba(0,0,0,0.5);
 
     display: none;
     overflow: auto;
