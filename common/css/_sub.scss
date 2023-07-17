@@ -142,7 +142,7 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: #8fc664;
+            background: #94B75B;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -153,16 +153,92 @@
                 content: "";
                 width: 100%;
                 height: 100%;
+                display: block;
             }
 
             &.home::after {
                 background: url(../images/lnb_home.png) no-repeat center center;
             }
-            &.share::after {
-                background: url(../images/lnb_share.png) no-repeat center center;
+            &.share {
+                @include maxWidth(720px) {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .sharelistwrap {
+                    display: none;
+                    &.active {
+                        display: block;
+                    }
+                }
+                .sharelist {
+                    position: absolute;
+                    top: 50%;
+                    left: -308px;
+                    width: 292px;
+                    height: 56px;
+                    border-radius: 38px;
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-50%);
+                    background: #fff;
+                    box-shadow: 0 0 1px 1px #ccc;
+                    padding: 0 24px;
+
+                    li {
+                        font-size: 16px;
+                        font-family: 'SUIT-SB';
+                        margin-right: 12px;
+                        color: #222;
+
+                        &:first-of-type {
+                            margin-right: 24px;
+                        }
+                        &:last-of-type {
+                            margin-right: unset;
+                        }
+                        &.sh_btns {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            a {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        &.sh_insta {
+                            a { 
+                                background: url(../images/sh_insta.png) no-repeat center center;
+                            }
+                        }
+                        &.sh_fb {
+                            a { 
+                                background: url(../images/sh_fb.png) no-repeat center center;
+                            }
+                        }
+                        &.sh_twt {
+                            a { 
+                                background: url(../images/sh_twt.png) no-repeat center center;
+                            }
+                        }
+                        &.sh_url {
+                            a { 
+                                background: url(../images/sh_url.png) no-repeat center center;
+                            }
+                        }
+                    }
+                }
+                &::after {
+                    background: url(../images/lnb_share.png) no-repeat center center;
+                }
             }
             &.print::after {
                 background: url(../images/lnb_print.png) no-repeat center center;
+
+                @include maxWidth(720px) {
+                    display: none;
+                }
             }
         }
 
@@ -171,11 +247,12 @@
                 position: absolute;
 
                 &.share {
-                    right: 16px;
-                    transform: translateX(-100%);
+                    display: block;
+                    top: -60px;
+                    right: 0;
                 }
                 &.print {
-                    right: 0;
+                    display: none;
                 }
             }
         }
@@ -185,6 +262,10 @@
 
             .lnb_btn {
                 display: none;
+                &.share {
+                    top: -65px;
+                    right: 13px;
+                }
             }
             > div {
                 flex-wrap: wrap;

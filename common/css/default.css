@@ -2506,7 +2506,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #8fc664;
+  background: #94B75B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2517,9 +2517,70 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   content: "";
   width: 100%;
   height: 100%;
+  display: block;
 }
 .lnbwrap .container > button.home::after {
   background: url(../images/lnb_home.png) no-repeat center center;
+}
+@media screen and (max-width: 720px) {
+  .lnbwrap .container > button.share {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.lnbwrap .container > button.share .sharelistwrap {
+  display: none;
+}
+.lnbwrap .container > button.share .sharelistwrap.active {
+  display: block;
+}
+.lnbwrap .container > button.share .sharelist {
+  position: absolute;
+  top: 50%;
+  left: -308px;
+  width: 292px;
+  height: 56px;
+  border-radius: 38px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  background: #fff;
+  box-shadow: 0 0 1px 1px #ccc;
+  padding: 0 24px;
+}
+.lnbwrap .container > button.share .sharelist li {
+  font-size: 16px;
+  font-family: "SUIT-SB";
+  margin-right: 12px;
+  color: #222;
+}
+.lnbwrap .container > button.share .sharelist li:first-of-type {
+  margin-right: 24px;
+}
+.lnbwrap .container > button.share .sharelist li:last-of-type {
+  margin-right: unset;
+}
+.lnbwrap .container > button.share .sharelist li.sh_btns {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.lnbwrap .container > button.share .sharelist li.sh_btns a {
+  width: 100%;
+  height: 100%;
+}
+.lnbwrap .container > button.share .sharelist li.sh_insta a {
+  background: url(../images/sh_insta.png) no-repeat center center;
+}
+.lnbwrap .container > button.share .sharelist li.sh_fb a {
+  background: url(../images/sh_fb.png) no-repeat center center;
+}
+.lnbwrap .container > button.share .sharelist li.sh_twt a {
+  background: url(../images/sh_twt.png) no-repeat center center;
+}
+.lnbwrap .container > button.share .sharelist li.sh_url a {
+  background: url(../images/sh_url.png) no-repeat center center;
 }
 .lnbwrap .container > button.share::after {
   background: url(../images/lnb_share.png) no-repeat center center;
@@ -2527,16 +2588,22 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
 .lnbwrap .container > button.print::after {
   background: url(../images/lnb_print.png) no-repeat center center;
 }
+@media screen and (max-width: 720px) {
+  .lnbwrap .container > button.print::after {
+    display: none;
+  }
+}
 @media screen and (max-width: 880px) {
   .lnbwrap .container > button {
     position: absolute;
   }
   .lnbwrap .container > button.share {
-    right: 16px;
-    transform: translateX(-100%);
+    display: block;
+    top: -60px;
+    right: 0;
   }
   .lnbwrap .container > button.print {
-    right: 0;
+    display: none;
   }
 }
 @media screen and (max-width: 720px) {
@@ -2546,6 +2613,10 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   }
   .lnbwrap .container .lnb_btn {
     display: none;
+  }
+  .lnbwrap .container .lnb_btn.share {
+    top: -65px;
+    right: 13px;
   }
   .lnbwrap .container > div {
     flex-wrap: wrap;

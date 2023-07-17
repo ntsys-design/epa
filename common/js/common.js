@@ -302,7 +302,25 @@ $(".board .ulsel_btn").each( function (){
       // layerSwiper
 
 
-     
+     // 공유하기
+      // $('.sharelist').first().hide();
+       $('.lnb_btn.share').on('click',function (){
+        if($(this).hasClass('active')){
+          $(this).removeClass('active');
+          $('.sharelistwrap').removeClass('active');
+        }else{
+          $(this).addClass('active');
+          $('.sharelistwrap').addClass('active');
+        }
+       })
+       //외부영역 클릭 시 공유하기 닫기
+       $(document).bind('click', function(e) {
+         var $clicked = $(e.target);
+         if (!$clicked.hasClass("active")){
+              $(".lnb_btn.share").removeClass('active');
+                 $(".sharelistwrap").removeClass('active');
+             }
+       });
 
   $(".sub_tab_list2_1 li").on("click", function (e) {
     e.preventDefault();
