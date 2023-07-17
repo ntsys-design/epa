@@ -239,7 +239,7 @@ $(".board .ulsel_btn").each( function (){
             freeMode: true,
             watchSlidesProgress: true,
           });
-          var swiperSLS = new Swiper(".siteLayerSwiper", {
+          var swiperSLS = new Swiper(".mainSlide .siteLayerSwiper", {
             slidesPerView: 1,
             navigation: {
               nextEl: ".layersliderwrap .swiper-button-next",
@@ -250,8 +250,8 @@ $(".board .ulsel_btn").each( function (){
             },
           });
           
-          swiperSLST.on('slideChange',function(){
-            var siteTitle = $('.swiper-slide-active').children('img').attr('alt');
+          swiperSLS.on('slideChange',function(){
+            var siteTitle = $('.mainSlide .siteLayerSwiper .swiper-slide-active').children('img').attr('alt');
                 siteTitle = siteTitle.replace(" 사진01","");
                 console.log(siteTitle)
                 $('.layer_tit').text(siteTitle);
@@ -290,6 +290,7 @@ $(".board .ulsel_btn").each( function (){
 
             var siteTitle = $(this).children('img').attr('alt');
             siteTitle = siteTitle.replace(" 사진01","");
+            console.log(siteTitle)
             $('.layer_tit').text(siteTitle);
 /* 
             var thisIndex = $(this).index();
