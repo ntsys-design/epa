@@ -2442,19 +2442,26 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   gap: 0 1px;
   margin-right: auto;
 }
-.lnbwrap .container > div > button {
+.lnbwrap .container > div > .lnb_btn.home {
   width: 52px;
   height: 52px;
   background: #94B75B;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: unset;
+  top: 0;
 }
-.lnbwrap .container > div > button::after {
+.lnbwrap .container > div > .lnb_btn.home::after {
   content: "";
   width: 18px;
   height: 18px;
   background: url(../images/lnb_home.png) no-repeat center center;
+}
+@media screen and (max-width: 720px) {
+  .lnbwrap .container > div > .lnb_btn.home {
+    display: none;
+  }
 }
 .lnbwrap .container > div .ulsel {
   width: 320px;
@@ -2498,7 +2505,7 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
     font-family: "SUIT-M";
   }
 }
-.lnbwrap .container > button {
+.lnbwrap .container .lnb_btn {
   flex-shrink: 0;
   width: 48px;
   height: 48px;
@@ -2510,94 +2517,100 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   position: relative;
   top: -88px;
 }
-.lnbwrap .container > button::after {
+.lnbwrap .container .lnb_btn::after {
   content: "";
   width: 100%;
   height: 100%;
   display: block;
 }
-.lnbwrap .container > button.home::after {
-  background: url(../images/lnb_home.png) no-repeat center center;
+.lnbwrap .container .lnb_btn.share::after {
+  background: url(../images/lnb_share.png) no-repeat center center;
+}
+.lnbwrap .container .lnb_btn.print::after {
+  background: url(../images/lnb_print.png) no-repeat center center;
 }
 @media screen and (max-width: 720px) {
-  .lnbwrap .container > button.share {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .lnbwrap .container .lnb_btn.print::after {
+    display: none;
   }
 }
-.lnbwrap .container > button.share .sharelistwrap {
-  display: none;
+.lnbwrap .container .lnb_sharewrap {
+  position: absolute;
+  right: 64px;
 }
-.lnbwrap .container > button.share .sharelistwrap.active {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap {
+  position: absolute;
+  display: none;
+  right: 64px;
+  top: -93px;
+}
+.lnbwrap .container .lnb_sharewrap .sharelistwrap.active {
   display: block;
 }
-.lnbwrap .container > button.share .sharelist {
-  position: absolute;
-  top: 50%;
-  left: -308px;
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist {
   width: 292px;
   height: 56px;
   border-radius: 38px;
   display: flex;
   align-items: center;
-  transform: translateY(-50%);
   background: #fff;
   box-shadow: 0 0 1px 1px #ccc;
   padding: 0 24px;
 }
-.lnbwrap .container > button.share .sharelist li {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li {
   font-size: 16px;
   font-family: "SUIT-SB";
   margin-right: 12px;
   color: #222;
 }
-.lnbwrap .container > button.share .sharelist li:first-of-type {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li:first-of-type {
   margin-right: 24px;
 }
-.lnbwrap .container > button.share .sharelist li:last-of-type {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li:last-of-type {
   margin-right: unset;
 }
-.lnbwrap .container > button.share .sharelist li.sh_btns {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li.sh_btns {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
-.lnbwrap .container > button.share .sharelist li.sh_btns a {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li.sh_btns a {
   width: 100%;
   height: 100%;
 }
-.lnbwrap .container > button.share .sharelist li.sh_insta a {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li.sh_insta a {
   background: url(../images/sh_insta.png) no-repeat center center;
 }
-.lnbwrap .container > button.share .sharelist li.sh_fb a {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li.sh_fb a {
   background: url(../images/sh_fb.png) no-repeat center center;
 }
-.lnbwrap .container > button.share .sharelist li.sh_twt a {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li.sh_twt a {
   background: url(../images/sh_twt.png) no-repeat center center;
 }
-.lnbwrap .container > button.share .sharelist li.sh_url a {
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .sharelist li.sh_url a {
   background: url(../images/sh_url.png) no-repeat center center;
 }
-.lnbwrap .container > button.share::after {
-  background: url(../images/lnb_share.png) no-repeat center center;
+.lnbwrap .container .lnb_sharewrap .sharelistwrap .btn_close_share {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 2px;
+  top: -32px;
+  background: url(../images/btn_close_share.png) no-repeat center center;
 }
-.lnbwrap .container > button.print::after {
-  background: url(../images/lnb_print.png) no-repeat center center;
+@media screen and (max-width: 880px) {
+  .lnbwrap .container .lnb_sharewrap {
+    right: 0;
+  }
 }
 @media screen and (max-width: 720px) {
-  .lnbwrap .container > button.print::after {
-    display: none;
+  .lnbwrap .container .lnb_sharewrap {
+    right: 13px;
   }
 }
 @media screen and (max-width: 880px) {
   .lnbwrap .container > button {
     position: absolute;
-  }
-  .lnbwrap .container > button.share {
-    display: block;
-    top: -60px;
-    right: 0;
   }
   .lnbwrap .container > button.print {
     display: none;
@@ -2607,13 +2620,6 @@ footer .footer_btm .container ul.ft_sns li a.twt_ico {
   .lnbwrap .container {
     margin-right: 0;
     margin-left: 0;
-  }
-  .lnbwrap .container .lnb_btn {
-    display: none;
-  }
-  .lnbwrap .container .lnb_btn.share {
-    top: -65px;
-    right: 13px;
   }
   .lnbwrap .container > div {
     flex-wrap: wrap;

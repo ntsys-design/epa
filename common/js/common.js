@@ -144,6 +144,9 @@ $(".board .ulsel_btn").each( function (){
     toFunc();
     $('.ulsel_btn').removeClass('open');
     $(".ulsel_list").fadeOut(100);
+    $('.lnb_btn.share').removeClass('active');
+    $('.sharelistwrap').removeClass('active');
+
 });
 
   $(".pagination ul li a").on("click", function (e) {
