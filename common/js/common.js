@@ -221,84 +221,84 @@ $(".board .ulsel_btn").each( function (){
       //   }
       // -----------------
 
-      $('.site_slide').each(function() {
-        var callSlide = $(this).find('.swiper-wrapper').html();
-        function appendSlide() {
-          $('.layersliderwrap .layerswiperwrapper').append(callSlide);
-        }
+//       $('.site_slide').each(function() {
+//         var callSlide = $(this).find('.swiper-wrapper').html();
+//         function appendSlide() {
+//           $('.layersliderwrap .layerswiperwrapper').append(callSlide);
+//         }
   
-        function removeSlide() {
-          $('.layersliderwrap .layerswiperwrapper').empty();
-        }
+//         function removeSlide() {
+//           $('.layersliderwrap .layerswiperwrapper').empty();
+//         }
   
   
-        function siteSlideFunc() {
-          var swiperSLST = new Swiper(".siteLayerSwiperThumbs", {
-            spaceBetween: 24,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true,
-          });
-          var swiperSLS = new Swiper(".mainSlide .siteLayerSwiper", {
-            slidesPerView: 1,
-            navigation: {
-              nextEl: ".layersliderwrap .swiper-button-next",
-              prevEl: ".layersliderwrap .swiper-button-prev",
-            },
-            thumbs: {
-              swiper: swiperSLST,
-            },
-          });
+//         function siteSlideFunc() {
+//           var swiperSLST = new Swiper(".siteLayerSwiperThumbs", {
+//             spaceBetween: 24,
+//             slidesPerView: 4,
+//             freeMode: true,
+//             watchSlidesProgress: true,
+//           });
+//           var swiperSLS = new Swiper(".mainSlide .siteLayerSwiper", {
+//             slidesPerView: 1,
+//             navigation: {
+//               nextEl: ".layersliderwrap .swiper-button-next",
+//               prevEl: ".layersliderwrap .swiper-button-prev",
+//             },
+//             thumbs: {
+//               swiper: swiperSLST,
+//             },
+//           });
           
-          swiperSLS.on('slideChange',function(){
-            var siteTitle = $('.mainSlide .siteLayerSwiper .swiper-slide-active').children('img').attr('alt');
-                siteTitle = siteTitle.replace(" 사진01","");
-                console.log(siteTitle)
-                $('.layer_tit').text(siteTitle);
+//           swiperSLS.on('slideChange',function(){
+//             var siteTitle = $('.mainSlide .siteLayerSwiper .swiper-slide-active').children('img').attr('alt');
+//                 siteTitle = siteTitle.replace(" 사진01","");
+//                 console.log(siteTitle)
+//                 $('.layer_tit').text(siteTitle);
                 
-          })
+//           })
     
     
-            $('.site_layerpopwrap').addClass('active');
-            scrollLock();
+//             $('.site_layerpopwrap').addClass('active');
+//             scrollLock();
     
-            removeSlide();
+//             removeSlide();
     
-            appendSlide();
-            swiperSLS.init()
-            swiperSLST.init()
-            swiperSLS.update()
-            swiperSLST.update()
+//             appendSlide();
+//             swiperSLS.init()
+//             swiperSLST.init()
+//             swiperSLS.update()
+//             swiperSLST.update()
             
             
             
-            //외부영역 클릭 시 site layer 닫기
-            $('.site_layerpopwrap').bind('click', function(e) {
-              var $clicked = $(e.target);
-              if ($clicked.hasClass("active")){
-                      $('.site_layerpopwrap').removeClass('active');
-                      scrollRelease();
-                      swiperSLS.destroy();
-                      swiperSLST.destroy();
-                      removeSlide();
-                  }
+//             //외부영역 클릭 시 site layer 닫기
+//             $('.site_layerpopwrap').bind('click', function(e) {
+//               var $clicked = $(e.target);
+//               if ($clicked.hasClass("active")){
+//                       $('.site_layerpopwrap').removeClass('active');
+//                       scrollRelease();
+//                       swiperSLS.destroy();
+//                       swiperSLST.destroy();
+//                       removeSlide();
+//                   }
       
-            });
-          }
-          $(this).find('.swiper-wrapper').children('div').on('click',function(){
-            siteSlideFunc();
+//             });
+//           }
+//           $(this).find('.swiper-wrapper').children('div').on('click',function(){
+//             siteSlideFunc();
 
-            var siteTitle = $(this).children('img').attr('alt');
-            siteTitle = siteTitle.replace(" 사진01","");
-            console.log(siteTitle)
-            $('.layer_tit').text(siteTitle);
-/* 
-            var thisIndex = $(this).index();
-            console.log(thisIndex + 1); */
-          })
+//             var siteTitle = $(this).children('img').attr('alt');
+//             siteTitle = siteTitle.replace(" 사진01","");
+//             console.log(siteTitle)
+//             $('.layer_tit').text(siteTitle);
+// /* 
+//             var thisIndex = $(this).index();
+//             console.log(thisIndex + 1); */
+//           })
 
 
-      })
+//       })
 
       // layerSwiper
 
@@ -477,6 +477,49 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
           prevEl: ".swiperwrap1 .swiper-button-prev",
         },
   });
+          var swiperSLST = new Swiper(".subSlide1 .siteLayerSwiperThumbs", {
+            spaceBetween: 24,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+          });
+
+          var swiperSLS = new Swiper(".mainSlide1 .siteLayerSwiper", {
+            slidesPerView: 1,
+            navigation: {
+              nextEl: ".mainSlide1 .swiper-button-next",
+              prevEl: ".mainSlide1 .swiper-button-prev",
+            },
+            thumbs: {
+              swiper: swiperSLST,
+            },
+          });
+
+          
+         $('.sub_con_slide .swiper-slide').on('click',function(){
+          let idx=$(this).index()
+          //console.log(idx)
+
+          swiperSLS.slideTo(idx)
+         })
+
+         
+
+
+  $('.sub_con_slide .swiper-slide').on('click',function(){
+    $('.site_layerpopwrap').addClass('active')
+
+  })
+
+  $('.btn_close_layer').on('click',function(){
+    $('.site_layerpopwrap').removeClass('active')
+  })
+
+  $( document ).ready( function() {
+    var alt = $('.mainSlide1 .swiper-slide-active img').attr( 'alt' );
+    console.log(alt)
+    $( 'layer_tit' ).text( alt );
+  } );
 
   var subConSlide2 = new Swiper(".sub_con_slide2", {
     slidesPerView: 4,
@@ -486,6 +529,30 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
           prevEl: ".swiperwrap2 .swiper-button-prev",
         },
   });
+  var swiperSLST2 = new Swiper(".subSlide2 .siteLayerSwiperThumbs", {
+    spaceBetween: 24,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  var swiperSLS2 = new Swiper(".mainSlide2 .siteLayerSwiper", {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".mainSlide2 .swiper-button-next",
+      prevEl: ".mainSlide2 .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperSLST2,
+    },
+  });
+
+$('.sub_con_slide2 .swiper-slide').on('click',function(){
+          let idx=$(this).index()
+          //console.log(idx)
+
+          swiperSLS2.slideTo(idx)
+         })
 
   var subConSlide3 = new Swiper(".sub_con_slide3", {
     slidesPerView: 4,
@@ -495,6 +562,29 @@ var subConSlideVer2 = new Swiper(".sub_con_slide_ver2", {
           prevEl: ".swiperwrap3 .swiper-button-prev",
         },
   });
+  var swiperSLST3 = new Swiper(".subSlide3 .siteLayerSwiperThumbs", {
+    spaceBetween: 24,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  var swiperSLS3 = new Swiper(".mainSlide3 .siteLayerSwiper", {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".mainSlide3 .swiper-button-next",
+      prevEl: ".mainSlide3 .swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperSLST3,
+    },
+  });
+$('.sub_con_slide3 .swiper-slide').on('click',function(){
+          let idx=$(this).index()
+          //console.log(idx)
+
+          swiperSLS3.slideTo(idx)
+         })
 // sub_01_04_02 공간별보기
   $('.spc_idx li').on('click',function(e){
     e.preventDefault()
